@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" class="no-js">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Security headers set site-wide via /_headers, see index.html -->
+    
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- SEO -->
+    <title>Política de Privacidad | Abundia.io</title>
+    <meta name="description" content="Conoce cómo Abundia.io recopila, utiliza, protege y administra la información personal de sus usuarios y clientes.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://abundia.io/legal/politica-de-privacidad.html">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Política de Privacidad | Abundia.io">
+    <meta property="og:description" content="Conoce cómo Abundia.io recopila, utiliza, protege y administra la información personal de sus usuarios y clientes.">
+    <meta property="og:url" content="https://abundia.io/legal/politica-de-privacidad.html">
+    <meta property="og:image" content="https://abundia.io/assets/img/og/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    
+    <!-- Icons -->
+    
+    <!-- Global CSS (DO NOT MODIFY) -->
+<!-- Scoped Styles for Legal Documents -->
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <style>
+        /* Technical Data Sheet */
+        .legal-tech-sheet {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-xl);
+            padding: var(--space-6);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-16);
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-1);
+        }
+
+        .tech-label {
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-tertiary);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .tech-value {
+            font-size: var(--text-base);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Legal Content Layout */
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-16);
+        }
+
+        .legal-section h2 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .legal-text {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-6);
+        }
+
+        .legal-text p + p {
+            margin-top: var(--space-4);
+        }
+
+        /* Info Grid (Data Collection) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-6);
+        }
+
+        .info-card h3 {
+            font-size: var(--text-lg);
+            color: var(--color-primary-500);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+        }
+
+        .info-list li {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            padding-left: var(--space-4);
+            position: relative;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--color-primary-500);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Purpose Cards */
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .purpose-item {
+            background: rgba(34, 197, 94, 0.05);
+            border: 1px solid rgba(34, 197, 94, 0.1);
+            padding: var(--space-4) var(--space-5);
+            border-radius: var(--border-radius-md);
+            font-size: var(--text-base);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .purpose-item i {
+            color: var(--color-primary-500);
+            font-size: 20px;
+        }
+
+        /* Elegant Table */
+        .legal-table-wrapper {
+            overflow-x: auto;
+            margin: var(--space-8) 0;
+            border-radius: var(--border-radius-lg);
+            border: 1px solid var(--border-default);
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .legal-table th {
+            background: var(--bg-tertiary);
+            text-align: left;
+            padding: var(--space-4) var(--space-6);
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-tertiary);
+            border-bottom: 1px solid var(--border-default);
+        }
+
+        .legal-table td {
+            padding: var(--space-4) var(--space-6);
+            border-bottom: 1px solid var(--border-default);
+            color: var(--text-secondary);
+            font-size: var(--text-base);
+        }
+
+        .legal-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .legal-table tr:hover td {
+            background: var(--bg-secondary);
+        }
+
+        /* Security List */
+        .security-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .security-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+        }
+
+        .security-item i {
+            color: var(--color-primary-500);
+            font-size: 18px;
+        }
+
+        /* Rights Grid */
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .right-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            padding: var(--space-5);
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            transition: var(--transition-fast);
+        }
+
+        .right-card:hover {
+            border-color: var(--color-primary-500);
+            transform: translateY(-2px);
+        }
+
+        .right-card i {
+            font-size: 24px;
+            color: var(--color-primary-500);
+            margin-bottom: var(--space-3);
+            display: block;
+        }
+
+        .right-card span {
+            font-size: var(--text-base);
+            font-weight: var(--font-weight-medium);
+            color: var(--text-primary);
+        }
+
+        /* Commitment Block */
+        .commitment-block {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(16, 185, 129, 0.03) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: var(--border-radius-2xl);
+            padding: var(--space-12) var(--space-8);
+            text-align: center;
+            margin: var(--space-16) 0;
+        }
+
+        .commitment-block h3 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+        }
+
+        .commitment-block p {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Final Actions */
+        .legal-actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+            padding-top: var(--space-12);
+            border-top: 1px solid var(--border-default);
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .legal-tech-sheet {
+                grid-template-columns: 1fr 1fr;
+            }
+            .legal-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .legal-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+<style id="abundia-legal-final-fix">
+/* === ABUNDIA LEGAL VISUAL FIX v1.0 === */
+
+/* 1. VARIABLES & RESET BASE */
+:root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --color-bg: #0a0a0a;
+    --color-surface: #171717;
+    --color-text: #e5e5e5;
+    --color-text-muted: #a3a3a3;
+    --color-primary: #22c55e;
+    --space-unit: 1rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* 2. CONTENEDORES Y CENTRADO */
+.container, main > div, section > div, .legal-content {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    width: 100%;
+}
+
+/* 3. TIPOGRAFÍA ESTRUCTURADA */
+h1, h2, h3, h4 { 
+    color: #fff; 
+    font-weight: 700; 
+    line-height: 1.2; 
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin-top: 2rem; text-align: center; }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-top: 3rem; border-bottom: 1px solid #262626; padding-bottom: 0.75rem; }
+h3 { font-size: 1.25rem; margin-top: 2rem; color: var(--color-primary); }
+p { margin-bottom: 1.25rem; color: var(--color-text-muted); max-width: 70ch !important; }
+
+/* 4. LISTAS ORDENADAS */
+ul, ol, .info-list, .permission-list { 
+    margin: 1rem 0 1.5rem 1.5rem !important; 
+    color: var(--color-text-muted);
+    padding-left: 1.5rem !important;
+}
+li { margin-bottom: 0.5rem; padding-left: 0.5rem; }
+li::marker { color: var(--color-primary); }
+
+/* 5. TABLAS LEGIBLES */
+table, .legal-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 2rem 0; 
+    font-size: 0.95rem;
+}
+th, td { 
+    padding: 1rem 1.25rem !important; 
+    border: 1px solid #262626; 
+    text-align: left;
+}
+th { background: var(--color-surface); color: #fff; font-weight: 600; }
+tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+/* 6. ENLACES Y BOTONES */
+a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.8; text-decoration: underline; }
+
+/* 7. ESPACIADO VERTICAL ENTRE SECCIONES */
+section, .legal-section { margin-bottom: 4rem !important; }
+
+/* 8. HERO COMPACTO */
+.hero--compact { text-align: center; padding: 4rem 0 2rem; }
+.hero--compact p { margin-left: auto; margin-right: auto; }
+
+/* --- REFINAMIENTO VISUAL (GAPS Y PADDING) --- */
+
+/* 9. GRID GAP UNIVERSAL */
+.legal-content [class*="-grid"],
+.info-grid, .ownership-grid, .permissions-grid, 
+.services-grid, .checklist-grid, .purpose-grid,
+.mgmt-grid, .third-party-grid, .rights-grid {
+    gap: 2rem !important;
+}
+
+/* 10. COLUMN PADDING INTERNO */
+.legal-content [class*="-grid"] > * {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+/* 11. CARD PADDING CORRECTO */
+.info-card, .ownership-card, .principle-card, 
+.permission-column, .right-card, .mgmt-item,
+.tp-card, .service-tag, .check-item, .usage-card {
+    padding: 1.5rem !important;
+}
+
+/* 12. MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .container, main > div, section > div, .legal-content {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    .legal-content [class*="-grid"] { gap: 1rem !important; }
+    .legal-section { margin-bottom: 2.5rem !important; }
+    .info-card, .ownership-card, .principle-card,
+    .permission-column, .right-card { padding: 1rem !important; }
+    table { display: block; overflow-x: auto; }
+}
+</style>
+
+<style id="legal-tables-only">
+/* Solo tablas legales - resto usa clases globales */
+.legal-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.95rem}
+.legal-table th,.legal-table td{padding:1rem 1.25rem;border:1px solid var(--border-default,#262626);text-align:left;color:var(--text-secondary,#a3a3a3)}
+.legal-table th{background:var(--bg-tertiary,#1a1a1a);color:var(--text-primary,#fff);font-weight:600;text-transform:uppercase;font-size:.8rem;letter-spacing:.05em}
+.legal-table tr:hover td{background:var(--bg-secondary,#171717)}
+.legal-prose p{margin-bottom:1.25rem;line-height:1.7;color:var(--text-secondary,#a3a3a3);max-width:75ch}
+.legal-prose h2{font-size:1.75rem;color:var(--text-primary,#fff);margin:3rem 0 1rem;font-weight:700}
+.legal-prose h3{font-size:1.25rem;color:var(--color-primary-500,#22c55e);margin:2rem 0 .75rem;font-weight:600}
+.legal-prose ul{margin:1rem 0 1.5rem 1.5rem;color:var(--text-secondary,#a3a3a3)}
+.legal-prose li{margin-bottom:.5rem}
+@media(max-width:768px){.legal-table{display:block;overflow-x:auto}}
+</style>
+    <link rel="stylesheet" href="/css/legal.css">
+
+</head>
+<body class="antialiased">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header (Reused) -->
+    <header class="header" role="banner" id="site-header"></header>
+
+    <main id="main-content" role="main">
+        
+        <!-- HERO -->
+        <section class="hero hero--compact">
+            <div class="hero-bg">
+                <div class="hero-bg-grid"></div>
+                <div class="hero-bg-glow"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="hero-badge animate-fade-in">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-lock-key"></use></svg>
+                        <span>Privacidad • Transparencia • Confianza</span>
+                    </div>
+                    <h1 class="hero-title animate-fade-in-up">Política de Privacidad</h1>
+                    <p class="hero-description animate-fade-in-up delay-1">
+                        En Abundia creemos que la confianza comienza con la transparencia.
+                        Cuando compartes información con nosotros depositas parte de esa confianza. Nuestra responsabilidad consiste en protegerla, utilizarla únicamente para los fines legítimos para los cuales fue proporcionada y explicar de forma clara cómo administramos dicha información.
+                        La privacidad forma parte del diseño de nuestros servicios y constituye uno de los principios fundamentales del ecosistema tecnológico Abundia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            
+            <!-- TECHNICAL DATA SHEET -->
+            <div class="legal-tech-sheet animate-fade-in-up delay-2">
+                <div class="tech-item">
+                    <span class="tech-label">Documento</span>
+                    <span class="tech-value">Política de Privacidad</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Versión</span>
+                    <span class="tech-value">1.2</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Última actualización</span>
+                    <span class="tech-value">Julio de 2026</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Estado</span>
+                    <span class="tech-value" style="color: var(--color-primary-500);">Vigente</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Responsable</span>
+                    <span class="tech-value">Abundia.io</span>
+                </div>
+            </div>
+
+            <div class="container legal-prose">
+
+                <!-- ALCANCE -->
+                <section class="section legal-prose">
+                    <h2>Alcance</h2>
+                    <div class="legal-prose">
+                        <p>Esta Política de Privacidad aplica al sitio web Abundia.io y a los formularios, plataformas, aplicaciones y servicios desarrollados por Abundia, salvo que un servicio específico indique expresamente una política diferente.</p>
+                    </div>
+                </section>
+
+                <!-- INFORMACIÓN QUE RECOPILAMOS -->
+                <section class="section legal-prose">
+                    <h2>Información que podemos recopilar</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-user"></use></svg> Información de contacto</h3>
+                            <ul class="service-features">
+                                <li>Nombre</li>
+                                <li>Correo electrónico</li>
+                                <li>Número telefónico (si se proporciona)</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-chat-text"></use></svg> Información de solicitudes</h3>
+                            <ul class="service-features">
+                                <li>Tipo de servicio solicitado</li>
+                                <li>Contenido del formulario</li>
+                                <li>Mensajes enviados voluntariamente</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-desktop-tower"></use></svg> Información técnica</h3>
+                            <ul class="service-features">
+                                <li>Dirección IP</li>
+                                <li>Navegador utilizado</li>
+                                <li>Sistema operativo</li>
+                                <li>Fecha y hora del acceso</li>
+                                <li>Información técnica necesaria para el funcionamiento del sitio</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="legal-prose" style="font-size: var(--text-sm); opacity: 0.8; margin-top: var(--space-4);">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-info"></use></svg> Esta información se utiliza exclusivamente para fines operativos, de seguridad y mejora continua del servicio.
+                    </p>
+                </section>
+
+                <!-- FINALIDAD -->
+                <section class="section legal-prose">
+                    <h2>Finalidad del tratamiento de los datos</h2>
+                    <div class="services-grid">
+                        <div class="purpose-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Responder consultas</div>
+                        <div class="purpose-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Preparar propuestas comerciales</div>
+                        <div class="purpose-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Brindar soporte técnico</div>
+                        <div class="purpose-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Gestionar comunicaciones relacionadas con nuestros servicios</div>
+                        <div class="purpose-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Mejorar continuamente nuestros productos</div>
+                        <div class="purpose-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Detectar actividades maliciosas o intentos de abuso</div>
+                        <div class="purpose-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Cumplir obligaciones legales cuando corresponda</div>
+                    </div>
+                </section>
+
+                <!-- BASE DEL TRATAMIENTO -->
+                <section class="section legal-prose">
+                    <h2>Base del tratamiento</h2>
+                    <div class="legal-prose">
+                        <p>Tratamos la información personal únicamente cuando existe una base legítima para hacerlo, incluyendo:</p>
+                        <ul class="service-features" style="margin-top: var(--space-4);">
+                            <li>Consentimiento otorgado por el usuario.</li>
+                            <li>Solicitud de información o cotización.</li>
+                            <li>Prestación de servicios contratados.</li>
+                            <li>Cumplimiento de obligaciones legales.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- CONSERVACIÓN -->
+                <section class="section legal-prose">
+                    <h2>Conservación de la información</h2>
+                    <div class="legal-prose">
+                        <p>Los datos serán conservados únicamente durante el tiempo razonablemente necesario para atender la finalidad para la cual fueron recopilados o mientras exista una obligación legal que requiera su conservación.</p>
+                        <p>Posteriormente podrán eliminarse o anonimizarse de manera segura.</p>
+                    </div>
+                </section>
+
+                <!-- COMPARTICIÓN -->
+                <section class="section legal-prose">
+                    <h2>Compartición de información</h2>
+                    <div class="legal-prose">
+                        <p><strong>Abundia no vende información personal.</strong></p>
+                        <p>La información únicamente podrá compartirse cuando sea necesario para la prestación del servicio o por obligación legal.</p>
+                    </div>
+                    
+                    <div>
+                        <table class="legal-table">
+                            <thead>
+                                <tr>
+                                    <th>Proveedor</th>
+                                    <th>Finalidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cloudflare</td>
+                                    <td>Seguridad e infraestructura</td>
+                                </tr>
+                                <tr>
+                                    <td>FormSubmit</td>
+                                    <td>Recepción de formularios de contacto</td>
+                                </tr>
+                                <tr>
+                                    <td>Servicios de hosting</td>
+                                    <td>Infraestructura tecnológica</td>
+                                </tr>
+                                <tr>
+                                    <td>Autoridades competentes</td>
+                                    <td>Cuando exista obligación legal</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="legal-prose" style="font-size: var(--text-sm); opacity: 0.8;">
+                        La incorporación de nuevos proveedores podrá reflejarse mediante futuras actualizaciones de esta política.
+                    </p>
+                </section>
+
+                <!-- SEGURIDAD -->
+                <section class="section legal-prose">
+                    <h2>Seguridad de la información</h2>
+                    <div class="legal-prose">
+                        <p>La seguridad constituye uno de los pilares fundamentales de Abundia. Aplicamos medidas técnicas y organizativas razonables orientadas a proteger la información frente a accesos no autorizados, alteración, divulgación o destrucción.</p>
+                        <p>Entre dichas medidas pueden incluirse:</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="security-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-lock"></use></svg> Conexiones cifradas HTTPS</div>
+                        <div class="security-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-code"></use></svg> Buenas prácticas de desarrollo seguro</div>
+                        <div class="security-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-shield-check"></use></svg> Protección de infraestructura</div>
+                        <div class="security-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-key"></use></svg> Controles de acceso</div>
+                        <div class="security-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrows-clockwise"></use></svg> Actualizaciones periódicas</div>
+                        <div class="security-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-eye"></use></svg> Supervisión continua</div>
+                    </div>
+                </section>
+
+                <!-- DERECHOS -->
+                <section class="section legal-prose">
+                    <h2>Derechos del usuario</h2>
+                    <div class="legal-prose">
+                        <p>Dependiendo de la legislación aplicable, el usuario podrá solicitar:</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-magnifying-glass"></use></svg>
+                            <span>Acceso a sus datos</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-pencil-simple"></use></svg>
+                            <span>Corrección de información</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrows-counter-clockwise"></use></svg>
+                            <span>Actualización</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-trash"></use></svg>
+                            <span>Eliminación cuando proceda</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-pause-circle"></use></svg>
+                            <span>Limitación del tratamiento</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-x-circle"></use></svg>
+                            <span>Revocación del consentimiento</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EJERCICIO DE DERECHOS -->
+                <section class="section legal-prose">
+                    <h2>Ejercicio de derechos</h2>
+                    <div class="legal-prose">
+                        <p>Las solicitudes relacionadas con privacidad podrán enviarse a:</p>
+                        <p><a href="mailto:info@abundia.io" style="color: var(--color-primary-500); text-decoration: underline;">info@abundia.io</a></p>
+                        <p>o mediante el formulario oficial disponible en:</p>
+                        <p><a href="/contacto.html" style="color: var(--color-primary-500); text-decoration: underline;">/contacto.html</a></p>
+                        <p>Responderemos dentro de un plazo razonable conforme a la naturaleza de la solicitud.</p>
+                    </div>
+                </section>
+
+                <!-- COOKIES -->
+                <section class="section legal-prose">
+                    <h2>Cookies</h2>
+                    <div class="legal-prose">
+                        <p>Este sitio puede utilizar cookies y tecnologías similares necesarias para el funcionamiento del sitio y para mejorar la experiencia del usuario.</p>
+                        <p>Para más información consulte:</p>
+                    </div>
+                    <a href="/legal/politica-de-cookies.html" class="btn btn-outline">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-cookie"></use></svg> Política de Cookies
+                    </a>
+                </section>
+
+                <!-- MENORES -->
+                <section class="section legal-prose">
+                    <h2>Menores de edad</h2>
+                    <div class="legal-prose">
+                        <p>Nuestros servicios no están dirigidos específicamente a menores de edad.</p>
+                        <p>Cuando resulte necesario recopilar información perteneciente a menores, esta deberá realizarse conforme a la legislación aplicable y, cuando corresponda, con autorización de sus representantes legales.</p>
+                    </div>
+                </section>
+
+                <!-- CAMBIOS -->
+                <section class="section legal-prose">
+                    <h2>Cambios en esta política</h2>
+                    <div class="legal-prose">
+                        <p>Esta Política de Privacidad podrá actualizarse periódicamente para reflejar:</p>
+                        <ul class="service-features" style="margin-top: var(--space-4);">
+                            <li>Cambios legales.</li>
+                            <li>Mejoras en nuestros servicios.</li>
+                            <li>Nuevas tecnologías.</li>
+                            <li>Actualizaciones del ecosistema Abundia.</li>
+                        </ul>
+                        <p style="margin-top: var(--space-4);">La fecha de última actualización aparecerá siempre al final del documento.</p>
+                    </div>
+                </section>
+
+                <!-- RESUMEN CARD -->
+                <div class="legal-tech-sheet animate-fade-in" style="margin-top: var(--space-16);">
+                    <div class="tech-item">
+                        <span class="tech-label">Versión</span>
+                        <span class="tech-value">1.2</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Última actualización</span>
+                        <span class="tech-value">Julio de 2026</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Responsable</span>
+                        <span class="tech-value">Abundia.io</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Correo</span>
+                        <span class="tech-value">info@abundia.io</span>
+                    </div>
+                </div>
+
+                <!-- COMPROMISO -->
+                <div class="service-card" style="grid-column:1/-1;text-align:center;padding:3rem">
+                    <h3>Nuestro compromiso</h3>
+                    <p>
+                        La privacidad no consiste únicamente en cumplir una obligación legal. Para Abundia representa un principio de diseño.
+                        <br><br>
+                        Procuramos desarrollar cada plataforma bajo enfoques de Privacy by Design, Security by Design y buenas prácticas internacionales de ingeniería, buscando minimizar la recopilación de información, proteger adecuadamente los datos y ofrecer a nuestros usuarios un entorno tecnológico confiable, transparente y seguro.
+                    </p>
+                </div>
+
+                <!-- BOTONES FINALES -->
+                <div class="legal-actions animate-fade-in">
+                    <a href="/legal/" class="btn btn-secondary">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrow-left"></use></svg> Volver al Centro Legal
+                    </a>
+                    <a href="/contacto.html" class="btn btn-primary">
+                        Contacto <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrow-right"></use></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Spacer before footer -->
+        <div style="height: var(--space-24);"></div>
+
+    </main>
+
+    <!-- Footer (Reused) -->
+    <footer class="footer" role="contentinfo" id="site-footer">                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+        </footer>
+
+    <!-- Scripts (Site Standard) -->
+    <script src="/js/main.js" defer></script>
+    <script src="/assets/js/components/header.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/assets/js/components/footer.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+</body>
+</html>

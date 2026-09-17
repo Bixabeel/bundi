@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infraestructura y Hosting Profesional por Abundia.io. Google Cloud, Cloudflare, 99.9% uptime, backups diarios y correos corporativos.">
+    <meta name="keywords" content="hosting, infraestructura, Google Cloud, Cloudflare, servidores, dominios, Abundia">
+    <meta property="og:title" content="Infraestructura y Hosting | Abundia.io">
+    <meta property="og:description" content="La base sólida para tu crecimiento digital. Hosting profesional con almacenamiento redundante y soporte 24/7.">
+    <title>Infraestructura y Hosting | Abundia.io</title>
+    
+    <link rel="canonical" href="https://abundia.io/servicios/infraestructura.html">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#22c55e">
+
+    <style>
+        .infra-visual { max-width: 800px; margin: var(--space-12) auto 0; }
+        .tech-stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-top: var(--space-8); }
+        .tech-stack-item { padding: var(--space-6); background: rgba(255,255,255,0.02); border: 1px solid var(--color-gray-800); border-radius: var(--radius-lg); text-align: center; transition: all var(--transition-fast); }
+        .tech-stack-item:hover { background: rgba(34, 197, 94, 0.03); border-color: rgba(34, 197, 94, 0.2); }
+        .tech-stack-item h4 { font-size: var(--text-base); font-weight: var(--font-semibold); color: var(--color-gray-100); margin-top: var(--space-3); }
+        
+        /* Pricing Tables */
+        .pricing-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-8); max-width: 1200px; margin: var(--space-12) auto 0; }
+        @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+        .pricing-card { padding: var(--space-8); background: var(--color-black-elevated); border: 1px solid var(--color-gray-800); border-radius: var(--radius-2xl); position: relative; transition: all var(--transition-normal); }
+        .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .pricing-card.featured { border-color: var(--color-primary); background: linear-gradient(180deg, rgba(34, 197, 94, 0.05) 0%, var(--color-black-elevated) 100%); }
+        .pricing-card.featured::before { content: 'Más Popular'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); padding: 4px 16px; background: var(--color-primary); color: var(--color-black-deep); font-size: 12px; font-weight: 700; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; }
+        
+        .pricing-header { text-align: center; padding-bottom: var(--space-6); margin-bottom: var(--space-6); border-bottom: 1px solid var(--color-gray-800); }
+        .pricing-icon { font-size: 32px; margin-bottom: var(--space-3); }
+        .pricing-name { font-size: var(--text-xl); font-weight: var(--font-bold); color: var(--color-gray-100); margin-bottom: var(--space-2); }
+        .pricing-desc { font-size: var(--text-sm); color: var(--color-gray-400); margin-bottom: var(--space-4); }
+        .pricing-price { font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--color-primary); line-height: 1; }
+        .pricing-price span { font-size: var(--text-base); font-weight: var(--font-regular); color: var(--color-gray-500); }
+        
+        .pricing-features { list-style: none; padding: 0; margin: 0 0 var(--space-6); }
+        .pricing-features li { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) 0; font-size: var(--text-sm); color: var(--color-gray-300); border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .pricing-features li:last-child { border-bottom: none; }
+        .pricing-features li::before { content: '✓'; color: var(--color-primary); font-weight: 700; flex-shrink: 0; }
+        
+        .pricing-note { font-size: var(--text-xs); color: var(--color-gray-500); text-align: center; font-style: italic; margin-top: var(--space-8); }
+    </style>
+<style>
+/* Abundia Legal Footer Fix */
+.footer-grid{grid-template-columns:repeat(5,1fr)!important}
+@media(max-width:1024px){.footer-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar" id="navbar" role="banner">
+        <nav class="navbar-container" role="navigation" aria-label="Navegación principal">
+            <a href="/" class="navbar-logo">
+                <img src="/assets/img/logo.webp" alt="Abundia.io" class="navbar-logo-icon" width="40" height="40">
+                <div class="navbar-logo-text"><span class="navbar-logo-tagline">ECOSISTEMA TECNOLÓGICO</span><span class="navbar-logo-name">ABUNDIA.IO</span></div>
+            </a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="/#servicios" class="navbar-link" aria-current="page">Servicios</a></li>
+                <li class="navbar-item"><a href="/proyectos.html" class="navbar-link">Abundia Labs</a></li>
+                <li class="navbar-item"><a href="/servicios/hosting.html" class="navbar-link">Hosting</a></li>
+                <li class="navbar-item"><a href="/servicios/hosting.html#planes" class="navbar-link">Planes</a></li>
+                
+                <li class="navbar-item"><a href="/legal/" class="navbar-link">Legal</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="/contacto.html" class="btn btn-primary navbar-cta">Solicitar Cotización</a>
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="navbar-toggle-line"></span><span class="navbar-toggle-line"></span><span class="navbar-toggle-line"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="navbar-mobile-menu" id="navbar-mobile-menu" aria-hidden="true">
+            <ul class="navbar-mobile-list">
+                <li><a href="/#servicios" class="navbar-mobile-link">Servicios</a></li>
+                <li><a href="/proyectos.html" class="navbar-mobile-link">Abundia Labs</a></li>
+                <li><a href="/servicios/hosting.html" class="navbar-mobile-link">Hosting</a></li>
+                <li><a href="/servicios/hosting.html#planes" class="navbar-mobile-link">Planes</a></li>
+                
+                <li><a href="/legal/" class="navbar-mobile-link">Legal</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Hero -->
+        <section class="page-hero" aria-labelledby="infra-hero-title">
+            <div class="page-hero-content">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    Infraestructura y Hosting
+                </div>
+                <h1 class="page-hero-title" id="infra-hero-title">La base sólida para tu crecimiento digital</h1>
+                <p class="page-hero-description">Hosting profesional con almacenamiento redundante, correos corporativos, backups diarios y soporte técnico. Tu éxito digital depende de una infraestructura confiable.</p>
+                
+                <div class="infra-visual reveal-up">
+                    <svg viewBox="0 0 800 400" fill="none" aria-hidden="true" style="width:100%;height:auto;">
+                        <defs>
+                            <linearGradient id="infraBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.1"/>
+                                <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:0.95"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="800" height="400" fill="url(#infraBg)" rx="16"/>
+                        <!-- Server Rack -->
+                        <rect x="250" y="80" width="300" height="240" rx="8" fill="#171717" stroke="#22c55e" stroke-width="2"/>
+                        <rect x="270" y="100" width="260" height="40" rx="4" fill="#262626" stroke="#404040" stroke-width="1"/>
+                        <rect x="270" y="150" width="260" height="40" rx="4" fill="#262626" stroke="#404040" stroke-width="1"/>
+                        <rect x="270" y="200" width="260" height="40" rx="4" fill="#262626" stroke="#404040" stroke-width="1"/>
+                        <rect x="270" y="250" width="260" height="40" rx="4" fill="#262626" stroke="#404040" stroke-width="1"/>
+                        <!-- Lights -->
+                        <circle cx="290" cy="120" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+                        <circle cx="310" cy="120" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/></circle>
+                        <circle cx="290" cy="170" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/></circle>
+                        <circle cx="310" cy="170" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/></circle>
+                        <circle cx="290" cy="220" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2.1s" repeatCount="indefinite"/></circle>
+                        <circle cx="310" cy="220" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="1.9s" repeatCount="indefinite"/></circle>
+                        <circle cx="290" cy="270" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2.3s" repeatCount="indefinite"/></circle>
+                        <circle cx="310" cy="270" r="4" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/></circle>
+                        <!-- Cloud connections -->
+                        <path d="M400 80 Q400 40 450 40 Q500 40 500 80" stroke="#22c55e" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologías -->
+        <section class="section" aria-labelledby="infra-tech-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        Stack de Infraestructura
+                    </div>
+                    <h2 class="section-title" id="infra-tech-title">Integramos las mejores plataformas del mundo</h2>
+                    <p class="section-description">Garantizamos rendimiento, seguridad y escalabilidad utilizando proveedores líderes en la industria.</p>
+                </div>
+                
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-item reveal">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        <h4>Google Cloud</h4>
+                    </div>
+                    <div class="tech-stack-item reveal">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F38020" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9z"/></svg>
+                        <h4>Cloudflare CDN</h4>
+                    </div>
+                    <div class="tech-stack-item reveal">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+                        <h4>AWS Ready</h4>
+                    </div>
+                    <div class="tech-stack-item reveal">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <h4>Wordfence</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planes de Hosting -->
+        <section class="section section-dark" id="planes" aria-labelledby="pricing-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        Planes de Hosting
+                    </div>
+                    <h2 class="section-title" id="pricing-title">Planes que crecen contigo</h2>
+                    <p class="section-description">Hosting profesional con almacenamiento redundante, correos corporativos, backups diarios y soporte técnico.</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <!-- Esencial -->
+                    <div class="pricing-card reveal">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">🟢</div>
+                            <h3 class="pricing-name">Esencial</h3>
+                            <p class="pricing-desc">Ideal para pequeños negocios y páginas individuales.</p>
+                            <div class="pricing-price">$10<span>/mes</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>1 página web</li>
+                            <li>50 GB de almacenamiento redundante</li>
+                            <li>5 bases de datos</li>
+                            <li>SSH, SFTP & WP-CLI</li>
+                            <li>Correo profesional incluido</li>
+                            <li>Backups diarios</li>
+                        </ul>
+                        <a href="/contacto.html" class="btn btn-secondary btn-full">Elegir Plan</a>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="pricing-card featured reveal">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">🔵</div>
+                            <h3 class="pricing-name">Business</h3>
+                            <p class="pricing-desc">Perfecto para empresas en crecimiento y múltiples proyectos.</p>
+                            <div class="pricing-price">$14<span>/mes</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>2 páginas web</li>
+                            <li>100 GB de almacenamiento redundante</li>
+                            <li>100 bases de datos</li>
+                            <li>Nivel de rendimiento 1</li>
+                            <li>Correo profesional incluido</li>
+                            <li>Backups diarios</li>
+                        </ul>
+                        <a href="/contacto.html" class="btn btn-primary btn-full">Elegir Plan</a>
+                    </div>
+
+                    <!-- Profesional -->
+                    <div class="pricing-card reveal">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">🟣</div>
+                            <h3 class="pricing-name">Profesional</h3>
+                            <p class="pricing-desc">Pensado para múltiples sitios y empresas de mayor escala.</p>
+                            <div class="pricing-price">$18<span>/mes</span></div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Hasta 50 páginas web</li>
+                            <li>500 GB de almacenamiento redundante</li>
+                            <li>500 bases de datos</li>
+                            <li>Nivel de rendimiento 2</li>
+                            <li>Correo profesional incluido</li>
+                            <li>Backups diarios</li>
+                        </ul>
+                        <a href="/contacto.html" class="btn btn-secondary btn-full">Elegir Plan</a>
+                    </div>
+                </div>
+                
+                <p class="pricing-note">Todos los precios están expresados en USD y corresponden a tarifas mensuales, facturadas anualmente. Todos los servicios están sujetos a condiciones generales.</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" aria-labelledby="infra-cta-title">
+            <div class="container text-center">
+                <div class="section-header text-center">
+                    <h2 class="section-title" id="infra-cta-title">Mejora tu infraestructura hoy</h2>
+                    <p class="section-description">Migramos tu sitio sin downtime. Solicita una evaluación gratuita de tu infraestructura actual.</p>
+                </div>
+                <div class="section-actions" style="justify-content: center;">
+                    <a href="/contacto.html" class="btn btn-primary btn-large">Solicitar Cotización</a>
+                    <a href="https://wa.me/50672232295" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo"><img src="/assets/img/logo.webp" alt="Abundia.io" class="footer-logo-icon" width="40" height="40"><span class="footer-logo-name">Abundia.io</span></a>
+                    <p class="footer-description">Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links"><li><a href="/servicios/ciberseguridad.html">Ciberseguridad</a></li><li><a href="/servicios/hosting.html">Hosting</a></li><li><a href="/servicios/desarrollo-web.html">Desarrollo Web</a></li><li><a href="/servicios/ia.html">IA & Automatización</a></li></ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">ImmuniWeb</h4>
+                    <ul class="footer-links"><li><a href="/servicios/ciberseguridad.html#discovery">Discovery</a></li><li><a href="/servicios/ciberseguridad.html#neuron">Neuron</a></li><li><a href="/servicios/ciberseguridad.html#continuous">Continuous</a></li><li><a href="/servicios/ciberseguridad.html#mobile">Mobile</a></li></ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact"><li><a href="https://wa.me/50672232295" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li><a href="https://t.me/abundiatech" target="_blank" rel="noopener noreferrer">Telegram</a></li><li><a href="mailto:info@abundia.io">info@abundia.io</a></li><li>San José, Costa Rica</li></ul>
+                </div>
+            
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div><div class="footer-bottom">
+                <p>&copy; 2026 Abundia.io · Todos los derechos reservados</p>
+                <p class="footer-partner">Partner ImmuniWeb® · Hosting · IA · Seguridad</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
+    <script src="/js/cursor.js" defer></script>
+</body>
+</html>
+

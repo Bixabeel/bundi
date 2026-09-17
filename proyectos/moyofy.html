@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MOYOFY - Plataforma de gamificación social para bares, nightlife y eventos. Aumenta el consumo y el engagement con música interactiva y economía digital.">
+    <meta name="keywords" content="MOYOFY, gamificación bares, nightlife tech, música interactiva, economía digital, engagement bares">
+    <meta property="og:title" content="MOYOFY | Gamificación Social para Bares | Abundia.io">
+    <meta property="og:description" content="Transforma tu espacio en una experiencia social gamificada. Música, consumo e interacción que generan ingresos reales.">
+    <title>MOYOFY | Gamificación Social para Bares | Abundia.io</title>
+    
+    <link rel="canonical" href="https://abundia.io/proyectos/moyofy.html">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#22c55e">
+
+    <style>
+        .moyofy-hero-visual {
+            max-width: 800px;
+            margin: var(--space-12) auto 0;
+        }
+        .feature-highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+        }
+        .feature-highlight-card {
+            padding: var(--space-8);
+            background: var(--color-black-elevated);
+            border: 1px solid var(--color-gray-800);
+            border-radius: var(--radius-xl);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        .feature-highlight-card:hover {
+            border-color: rgba(34, 197, 94, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .feature-highlight-card:hover::before {
+            opacity: 1;
+        }
+        .feature-highlight-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: var(--radius-lg);
+            color: var(--color-primary);
+            margin-bottom: var(--space-6);
+        }
+        .feature-highlight-card h3 {
+            font-size: var(--text-xl);
+            font-weight: var(--font-semibold);
+            color: var(--color-gray-100);
+            margin-bottom: var(--space-3);
+        }
+        .feature-highlight-card p {
+            font-size: var(--text-sm);
+            color: var(--color-gray-400);
+            margin: 0;
+            line-height: var(--leading-relaxed);
+        }
+        .benefits-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-12);
+            align-items: center;
+        }
+        @media (min-width: 1024px) {
+            .benefits-layout { grid-template-columns: 1fr 1fr; }
+        }
+        .benefit-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-5);
+        }
+        .benefit-item {
+            display: flex;
+            gap: var(--space-4);
+        }
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: var(--radius-md);
+            color: var(--color-primary);
+        }
+        .benefit-content h4 {
+            font-size: var(--text-base);
+            font-weight: var(--font-semibold);
+            color: var(--color-gray-100);
+            margin-bottom: var(--space-1);
+        }
+        .benefit-content p {
+            font-size: var(--text-sm);
+            color: var(--color-gray-400);
+            margin: 0;
+        }
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+        }
+        .target-card {
+            padding: var(--space-6);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--color-gray-800);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition-fast);
+        }
+        .target-card:hover {
+            background: rgba(34, 197, 94, 0.03);
+            border-color: rgba(34, 197, 94, 0.2);
+        }
+        .target-card h4 {
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            color: var(--color-gray-200);
+            margin-top: var(--space-3);
+        }
+        .external-link-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            font-weight: var(--font-semibold);
+            color: var(--color-primary);
+            margin-bottom: var(--space-6);
+        }
+    </style>
+<style>
+/* Abundia Legal Footer Fix */
+.footer-grid{grid-template-columns:repeat(5,1fr)!important}
+@media(max-width:1024px){.footer-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar" id="navbar" role="banner">
+        <nav class="navbar-container" role="navigation" aria-label="Navegación principal">
+            <a href="/" class="navbar-logo">
+                <img src="/assets/img/logo.webp" alt="Abundia.io" class="navbar-logo-icon" width="40" height="40">
+                <div class="navbar-logo-text">
+                    <span class="navbar-logo-tagline">ECOSISTEMA TECNOLÓGICO</span>
+                    <span class="navbar-logo-name">ABUNDIA.IO</span>
+                </div>
+            </a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="/#servicios" class="navbar-link">Servicios</a></li>
+                <li class="navbar-item"><a href="/proyectos.html" class="navbar-link" aria-current="page">Abundia Labs</a></li>
+                <li class="navbar-item"><a href="/servicios/hosting.html" class="navbar-link">Hosting</a></li>
+                <li class="navbar-item"><a href="/servicios/hosting.html#planes" class="navbar-link">Planes</a></li>
+                
+                <li class="navbar-item"><a href="/legal/" class="navbar-link">Legal</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="/contacto.html" class="btn btn-primary navbar-cta">Solicitar Cotización</a>
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="navbar-toggle-line"></span><span class="navbar-toggle-line"></span><span class="navbar-toggle-line"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="navbar-mobile-menu" id="navbar-mobile-menu" aria-hidden="true">
+            <ul class="navbar-mobile-list">
+                <li><a href="/#servicios" class="navbar-mobile-link">Servicios</a></li>
+                <li><a href="/proyectos.html" class="navbar-mobile-link">Abundia Labs</a></li>
+                <li><a href="/servicios/hosting.html" class="navbar-mobile-link">Hosting</a></li>
+                <li><a href="/servicios/hosting.html#planes" class="navbar-mobile-link">Planes</a></li>
+                
+                <li><a href="/legal/" class="navbar-mobile-link">Legal</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Hero -->
+        <section class="page-hero" aria-labelledby="moyofy-hero-title">
+            <div class="page-hero-content">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    Gamificación Social & Nightlife Tech
+                </div>
+                <a href="https://moyofy.abundia.io" target="_blank" rel="noopener noreferrer" class="external-link-badge">
+                    moyofy.abundia.io
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <h1 class="page-hero-title" id="moyofy-hero-title">MOYOFY</h1>
+                <p class="page-hero-description">Transforma tu espacio en una experiencia social gamificada donde la música, el consumo y la interacción generan ingresos reales. Aumenta el engagement de tus clientes con una plataforma única en el mercado.</p>
+                
+                <!-- Gamification Visualization -->
+                <div class="moyofy-hero-visual reveal-up">
+                    <svg viewBox="0 0 800 450" fill="none" aria-hidden="true" style="width:100%;height:auto;">
+                        <defs>
+                            <linearGradient id="mfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.15"/>
+                                <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:0.95"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="800" height="450" fill="url(#mfBg)" rx="16"/>
+                        
+                        <!-- Background elements (Music notes, coins) -->
+                        <g opacity="0.1" stroke="#22c55e" stroke-width="1">
+                            <path d="M100 100 Q120 80 140 100 T180 100"/><path d="M120 100 L120 140"/><path d="M160 100 L160 130"/>
+                            <path d="M650 350 Q670 330 690 350 T730 350"/><path d="M670 350 L670 390"/><path d="M710 350 L710 380"/>
+                        </g>
+                        <g opacity="0.15" fill="#22c55e">
+                            <circle cx="200" cy="150" r="15"/><circle cx="600" cy="200" r="12"/><circle cx="150" cy="350" r="10"/>
+                        </g>
+
+                        <!-- Central Phone/Tablet Interface -->
+                        <rect x="250" y="80" width="300" height="290" rx="24" fill="#171717" stroke="#22c55e" stroke-width="2"/>
+                        <rect x="265" y="100" width="270" height="250" rx="12" fill="rgba(34,197,94,0.05)"/>
+                        
+                        <!-- UI Header -->
+                        <text x="400" y="130" text-anchor="middle" fill="#22c55e" font-size="16" font-weight="700">MOYOFY LIVE</text>
+                        <rect x="280" y="145" width="240" height="40" rx="8" fill="rgba(34,197,94,0.1)" stroke="#22c55e" stroke-width="1"/>
+                        <text x="400" y="170" text-anchor="middle" fill="#e5e5e5" font-size="12">🎵 Now Playing: Song Title</text>
+                        
+                        <!-- Ranking List -->
+                        <g transform="translate(280, 200)">
+                            <rect x="0" y="0" width="240" height="30" rx="6" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1"/>
+                            <text x="10" y="20" fill="#22c55e" font-size="11" font-weight="700">1</text>
+                            <text x="30" y="20" fill="#e5e5e5" font-size="11">Mesa 4</text>
+                            <text x="200" y="20" fill="#22c55e" font-size="11" font-weight="700">1,250 M</text>
+                            
+                            <rect x="0" y="40" width="240" height="30" rx="6" fill="rgba(255,255,255,0.03)"/>
+                            <text x="10" y="60" fill="#a3a3a3" font-size="11" font-weight="700">2</text>
+                            <text x="30" y="60" fill="#e5e5e5" font-size="11">Mesa 2</text>
+                            <text x="200" y="60" fill="#a3a3a3" font-size="11">980 M</text>
+                            
+                            <rect x="0" y="80" width="240" height="30" rx="6" fill="rgba(255,255,255,0.03)"/>
+                            <text x="10" y="100" fill="#a3a3a3" font-size="11" font-weight="700">3</text>
+                            <text x="30" y="100" fill="#e5e5e5" font-size="11">Mesa 7</text>
+                            <text x="200" y="100" fill="#a3a3a3" font-size="11">750 M</text>
+                        </g>
+
+                        <!-- Action Buttons -->
+                        <g transform="translate(280, 310)">
+                            <rect x="0" y="0" width="115" height="30" rx="15" fill="#22c55e"/>
+                            <text x="57.5" y="20" text-anchor="middle" fill="#0a0a0a" font-size="10" font-weight="700">Votar Canción</text>
+                            
+                            <rect x="125" y="0" width="115" height="30" rx="15" fill="rgba(34,197,94,0.1)" stroke="#22c55e" stroke-width="1"/>
+                            <text x="182.5" y="20" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="700">Enviar Regalo</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Características Principales -->
+        <section class="section" aria-labelledby="mf-features-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        La Experiencia MOYOFY
+                    </div>
+                    <h2 class="section-title" id="mf-features-title">Una plataforma completa de interacción social</h2>
+                    <p class="section-description">Cuatro pilares tecnológicos que transforman la música y el consumo en una experiencia participativa y rentable.</p>
+                </div>
+                
+                <div class="feature-highlight-grid">
+                    <div class="feature-highlight-card reveal">
+                        <div class="feature-highlight-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8"/><path d="M12 18V6"/></svg>
+                        </div>
+                        <h3>Economía Digital MOYOS</h3>
+                        <p>Moneda virtual que incentiva acciones reales: votar canciones, agregar temas a la cola, comprar consumiciones y participar en dinámicas del local.</p>
+                    </div>
+                    <div class="feature-highlight-card reveal">
+                        <div class="feature-highlight-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3>Misiones & Logros</h3>
+                        <p>Gamificación completa con retos diarios y recompensas que generan dopamina y engagement real entre los clientes del establecimiento.</p>
+                    </div>
+                    <div class="feature-highlight-card reveal">
+                        <div class="feature-highlight-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                        </div>
+                        <h3>Regalos Virtuales</h3>
+                        <p>Regalos animados como cerveza dorada, unicornio neón y efectos visuales que elevan la experiencia social y se proyectan en las pantallas del bar.</p>
+                    </div>
+                    <div class="feature-highlight-card reveal">
+                        <div class="feature-highlight-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                        <h3>Ranking en Tiempo Real</h3>
+                        <p>Clasificación de mesas por actividad, MOYOS y participación. Visible tanto en los teléfonos de los clientes como en las pantallas gigantes del local.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section class="section section-dark" aria-labelledby="mf-benefits-title">
+            <div class="container">
+                <div class="benefits-layout">
+                    <div class="reveal-left">
+                        <div class="section-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                            ¿Por qué MOYOFY?
+                        </div>
+                        <h2 class="section-title" id="mf-benefits-title">Más participación, mejores momentos</h2>
+                        <p class="section-description">Una experiencia activa hace que la gente disfrute más, se quede más tiempo y consuma más. MOYOFY convierte espectadores pasivos en protagonistas de la noche.</p>
+                    </div>
+                    
+                    <div class="benefit-list reveal-right">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Experiencia Única</h4>
+                                <p>Crea momentos memorables que diferencian a tu espacio de la competencia y fidelizan a los clientes.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Marketing Viral Orgánico</h4>
+                                <p>Las animaciones, rankings y premios generan conversaciones y contenido orgánico en redes sociales.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            </div>
+                            <div class="benefit-content">
+                                <h4>Dashboard PRO</h4>
+                                <p>Control total de misiones, estadísticas por mesa, promociones y actividades en tiempo real para el administrador.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Audience -->
+        <section class="section" aria-labelledby="mf-target-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        ¿Para quién es MOYOFY?
+                    </div>
+                    <h2 class="section-title" id="mf-target-title">Diseñado para espacios de entretenimiento</h2>
+                </div>
+                
+                <div class="target-grid">
+                    <div class="target-card reveal">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><path d="M8 21h8M12 17v4M7 4h10M5 4h14v4a7 7 0 01-14 0V4z"/></svg>
+                        <h4>Bares y Pubs</h4>
+                    </div>
+                    <div class="target-card reveal">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                        <h4>Discotecas y Clubes</h4>
+                    </div>
+                    <div class="target-card reveal">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <h4>Eventos Privados</h4>
+                    </div>
+                    <div class="target-card reveal">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 18v.01"/></svg>
+                        <h4>Productoras de Eventos</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="section section-dark" aria-labelledby="mf-cta-title">
+            <div class="container text-center">
+                <div class="section-header text-center">
+                    <h2 class="section-title" id="mf-cta-title">Agenda una Demo Personalizada</h2>
+                    <p class="section-description">Descubre cómo MOYOFY puede transformar tu negocio en una experiencia interactiva y rentable. Selecciona un horario para una demostración en vivo de la plataforma.</p>
+                </div>
+                <div class="section-actions" style="justify-content: center;">
+                    <a href="https://moyofy.abundia.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                        Visitar Sitio Oficial
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                    <a href="https://wa.me/50662667997" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        WhatsApp MOYOFY
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/assets/img/logo.webp" alt="Abundia.io" class="footer-logo-icon" width="40" height="40">
+                        <span class="footer-logo-name">Abundia.io</span>
+                    </a>
+                    <p class="footer-description">Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links"><li><a href="/servicios/ciberseguridad.html">Ciberseguridad</a></li><li><a href="/servicios/hosting.html">Hosting</a></li><li><a href="/servicios/desarrollo-web.html">Desarrollo Web</a></li><li><a href="/servicios/ia.html">IA & Automatización</a></li></ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">ImmuniWeb</h4>
+                    <ul class="footer-links"><li><a href="/servicios/ciberseguridad.html#discovery">Discovery</a></li><li><a href="/servicios/ciberseguridad.html#neuron">Neuron</a></li><li><a href="/servicios/ciberseguridad.html#continuous">Continuous</a></li><li><a href="/servicios/ciberseguridad.html#mobile">Mobile</a></li></ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact"><li><a href="https://wa.me/50672232295" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li><a href="https://t.me/abundiatech" target="_blank" rel="noopener noreferrer">Telegram</a></li><li><a href="mailto:info@abundia.io">info@abundia.io</a></li><li>San José, Costa Rica</li></ul>
+                </div>
+            
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div><div class="footer-bottom">
+                <p>&copy; 2026 Abundia.io · Todos los derechos reservados</p>
+                <p class="footer-partner">Partner ImmuniWeb® · Hosting · IA · Seguridad</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
+    <script src="/js/cursor.js" defer></script>
+</body>
+</html>
+

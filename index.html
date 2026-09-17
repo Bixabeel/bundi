@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abundia.io - Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium. Partner oficial ImmuniWeb®.">
+    <meta name="keywords" content="ciberseguridad, inteligencia artificial, hosting, desarrollo web, automatización, ImmuniWeb, cloud, WAF, DDoS">
+    <meta name="author" content="Abundia.io">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abundia.io/">
+    <meta property="og:title" content="Abundia.io | Tecnología, IA, Seguridad y Hosting">
+    <meta property="og:description" content="Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium.">
+    <meta property="og:image" content="https://abundia.io/assets/img/og/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://abundia.io/">
+    <meta property="twitter:title" content="Abundia.io | Tecnología, IA, Seguridad y Hosting">
+    <meta property="twitter:description" content="Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium.">
+    <meta property="twitter:image" content="https://abundia.io/assets/img/og/og-image.jpg">
+    
+    <!-- Security headers (CSP, HSTS, Permissions-Policy, etc.) are set
+         site-wide via Cloudflare in the /_headers file, not per-page,
+         to avoid the drift that existed here before hardening. -->
+    
+    <title>Abundia.io | Tecnología, IA, Seguridad y Hosting</title>
+    
+    <link rel="canonical" href="https://abundia.io/">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#22c55e">
+
+<!-- ===== ESTILOS PARA CARRUSEL MARQUEE DE ALIADOS (MEJORADO Y AMPLIADO) ===== -->
+<style>
+/* Contenedor del marquee */
+.logo-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0; /* Un poco más de espacio vertical para respirar */
+  mask-image: linear-gradient(to right, transparent 0, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 1) 92%, transparent 100%);
+}
+
+/* Track que contiene todos los logos y se anima */
+.marquee-track {
+  display: flex;
+  gap: 48px; /* Aumentado de 40px a 48px para mejor separación */
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+  align-items: center;
+}
+
+.logo-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Cada slide del logo (TAMAÑO AUMENTADO) */
+.logo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 180px;  /* Aumentado de 150px a 180px */
+  height: 110px; /* Aumentado de 90px a 110px */
+  padding: 16px 20px; /* Aumentado para mejor proporción interna */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.logo-slide:hover {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.35);
+  transform: translateY(-4px); /* Elevación ligeramente más notoria */
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.15);
+}
+
+/* Imagen dentro del slide: forzamos a que llene el nuevo espacio disponible */
+.logo-slide img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%) brightness(0.95);
+  transition: filter 0.3s ease;
+}
+
+.logo-slide:hover img {
+  filter: grayscale(0%) brightness(1.1);
+}
+
+/* Link "Ver todos los aliados" */
+.marquee-view-all {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.marquee-view-all .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  text-decoration: none;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.marquee-view-all .card-link:hover {
+  background: #22c55e;
+  color: #0a0a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+  .logo-slide {
+    width: 140px;  /* Aumentado de 120px */
+    height: 85px;  /* Aumentado de 75px */
+    padding: 12px 16px;
+  }
+  .marquee-track {
+    gap: 32px; /* Aumentado de 24px */
+    animation-duration: 30s;
+  }
+}
+
+/* Responsive: Móvil */
+@media (max-width: 480px) {
+  .logo-slide {
+    width: 120px;  /* Aumentado de 100px */
+    height: 75px;  /* Aumentado de 65px */
+    padding: 10px 12px;
+  }
+  .marquee-track {
+    gap: 20px; /* Aumentado de 16px */
+    animation-duration: 20s;
+  }
+}
+
+/* Accesibilidad: Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+  }
+  .logo-marquee {
+    overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+</style>
+<!-- ===== FIN ESTILOS CARRUSEL ===== -->
+<style>
+/* Abundia Legal Footer Fix */
+.footer-grid{grid-template-columns:repeat(5,1fr)!important}
+@media(max-width:1024px){.footer-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr!important}}
+</style>
+
+<style id="abundia-index-refinement-v2">
+/* ---- Hero glitch / tech visual language ---- */
+.glitch-word {
+  position: relative;
+  display: inline-block;
+  color: var(--color-gray-100);
+  isolation: isolate;
+  text-shadow: 0 0 0 rgba(255,255,255,0);
+}
+
+.glitch-word::before,
+.glitch-word::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: screen;
+}
+
+.glitch-word::before {
+  color: #00f5ff;
+  transform: translate(2px, 0);
+}
+
+.glitch-word::after {
+  color: #ff315d;
+  transform: translate(-2px, 0);
+}
+
+.glitch-word {
+  animation: abundiaGlitchPulse 6.5s steps(1, end) infinite;
+}
+
+.glitch-word::before {
+  animation: abundiaGlitchCyan 6.5s steps(1, end) infinite;
+}
+
+.glitch-word::after {
+  animation: abundiaGlitchMagenta 6.5s steps(1, end) infinite;
+}
+
+@keyframes abundiaGlitchPulse {
+  0%, 88%, 100% { transform: translate3d(0,0,0); text-shadow: none; }
+  89% { transform: translate3d(-2px,0,0); text-shadow: 3px 0 #00f5ff, -3px 0 #ff315d; }
+  90% { transform: translate3d(3px,-1px,0); text-shadow: -4px 0 #00f5ff, 4px 0 #ff315d; }
+  91% { transform: translate3d(-1px,1px,0); text-shadow: 2px 0 #00f5ff, -2px 0 #ff315d; }
+  92% { transform: translate3d(0,0,0); text-shadow: none; }
+}
+
+@keyframes abundiaGlitchCyan {
+  0%, 88%, 100% { opacity: 0; clip-path: inset(0 0 0 0); }
+  89% { opacity: .8; clip-path: inset(10% 0 65% 0); }
+  90% { opacity: .65; clip-path: inset(55% 0 20% 0); }
+  91% { opacity: .75; clip-path: inset(28% 0 46% 0); }
+  92% { opacity: 0; }
+}
+
+@keyframes abundiaGlitchMagenta {
+  0%, 88%, 100% { opacity: 0; clip-path: inset(0 0 0 0); }
+  89% { opacity: .7; clip-path: inset(48% 0 33% 0); }
+  90% { opacity: .8; clip-path: inset(16% 0 60% 0); }
+  91% { opacity: .6; clip-path: inset(70% 0 8% 0); }
+  92% { opacity: 0; }
+}
+
+/* ---- Desktop/tablet navbar: prevent long CTA from stealing width ---- */
+@media (min-width: 768px) and (max-width: 1180px) {
+  .navbar-container {
+    padding-left: 18px;
+    padding-right: 18px;
+    gap: 16px;
+  }
+
+  .navbar-logo {
+    gap: 10px;
+  }
+
+  .navbar-logo-tagline { display: none; }
+  .navbar-logo-name { font-size: 16px; }
+
+  .navbar-menu {
+    gap: 18px;
+  }
+
+  .navbar-cta {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+}
+
+/* ---- Phone header: logo + hamburger; CTA moves into menu ---- */
+@media (max-width: 767px) {
+  .navbar-container {
+    height: 64px;
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .navbar-logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .navbar-logo-tagline { display: none; }
+  .navbar-logo-name {
+    font-size: 15px;
+    letter-spacing: .035em;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+  }
+
+  .navbar-cta { display: none !important; }
+
+  .navbar-toggle {
+    display: flex !important;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border-color: rgba(34,197,94,.35);
+    background: rgba(34,197,94,.06);
+  }
+
+  .navbar-toggle-line { background: var(--color-gray-200); }
+
+  .navbar-mobile-menu {
+    top: 64px;
+    padding: 18px;
+    background:
+      radial-gradient(circle at 90% 0%, rgba(34,197,94,.10), transparent 35%),
+      rgba(10,10,10,.98);
+    backdrop-filter: blur(18px);
+  }
+
+  .navbar-mobile-list {
+    padding-top: 6px;
+    gap: 8px;
+  }
+
+  .navbar-mobile-link {
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,.05);
+    background: rgba(255,255,255,.02);
+  }
+
+  .navbar-mobile-cta {
+    display: block;
+    margin-top: 8px;
+    padding: 14px 16px;
+    border-radius: var(--radius-lg);
+    background: var(--color-primary);
+    color: var(--color-black-deep);
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 0 26px rgba(34,197,94,.24);
+  }
+
+  .navbar-mobile-cta:hover,
+  .navbar-mobile-cta:focus {
+    color: var(--color-black-deep);
+    background: var(--color-primary-light);
+  }
+
+  .hero {
+    min-height: calc(100svh - 64px);
+    padding-top: 88px;
+    padding-bottom: 58px;
+    background:
+      radial-gradient(circle at 50% 18%, rgba(34,197,94,.10), transparent 30%),
+      radial-gradient(circle at 15% 90%, rgba(0,245,255,.05), transparent 24%),
+      var(--color-black-deep);
+  }
+
+  .hero-container {
+    gap: 18px;
+    max-width: 360px;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+    padding: 7px 11px;
+    letter-spacing: .08em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.15rem, 11vw, 3rem);
+    line-height: 1.04;
+    max-width: 350px;
+    text-wrap: balance;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 335px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    border-radius: 14px;
+  }
+
+  .hero-link { margin-top: 4px; }
+
+  .hero-trust {
+    width: min(100%, 360px);
+    margin-top: 28px;
+    padding-top: 22px;
+    gap: 16px;
+  }
+
+  .trust-badge {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,.05);
+    border-radius: 14px;
+    background: rgba(255,255,255,.02);
+  }
+
+  /* A little less visual density below the fold on phones. */
+  .section { padding-left: 18px; padding-right: 18px; }
+}
+
+/* Browser can avoid laying out far-below sections until needed. */
+@media (min-width: 900px) {
+  main > .section:not(:first-of-type) {
+    content-visibility: auto;
+    contain-intrinsic-size: 760px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch-word,
+  .glitch-word::before,
+  .glitch-word::after { animation: none; }
+}
+</style>
+
+</head>
+<body class="dark-theme">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar" id="navbar" role="banner">
+        <nav class="navbar-container" role="navigation" aria-label="Navegación principal">
+            <!-- Logo -->
+            <a href="/" class="navbar-logo" aria-label="Abundia.io - Inicio">
+                <img src="/assets/img/logo.webp" alt="Abundia.io" class="navbar-logo-icon" width="40" height="40">
+                <div class="navbar-logo-text">
+                    <span class="navbar-logo-tagline">ECOSISTEMA TECNOLÓGICO</span>
+                    <span class="navbar-logo-name">ABUNDIA.IO</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="/#servicios" class="navbar-link">Servicios</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/proyectos.html" class="navbar-link">Abundia Labs</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/servicios/hosting.html" class="navbar-link">Hosting</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/servicios/hosting.html#planes" class="navbar-link">Planes</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/contacto.html" class="navbar-link">Contacto</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/legal/" class="navbar-link">Legal</a>
+                </li>
+            </ul>
+            
+            <!-- CTA Buttons -->
+            <div class="navbar-actions">
+                <a href="/contacto.html" class="btn btn-primary navbar-cta">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    Solicitar Cotización
+                </a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navbar-mobile-menu">
+                    <span class="navbar-toggle-line"></span>
+                    <span class="navbar-toggle-line"></span>
+                    <span class="navbar-toggle-line"></span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="navbar-mobile-menu" id="navbar-mobile-menu" aria-hidden="true">
+            <ul class="navbar-mobile-list">
+                <li><a href="/#servicios" class="navbar-mobile-link">Servicios</a></li>
+                <li><a href="/proyectos.html" class="navbar-mobile-link">Abundia Labs</a></li>
+                <li><a href="/servicios/hosting.html" class="navbar-mobile-link">Hosting</a></li>
+                <li><a href="/servicios/hosting.html#planes" class="navbar-mobile-link">Planes</a></li>
+                <li><a href="/legal/" class="navbar-mobile-link">Legal</a></li>
+                <li><a href="/contacto.html" class="navbar-mobile-cta">Solicitar cotización</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-label="Bienvenida">
+            <div class="hero-container">
+                <div class="hero-badge fade-in-up">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                    IA · Seguridad · Hosting · Desarrollo
+                </div>
+                
+                <h1 class="hero-title fade-in-up" style="animation-delay: 0.1s">
+                    Tecnología, <span class="glitch-word" data-text="IA">IA</span> y Seguridad para empresas que quieren crecer
+                </h1>
+                
+                <p class="hero-description fade-in-up" style="animation-delay: 0.2s">
+                    Abundia integra ciberseguridad, automatización, desarrollo web, infraestructura y producción digital en un solo ecosistema
+                </p>
+                
+                <div class="hero-actions fade-in-up" style="animation-delay: 0.3s">
+                    <a href="https://wa.me/50672232295" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        Hablar por WhatsApp
+                    </a>
+                    <a href="/contacto.html" class="btn btn-primary">
+                        Solicitar Cotización
+                    </a>
+                </div>
+                
+                <a href="/proyectos.html" class="hero-link fade-in-up" style="animation-delay: 0.4s">
+                    Ver Proyectos
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="hero-trust fade-in-up" style="animation-delay: 0.5s">
+                <div class="trust-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <div>
+                        <strong>Partner ImmuniWeb®</strong>
+                        <span>Respuesta menor a 3h</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    <div>
+                        <strong>Hosting + Seguridad</strong>
+                        <span>IA integrada</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <div>
+                        <strong>+300 dominios</strong>
+                        <span>.com, .net, .org, .io, .ai, .tech </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Trust Stats Section -->
+        <section class="section section-dark" aria-labelledby="stats-title">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-title">Soporte técnico y monitoreo continuo</h3>
+                            <p class="stat-value">99.9%</p>
+                            <p class="stat-label">Disponibilidad y redundancia en hosting</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-title">Extensiones de dominio disponibles</h3>
+                            <p class="stat-value">+300</p>
+                            <p class="stat-label">TLD, ccTLD y gTLD</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-title">Automatización, chatbots, CRM y defensa multicapa</h3>
+                            <p class="stat-value">Code+IA</p>
+                            <p class="stat-label">Tecnología de punta integrada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="section" id="servicios" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                        Servicios Principales de Abundia
+                    </div>
+                    <h2 class="section-title" id="services-title">Tecnología empresarial integrada: ciberseguridad, IA, desarrollo web, hosting y optimización digital en un solo lugar</h2>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Ciberseguridad -->
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Ciberseguridad Empresarial</h3>
+                        <p class="service-description">WAF, DDoS, Anti-Bot, hardening, monitoreo y protección multicapa.</p>
+                        <a href="/servicios/ciberseguridad.html" class="service-link">
+                            Ver Seguridad
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <!-- Desarrollo Web -->
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Desarrollo Web & Apps</h3>
+                        <p class="service-description">Sitios premium, plataformas, eCommerce, PWA y sistemas empresariales</p>
+                        <a href="/proyectos.html" class="service-link">
+                            Ver Proyectos
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <!-- IA & Automatización -->
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/>
+                                <circle cx="7.5" cy="14.5" r="1.5"/>
+                                <circle cx="16.5" cy="14.5" r="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Chatbots & IA</h3>
+                        <p class="service-description">Automatización, WhatsApp Bots, CRM, dashboards y seguimiento automático</p>
+                        <a href="/contacto.html" class="service-link">
+                            Solicitar IA
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <!-- Hosting -->
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Hosting Seguro</h3>
+                        <p class="service-description">Infraestructura redundante, backups, correos corporativos y alto rendimiento</p>
+                        <a href="/servicios/hosting.html" class="service-link">
+                            Ver Hosting
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <!-- Dominios -->
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Dominios & SSL</h3>
+                        <p class="service-description">Dominios ICANN, privacidad WHOIS, SSL y más de 300 extensiones</p>
+                        <a href="/servicios/dominios.html" class="service-link">
+                            Ver Dominios
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <!-- SEO -->
+                    <article class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="M21 21l-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">SEO & Conversión</h3>
+                        <p class="service-description">Optimización técnica, velocidad, estructura SEO y mejores CTA</p>
+                        <a href="/contacto.html" class="service-link">
+                            Mejorar Sitio
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ImmuniWeb Section -->
+        <section class="section section-dark section-immuniweb" aria-labelledby="immuniweb-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        Partner Oficial de ImmuniWeb® AI Platform
+                    </div>
+                    <h2 class="section-title" id="immuniweb-title">Implementamos seguridad avanzada, descubrimiento de superficie de ataque, pentesting, escaneo continuo y protección para aplicaciones web, móviles y APIs</h2>
+                </div>
+                
+                <div class="immuniweb-grid">
+                    <div class="immuniweb-card reveal">
+                        <h3 class="immuniweb-card-title">ImmuniWeb® Discovery</h3>
+                        <p>Descubrimiento de activos expuestos, dominios, subdominios, infraestructura y superficie de ataque</p>
+                    </div>
+                    <div class="immuniweb-card reveal">
+                        <h3 class="immuniweb-card-title">ImmuniWeb® Neuron</h3>
+                        <p>Escaneo premium para aplicaciones web, vulnerabilidades críticas y OWASP Top 10</p>
+                    </div>
+                    <div class="immuniweb-card reveal">
+                        <h3 class="immuniweb-card-title">ImmuniWeb® Continuous</h3>
+                        <p>Escaneo continuo, pentesting permanente y monitoreo activo de amenazas</p>
+                    </div>
+                    <div class="immuniweb-card reveal">
+                        <h3 class="immuniweb-card-title">ImmuniWeb® Mobile</h3>
+                        <p>Protección y auditoría de aplicaciones móviles para Android e iOS</p>
+                    </div>
+                    <div class="immuniweb-card reveal">
+                        <h3 class="immuniweb-card-title">Dark Web Monitoring</h3>
+                        <p>Monitoreo de filtraciones, credenciales expuestas y amenazas en la dark web</p>
+                    </div>
+                    <div class="immuniweb-card reveal">
+                        <h3 class="immuniweb-card-title">API Security</h3>
+                        <p>Auditoría y protección avanzada para APIs, endpoints y microservicios</p>
+                    </div>
+                </div>
+                
+                <div class="section-actions">
+                    <a href="/contacto.html" class="btn btn-primary">Solicitar Auditoría</a>
+                    <a href="/servicios/ciberseguridad.html" class="btn btn-secondary">Ver Planes de Seguridad</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- IA Automation Section -->
+        <section class="section" aria-labelledby="ia-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        Automatización con IA
+                    </div>
+                    <h2 class="section-title" id="ia-title">Soluciones avanzadas para empresas que desean automatizar procesos, atención al cliente, seguimiento de leads, dashboards y operaciones repetitivas</h2>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Chatbots con IA basados en vectorización</h3>
+                            <p>responden usando tu web, documentos y archivos en tiempo real</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">WhatsApp Bots</h3>
+                            <p>Respuestas automáticas, seguimiento, preguntas frecuentes y generación de leads</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Dashboards & Reportes</h3>
+                            <p>Visualización de datos, métricas comerciales y control operacional</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polyline points="13 17 18 12 13 7"/>
+                                <polyline points="6 17 11 12 6 7"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Automatización de Procesos</h3>
+                            <p>Reducción de tareas repetitivas, ahorro de tiempo y eficiencia operativa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">CRM y Seguimiento</h3>
+                            <p>Seguimiento de clientes, recordatorios, pipelines y automatización comercial</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Integración con Sitios Web</h3>
+                            <p>IA integrada en landing pages, formularios, sistemas y plataformas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-actions">
+                    <a href="/contacto.html" class="btn btn-primary">Solicitar una Demo</a>
+                    <a href="https://wa.me/50672232295" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================================ -->
+        <!-- ============= NUEVA SECCIÓN: CARRUSEL MARQUEE ============== -->
+        <!-- ============================================================ -->
+        <section class="section section-dark" aria-labelledby="tech-title">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                        Tecnologías y Aliados
+                    </div>
+                    <h2 class="section-title" id="tech-title">Integramos las mejores plataformas para garantizar rendimiento, seguridad y escalabilidad</h2>
+                </div>
+                
+                <!-- CARRUSEL MARQUEE INFINITO -->
+                <div class="logo-marquee">
+                    <div class="marquee-track">
+                        <!-- === PRIMER SET DE LOGOS (17 logos) === -->
+                        <a href="https://aws.amazon.com/es/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/aws.webp" alt="Amazon Web Services" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.cloudflare.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/cloudflare.webp" alt="Cloudflare" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://cloud.google.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/google.webp" alt="Google Cloud" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.immuniweb.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/immuniweb.webp" alt="ImmuniWeb" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.pinecone.io/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/Pinecone.webp" alt="Pinecone" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://railway.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/railway.webp" alt="Railway" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://render.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/render.webp" alt="Render" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://vercel.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/vercel.webp" alt="Vercel" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.wordfence.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/wordfence.webp" alt="Wordfence" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://wordpress.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/wordpress.webp" alt="WordPress" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+
+                        <!-- === SEGUNDO SET DE LOGOS (duplicado para efecto infinito) === -->
+                        <a href="https://aws.amazon.com/es/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/aws.webp" alt="Amazon Web Services" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.cloudflare.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/cloudflare.webp" alt="Cloudflare" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://cloud.google.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/google.webp" alt="Google Cloud" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.immuniweb.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/immuniweb.webp" alt="ImmuniWeb" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.pinecone.io/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/Pinecone.webp" alt="Pinecone" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://railway.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/railway.webp" alt="Railway" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://render.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/render.webp" alt="Render" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://vercel.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/vercel.webp" alt="Vercel" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://www.wordfence.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/wordfence.webp" alt="Wordfence" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                        <a href="https://wordpress.com/" target="_blank" rel="noopener" class="logo-slide">
+                            <img src="/assets/img/wordpress.webp" alt="WordPress" width="51" height="32" loading="lazy" decoding="async">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="marquee-view-all">
+                    <a href="/contacto.html" class="card-link">Conoce todos nuestros aliados y tecnologías</a>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================================ -->
+        <!-- ============= FIN DE LA NUEVA SECCIÓN MARQUEE ============== -->
+        <!-- ============================================================ -->
+        
+        <!-- Web Development Economic Section -->
+        <section class="section section-economic" aria-labelledby="economic-title">
+            <div class="container">
+                <div class="economic-layout">
+                    <div class="economic-content">
+                        <div class="section-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                            Desde $200
+                        </div>
+                        <h2 class="section-title" id="economic-title">Páginas Web Profesionales para Emprendedores</h2>
+                        <p class="section-description">Diseños modernos, rápidos y optimizados para emprendedores, tours, restaurantes, alojamientos, transporte, servicios y negocios locales. Incluye dominio, hosting y entrega completa desde $200</p>
+                        
+                        <div class="economic-features">
+                            <div class="economic-feature">
+                                <h3>Diseño y experiencia</h3>
+                                <ul>
+                                    <li>Responsive para celular, tablet y computadora</li>
+                                    <li>Hero principal de alto impacto</li>
+                                    <li>Navegación fija superior</li>
+                                    <li>Botones CTA estratégicos</li>
+                                    <li>Diseño moderno con animaciones, hover y tipografías premium</li>
+                                    <li>Iconografía profesional, código ligero y rápido</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="economic-feature">
+                                <h3>Contacto y conversión</h3>
+                                <ul>
+                                    <li>Integración directa con WhatsApp</li>
+                                    <li>Botón flotante de WhatsApp</li>
+                                    <li>Formularios personalizados</li>
+                                    <li>Reservas, consultas y captación de leads</li>
+                                    <li>Google Maps integrado, datos de contacto visibles</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="economic-feature">
+                                <h3>Contenido visual</h3>
+                                <ul>
+                                    <li>Galerías con imágenes y videos</li>
+                                    <li>Filtros por categorías</li>
+                                    <li>Videos de YouTube integrados</li>
+                                    <li>Modales para pantalla completa</li>
+                                    <li>Secciones de servicios, paquetes y experiencias</li>
+                                    <li>Perfil del fundador o responsable</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="economic-feature">
+                                <h3>SEO y posicionamiento</h3>
+                                <ul>
+                                    <li>Meta title y meta description</li>
+                                    <li>Robots.txt preparado, sitemap.xml preparado</li>
+                                    <li>SEO integrado desde HTML, URLs amigables</li>
+                                    <li>Estructura H1, H2 y H3</li>
+                                    <li>Compatible con Google Search Console, preparación para Analytics y Meta Pixel</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="economic-feature">
+                                <h3>Escalabilidad futura</h3>
+                                <ul>
+                                    <li>Preparado para testimonios y FAQ</li>
+                                    <li>Compatible con blog, ecommerce y reservas online</li>
+                                    <li>Compatible con Cloudflare, Vercel y plataformas modernas</li>
+                                    <li>Código entregado completo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="economic-workflow">
+                            <h3>Flujo de trabajo:</h3>
+                            <p>El cliente entrega desde el inicio fotos, videos, textos, logotipo, servicios, precios e información del negocio. Realizamos una sola ronda de revisión. Una vez aprobado, entregamos todos los accesos, archivos originales y código fuente. Si en el futuro deseas cambios, nuevas secciones o actualizaciones, se cotizan por separado como mantenimiento mensual con un máximo definido de cambios al mes</p>
+                        </div>
+                        
+                        <div class="section-actions">
+                            <a href="/contacto.html" class="btn btn-primary">Solicitar página económica</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Preview Section -->
+        <section class="section" id="proyectos" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        Proyectos Recientes
+                    </div>
+                    <h2 class="section-title" id="projects-title"> Consulta los roadmaps de cada proyecto y participa como colaborador a través de GitHub o Discord</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- ETERNA -->
+                    <article class="project-card reveal">
+                        <div class="project-card-image">
+                            <img src="/assets/img/eterna.webp" alt="ETERNA - Sistema Multi-Agente con Graph-RAG, Digital Twin y Zero Trust" loading="lazy" width="400" height="250" decoding="async">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="project-badge">IA Organizacional</div>
+                            <h3 class="project-title">ETERNA</h3>
+                            <p class="project-description">El cerebro operativo de tu organización. Sistema Multi-Agente con Graph-RAG, Digital Twin y Zero Trust</p>
+                            <a href="/proyectos/eterna.html" class="project-link">
+                                Ver Roadmap
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- LifeFirst -->
+                    <article class="project-card reveal">
+                        <div class="project-card-image">
+                            <img src="/assets/img/lifefirst.webp" alt="LifeFirst - Compañero emocional diario con detección de ánimo y análisis de patrones" loading="lazy" width="400" height="250" decoding="async">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="project-badge">Salud Mental</div>
+                            <h3 class="project-title">LifeFirst</h3>
+                            <p class="project-description">Tu compañero emocional diario. Detección de ánimo, análisis de patrones y recomendaciones personalizadas basadas en ciencia</p>
+                            <a href="/proyectos/lifefirst.html" class="project-link">
+                                Ver Roadmap
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Open Eye -->
+                    <article class="project-card reveal">
+                        <div class="project-card-image">
+                            <img src="/assets/img/openeye.webp" alt="Open Eye - Protección contra grooming y manipulación en línea con IA" loading="lazy" width="400" height="250" decoding="async">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="project-badge">Protección Infantil</div>
+                            <h3 class="project-title">Open Eye</h3>
+                            <p class="project-description">Protección contra grooming y manipulación en línea. Detección temprana de amenazas con IA que previene antes de reaccionar</p>
+                            <a href="/proyectos/open-eye.html" class="project-link">
+                                Ver Roadmap
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- MOYOFY -->
+                    <article class="project-card reveal">
+                        <div class="project-card-image">
+                            <img src="/assets/img/moyofy.webp" alt="MOYOFY - Plataforma de gamificación social para bares con música interactiva y economía digital" loading="lazy" width="400" height="250" decoding="async">
+                        </div>
+                        <div class="project-card-content">
+                            <div class="project-badge">Gamificación Social</div>
+                            <h3 class="project-title">MOYOFY</h3>
+                            <p class="project-description">Plataforma de gamificación social para bares. Música interactiva, economía digital MOYOS, misiones y rankings en tiempo real</p>
+                            <a href="https://moyofy.abundia.io" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Visitar Sitio
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section-actions">
+                    <a href="/proyectos.html" class="btn btn-secondary">
+                        Ir a Abundia Labs
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Domains Section -->
+        <section class="section section-dark" aria-labelledby="domains-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                        Dominios, SSL y Presencia Profesional
+                    </div>
+                    <h2 class="section-title" id="domains-title">Accede a más de 300 extensiones de dominio, certificados SSL, privacidad WHOIS y soluciones de identidad digital profesional</h2>
+                </div>
+                
+                <div class="domains-grid">
+                    <div class="domain-card reveal">
+                        <div class="domain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="domain-title">Dominios ICANN</h3>
+                        <p>.com, .net, .org, .io, .ai, .tech y cientos de extensiones adicionales</p>
+                    </div>
+                    
+                    <div class="domain-card reveal">
+                        <div class="domain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="domain-title">WHOIS Gratis</h3>
+                        <p>Protección de privacidad WHOIS gratuita con cada dominio elegible</p>
+                    </div>
+                    
+                    <div class="domain-card reveal">
+                        <div class="domain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="domain-title">Certificados SSL</h3>
+                        <p>Protección HTTPS, confianza para clientes y mejor posicionamiento SEO</p>
+                    </div>
+                    
+                    <div class="domain-card reveal">
+                        <div class="domain-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3 class="domain-title">TLD, ccTLD y gTLD</h3>
+                        <p>Acceso a extensiones regionales, internacionales y premium</p>
+                    </div>
+                </div>
+                
+                <div class="section-actions">
+                    <a href="/contacto.html" class="btn btn-primary">Consultar Dominio</a>
+                    <a href="https://wa.me/50672232295" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo" aria-label="Abundia.io - Inicio">
+                        <img src="/assets/img/logo.webp" alt="Abundia.io" class="footer-logo-icon" width="40" height="40">
+                        <span class="footer-logo-name">Abundia.io</span>
+                    </a>
+                    <p class="footer-description">Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="/servicios/ciberseguridad.html">Ciberseguridad</a></li>
+                        <li><a href="/servicios/hosting.html">Hosting</a></li>
+                        <li><a href="/servicios/desarrollo-web.html">Desarrollo Web</a></li>
+                        <li><a href="/servicios/ia.html">IA & Automatización</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">ImmuniWeb</h4>
+                    <ul class="footer-links">
+                        <li><a href="/servicios/discovery.html">Discovery</a></li>
+                        <li><a href="/servicios/neuron.html">Neuron</a></li>
+                        <li><a href="/servicios/continuous.html">Continuous</a></li>
+                        <li><a href="/servicios/mobile.html">Mobile</a></li>
+                    </ul>
+                </div>
+                
+                
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <a href="https://wa.me/50672232295" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/abundiatech" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                </svg>
+                                Telegram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@abundia.io">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                info@abundia.io
+                            </a>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            San José, Costa Rica
+                        </li>
+                    </ul>
+                </div>
+            
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div><div class="footer-bottom">
+                <p>&copy; 2023-2026 Abundia.io · Todos los derechos reservados</p>
+                <p class="footer-partner">Partner ImmuniWeb® · Hosting · IA · Seguridad</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
+    <script src="/js/cursor.js" defer></script>
+</body>
+</html>
+

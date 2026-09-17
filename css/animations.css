@@ -1,0 +1,88 @@
+/* ============================================
+   ABUNDIA.IO - Scroll Reveal Animations
+   Used by js/animations.js (IntersectionObserver)
+   Respects prefers-reduced-motion (see main.css)
+   ============================================ */
+
+/* Base reveal state: hidden + offset, animated in via .active */
+.reveal,
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+  will-change: opacity, transform;
+}
+
+.reveal {
+  transform: translateY(24px);
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-down {
+  transform: translateY(-40px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+/* Active state: element has entered the viewport */
+.reveal.active,
+.reveal-up.active,
+.reveal-down.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-scale.active {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children (e.g. grids of cards) */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.reveal-stagger > *.active {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-stagger > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 80ms; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 240ms; }
+.reveal-stagger > *:nth-child(5) { transition-delay: 320ms; }
+.reveal-stagger > *:nth-child(6) { transition-delay: 400ms; }
+
+/* Safety net: never let reveal classes hide content if JS fails to load
+   or IntersectionObserver is unsupported (progressive enhancement) */
+.no-js .reveal,
+.no-js .reveal-up,
+.no-js .reveal-down,
+.no-js .reveal-left,
+.no-js .reveal-right,
+.no-js .reveal-scale,
+.no-js .reveal-stagger > * {
+  opacity: 1;
+  transform: none;
+}

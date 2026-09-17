@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HealthVision® | Plataforma de Análisis Médico con IA | Abundia.io</title>
+    <link rel="canonical" href="https://abundia.io/proyectos/healthvision.html">
+<meta name="description" content="HealthVision® es una plataforma empresarial de análisis de imágenes médicas impulsada por inteligencia artificial. Arquitectura moderna, MLOps, DICOM, GradCAM y cumplimiento normativo.">
+<meta property="og:title" content="HealthVision® | Plataforma de Análisis Médico con IA">
+<meta property="og:description" content="Análisis de imágenes médicas con IA explicable, arquitectura enterprise y cumplimiento normativo.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Favicon & Manifest -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/hero.css">
+<link rel="stylesheet" href="/css/sections.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<style>
+/* Abundia Legal Footer Fix */
+.footer-grid{grid-template-columns:repeat(5,1fr)!important}
+@media(max-width:1024px){.footer-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+NAVBAR
+============================================ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+<div class="navbar-container">
+<a href="/" class="navbar-logo" aria-label="Abundia.io - Inicio">
+<img src="/assets/img/logo.webp" alt="Abundia.io" class="navbar-logo-icon" width="40" height="40">
+<div class="navbar-logo-text">
+<span class="navbar-logo-tagline">Ecosistema Tecnológico</span>
+<span class="navbar-logo-name">ABUNDIA.IO</span>
+</div>
+</a>
+
+<div class="navbar-menu">
+<div class="navbar-item">
+<a href="/#servicios" class="navbar-link">Servicios</a>
+</div>
+<div class="navbar-item">
+<a href="/proyectos.html" class="navbar-link">Abundia Labs</a>
+</div>
+<div class="navbar-item">
+<a href="/servicios/hosting.html" class="navbar-link">Hosting</a>
+</div>
+<div class="navbar-item">
+<a href="/servicios/hosting.html#planes" class="navbar-link">Planes</a>
+</div>
+<div class="navbar-item">
+<a href="/contacto.html" class="navbar-link">Contacto</a>
+</div>
+</div>
+
+<div class="navbar-actions">
+<a href="/contacto.html" class="btn btn-primary navbar-cta">
+Solicitar Cotización
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+</a>
+<button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar-mobile-menu">
+<span class="navbar-toggle-line"></span>
+<span class="navbar-toggle-line"></span>
+<span class="navbar-toggle-line"></span>
+</button>
+</div>
+</div>
+
+<div class="navbar-mobile-menu" id="navbar-mobile-menu" aria-hidden="true">
+<ul class="navbar-mobile-list">
+<li><a href="/#servicios" class="navbar-mobile-link">Servicios</a></li>
+<li><a href="/proyectos.html" class="navbar-mobile-link">Abundia Labs</a></li>
+<li><a href="/servicios/hosting.html" class="navbar-mobile-link">Hosting</a></li>
+<li><a href="/servicios/hosting.html#planes" class="navbar-mobile-link">Planes</a></li>
+
+                <li><a href="/legal/" class="navbar-mobile-link">Legal</a></li>
+</ul>
+<a href="/contacto.html" class="btn btn-primary btn-full">Solicitar Cotización</a>
+</div>
+</nav>
+
+<!-- ============================================
+PAGE HERO
+============================================ -->
+<section class="page-hero">
+<div class="page-hero-content">
+<div class="hero-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+ECOSISTEMA TECNOLÓGICO · ABUNDIA.IO
+</div>
+<h1 class="page-hero-title">HealthVision<sup>®</sup></h1>
+<p class="page-hero-description">Plataforma empresarial de análisis de imágenes médicas impulsada por inteligencia artificial. Arquitectura moderna, procesamiento DICOM, inferencia explicable con GradCAM, MLOps y cumplimiento normativo para hospitales, clínicas e instituciones de salud</p>
+<div class="hero-actions">
+<a href="#arquitectura" class="btn btn-primary btn-large">
+Ver Arquitectura
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+</a>
+<a href="/contacto.html" class="btn btn-secondary btn-large">Solicitar Demo</a>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+ESTADO DEL PROYECTO
+============================================ -->
+<section class="section section-dark">
+<div class="container">
+<div class="info-box">
+<h3 class="info-box-title">Estado del Proyecto</h3>
+<p>HealthVision<sup>®</sup> se encuentra en desarrollo activo como plataforma de análisis médico con IA. Algunas funcionalidades descritas corresponden a capacidades ya implementadas en el prototipo (API FastAPI, procesamiento asíncrono con Celery, inferencia con GradCAM, observabilidad con Prometheus/Grafana y versionado con MLflow), mientras que otras representan componentes planificados cuya disponibilidad dependerá de futuras integraciones técnicas, validaciones clínicas, acuerdos con terceros y requisitos regulatorios aplicables en cada jurisdicción</p>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+1. ¿QUÉ ES HEALTHVISION?
+============================================ -->
+<section class="section" id="que-es">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+01 · PLATAFORMA
+</div>
+<h2 class="section-title">¿Qué es HealthVision<sup>®</sup>?</h2>
+<p class="section-description">Una plataforma de software médico diseñada para el análisis automatizado de imágenes clínicas mediante inteligencia artificial, con arquitectura enterprise, trazabilidad completa y explicabilidad integrada</p>
+</div>
+
+<div class="economic-layout">
+<div class="economic-content">
+<p style="font-size: var(--text-lg); color: var(--color-gray-300); line-height: var(--leading-relaxed); margin-bottom: var(--space-8);">HealthVision<sup>®</sup> no es un modelo aislado de machine learning ni un notebook experimental. Es un <strong style="color: var(--color-primary);">sistema completo de producción</strong> que integra API, procesamiento asíncrono, motor de inferencia, persistencia de datos, observabilidad, versionado de modelos y cumplimiento normativo, pensado para integrarse en los flujos de trabajo reales de instituciones de salud</p>
+
+<div class="economic-features">
+<div class="economic-feature">
+<h3>Diseñado para el Sector Salud</h3>
+<ul>
+<li>Procesamiento nativo de DICOM con metadatos clínicos completos</li>
+<li>Anonimización de información sensible del paciente (PHI)</li>
+<li>Trazabilidad completa de cada análisis y decisión del modelo</li>
+<li>Auditoría de accesos, modificaciones y exportaciones</li>
+<li>Arquitectura preparada para cumplir con GDPR, HIPAA y normativas locales</li>
+</ul>
+</div>
+<div class="economic-feature">
+<h3>Arquitectura Enterprise</h3>
+<ul>
+<li>Separación estricta entre frontend, API, workers y motor de IA</li>
+<li>Procesamiento asíncrono con colas de mensajes (Redis + Celery)</li>
+<li>Escalado horizontal por componente independiente</li>
+<li>Orquestación con Docker y preparación para Kubernetes</li>
+<li>Despliegues reproducibles con CI/CD y registros de imágenes</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+2. PROBLEMA QUE RESUELVE
+============================================ -->
+<section class="section section-dark">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+02 · PROBLEMA
+</div>
+<h2 class="section-title">El problema que resuelve</h2>
+<p class="section-description">Los sistemas de salud enfrentan volúmenes crecientes de estudios de imagen, tiempos de respuesta críticos y la necesidad de decisiones clínicas consistentes y auditables</p>
+</div>
+
+<div class="features-grid">
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Sobrecarga diagnóstica</h3>
+<p>Radiólogos y especialistas revisan cientos de estudios diarios. HealthVision<sup>®</sup> actúa como una capa de apoyo que prioriza casos, reduce tiempos y aporta una segunda opinión cuantificable</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Variabilidad en la interpretación</h3>
+<p>La consistencia diagnóstica depende del criterio humano. La plataforma aporta un análisis estandarizado, reproducible y documentado para cada estudio procesado</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Falta de trazabilidad</h3>
+<p>Muchas soluciones de IA médica no registran qué modelo se usó, con qué versión ni sobre qué datos. HealthVision<sup>®</sup> documenta cada inferencia para auditorías clínicas y regulatorias</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Riesgos de seguridad y privacidad</h3>
+<p>Las imágenes médicas contienen información sensible. La plataforma está diseñada con anonimización, cifrado en tránsito y reposo, y controles de acceso basados en roles (RBAC)</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Modelos no clínicamente validados</h3>
+<p>HealthVision<sup>®</sup> utiliza modelos entrenados en datasets médicos (CheXpert, MIMIC-CXR, NIH ChestXray14) y está preparado para incorporar validaciones clínicas, métricas y aprobaciones formales</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Reportes poco accionables</h3>
+<p>No basta con un número. La plataforma genera reportes con explicabilidad (GradCAM), metadatos del modelo, versión, checksum y timestamp UTC, listos para integración clínica</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+3. BENEFICIOS
+============================================ -->
+<section class="section">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+03 · BENEFICIOS
+</div>
+<h2 class="section-title">Beneficios para instituciones de salud</h2>
+<p class="section-description">HealthVision<sup>®</sup> aporta valor tangible a hospitales, clínicas, centros de diagnóstico y profesionales médicos</p>
+</div>
+
+<div class="immuniweb-grid">
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Para Hospitales</h3>
+<p>Reducción de tiempos de revisión, priorización automática de casos críticos, integración con PACS/RIS y trazabilidad completa para cumplir con auditorías internas y regulatorias</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Para Clínicas</h3>
+<p>Análisis de imágenes con explicabilidad clínica, reportes estructurados y soporte para decisiones médicas con evidencia documentada por estudio</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Para Radiólogos</h3>
+<p>Herramienta de apoyo que aporta una segunda opinión cuantificable, mapas de calor GradCAM y métricas de confianza para cada hallazgo detectado</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Para Directivos</h3>
+<p>Dashboard con KPIs operativos, uso de modelos, tiempos de procesamiento, costos por inferencia y trazabilidad completa de cada análisis realizado</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Para Equipos de TI</h3>
+<p>Arquitectura containerizada, observabilidad con Prometheus y Grafana, logs estructurados, CI/CD, y preparación para despliegues on-premise o cloud</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Para Compliance</h3>
+<p>Diseño preparado para GDPR, HIPAA y normativas locales. Anonimización DICOM, cifrado AES-256, control de acceso RBAC y políticas de retención configurables</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+4. FLUJO DE PROCESAMIENTO
+============================================ -->
+<section class="section section-dark" id="flujo">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+04 · PIPELINE
+</div>
+<h2 class="section-title">Flujo completo de procesamiento</h2>
+<p class="section-description">Cada imagen médica atraviesa un pipeline de diez etapas diseñado para garantizar calidad, seguridad y trazabilidad de principio a fin</p>
+</div>
+
+<div class="next-steps">
+<div class="next-step-item">
+<div class="next-step-number">1</div>
+<div class="next-step-content">
+<h4>Upload</h4>
+<p>Recepción del estudio médico (DICOM, NIfTI, JPEG, PNG) a través de endpoints REST con validación de tamaño, tipo MIME real y verificación de integridad mediante SHA-256</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">2</div>
+<div class="next-step-content">
+<h4>Validate</h4>
+<p>Validación estructural del archivo: cabeceras DICOM, Transfer Syntax, modality, series y verificación de que el contenido coincide con el MIME declarado</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">3</div>
+<div class="next-step-content">
+<h4>Anonymize</h4>
+<p>Eliminación de todos los campos PHI (Protected Health Information) según estándares DICOM PS3.15. Reemplazo de identificadores por seudónimos y registro del proceso en audit log</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">4</div>
+<div class="next-step-content">
+<h4>Store</h4>
+<p>Persistencia del estudio en almacenamiento cifrado (AES-256) con metadatos estructurados en PostgreSQL. Generación de hash único para evitar duplicados</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">5</div>
+<div class="next-step-content">
+<h4>Preprocess</h4>
+<p>Aplicación de VOI LUT, RescaleSlope, RescaleIntercept, Window Center, Window Width, normalización de intensidad, redimensionado y corrección de orientación según el modelo objetivo</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">6</div>
+<div class="next-step-content">
+<h4>Inference</h4>
+<p>Ejecución del modelo médico especializado (CheXNet, TorchXRayVision, MONAI o MedCLIP) sobre un servidor de inferencia dedicado (TorchServe, Triton o vLLM), independiente de la API</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">7</div>
+<div class="next-step-content">
+<h4>GradCAM</h4>
+<p>Generación de mapas de calor explicables que muestran las regiones de la imagen que más influyeron en la predicción del modelo, fundamentales para la confianza clínica</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">8</div>
+<div class="next-step-content">
+<h4>Report</h4>
+<p>Generación de reporte estructurado con predicciones, probabilidades calibradas, mapas GradCAM, versión del modelo, dataset de entrenamiento, checksum y timestamp UTC</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">9</div>
+<div class="next-step-content">
+<h4>Persist</h4>
+<p>Almacenamiento del reporte, overlays y artefactos en base de datos y object storage (S3 compatible). Indexación para búsquedas y recuperación por estudio, paciente o fecha</p>
+</div>
+</div>
+
+<div class="next-step-item">
+<div class="next-step-number">10</div>
+<div class="next-step-content">
+<h4>Notify Frontend</h4>
+<p>Notificación al cliente vía WebSockets o polling con el estado final (completed/failed), URL del reporte y metadatos del análisis. Experiencia en tiempo real sin refresh</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+5. ARQUITECTURA DEL SISTEMA
+============================================ -->
+<section class="section" id="arquitectura">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+05 · ARQUITECTURA
+</div>
+<h2 class="section-title">Arquitectura del sistema</h2>
+<p class="section-description">Diseño por capas con separación estricta de responsabilidades, pensado para escalar, mantenerse y evolucionar sin romper componentes existentes</p>
+</div>
+
+<div class="economic-workflow">
+<h3>Estructura por capas</h3>
+<p style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-gray-300); line-height: 1.8; margin: 0;">
+app/<br>
+├── api/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Rutas, middleware, dependencias, versionado<br>
+├── core/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Configuración, seguridad, logging<br>
+├── domain/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Entidades, interfaces, contratos<br>
+├── application/ &nbsp;&nbsp;&nbsp;# Casos de uso, orquestación<br>
+├── infrastructure/ &nbsp;# DB, storage, motor IA, colas<br>
+├── workers/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Procesamiento asíncrono Celery<br>
+└── tests/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Unitarias, integración, E2E, seguridad
+</p>
+</div>
+
+<div class="features-grid">
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">API Gateway (FastAPI)</h3>
+<p>API REST versionada (/api/v1/), documentación OpenAPI, validación con Pydantic, autenticación JWT con refresh tokens, rate limiting y request ID para trazabilidad</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Cola de Mensajes (Redis + Celery)</h3>
+<p>Procesamiento asíncrono con colas priorizadas, dead letter queue, reintentos exponenciales, circuit breaker y heartbeats. Evita timeouts y permite escalar workers independientemente</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Motor de IA Independiente</h3>
+<p>Servidor de inferencia desacoplado (TorchServe, Triton o vLLM) que permite actualizar modelos sin reiniciar la API. Soporte para múltiples versiones en paralelo y canary deployments</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Persistencia (PostgreSQL + S3)</h3>
+<p>Base de datos relacional con ORM para pacientes, estudios, análisis, reportes, usuarios, roles, versiones de modelos y audit logs. Object storage cifrado para imágenes y artefactos</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Infraestructura (Docker + K8s)</h3>
+<p>Containerización completa, orquestación con Kubernetes, HPA para escalado automático, Ingress, ConfigMaps, Secrets gestionados y nodos GPU para inferencia</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Observabilidad (Prometheus + Grafana)</h3>
+<p>Métricas en tiempo real, trazas distribuidas con OpenTelemetry y Jaeger, logs estructurados en JSON, alertas con AlertManager y dashboards por componente</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+6. INTELIGENCIA ARTIFICIAL
+============================================ -->
+<section class="section section-dark" id="ia">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01"/></svg>
+06 · INTELIGENCIA ARTIFICIAL
+</div>
+<h2 class="section-title">IA médica especializada</h2>
+<p class="section-description">Modelos entrenados específicamente para imágenes clínicas, con explicabilidad integrada, validación rigurosa y versionado completo</p>
+</div>
+
+<div class="economic-layout">
+<div class="economic-content">
+<div class="economic-features">
+<div class="economic-feature">
+<h3>Modelos médicos, no genéricos</h3>
+<ul>
+<li>CheXNet para radiografía de tórax</li>
+<li>TorchXRayVision para múltiples modalidades</li>
+<li>MONAI para segmentación y detección</li>
+<li>MedCLIP para análisis multimodal texto-imagen</li>
+<li>Entrenados sobre CheXpert, MIMIC-CXR, NIH ChestXray14</li>
+</ul>
+</div>
+<div class="economic-feature">
+<h3>Explicabilidad con GradCAM</h3>
+<ul>
+<li>Mapas de calor sobre la imagen original</li>
+<li>Identificación de regiones determinantes</li>
+<li>Confianza clínica mediante visualización</li>
+<li>Soporte para auditoría de decisiones asistidas</li>
+<li>Integración en reportes PDF y visor web</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="immuniweb-grid" style="margin-top: var(--space-12);">
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Métricas clínicas</h3>
+<p>AUC, Recall, Sensitivity, Specificity, PPV, NPV y calibración de probabilidades. Cada modelo se evalúa con métricas relevantes para el uso clínico previsto</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Model Registry</h3>
+<p>Registro centralizado con versión, métricas, dataset, autor, commit Git, imagen Docker, checksum y estado de aprobación (dev, QA, staging, production)</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Validación continua</h3>
+<p>Detección de drift, shadow testing con modelos nuevos, A/B testing controlado y rollback automático ante degradación de métricas</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+7. SEGURIDAD Y PRIVACIDAD
+============================================ -->
+<section class="section" id="seguridad">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+07 · SEGURIDAD
+</div>
+<h2 class="section-title">Seguridad y privacidad por diseño</h2>
+<p class="section-description">La información médica exige el más alto estándar. HealthVision<sup>®</sup> integra controles de seguridad en cada capa de la arquitectura</p>
+</div>
+
+<div class="features-grid">
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Cifrado end-to-end</h3>
+<p>TLS 1.3 en tránsito, AES-256 en reposo con rotación automática de claves gestionadas desde Vault, AWS Secrets Manager o Azure Key Vault</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Autenticación robusta</h3>
+<p>JWT con refresh tokens, expiración configurable, revocación y rotación. MFA obligatorio para administradores. SSO corporativo preparado</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">RBAC completo</h3>
+<p>Usuarios, roles, permisos, organizaciones, clínicas y departamentos. Control granular sobre qué puede ver, modificar o exportar cada perfil</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Anonimización DICOM</h3>
+<p>Eliminación completa de PHI según DICOM PS3.15. Seudonimización reversible solo para usuarios autorizados. Registro de cada operación en audit log</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Rate Limiting y protección</h3>
+<p>SlowAPI, NGINX y Cloudflare para protección contra abuso. Validación MIME real, escaneo antivirus de archivos subidos y sanitización de nombres</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Audit Log inmutable</h3>
+<p>Cada acceso, modificación, exportación y análisis se registra con timestamp UTC, user_id, request_id y detalle de la acción. Preparado para auditorías regulatorias</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+8. ESCALABILIDAD
+============================================ -->
+<section class="section section-dark" id="escalabilidad">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+08 · ESCALABILIDAD
+</div>
+<h2 class="section-title">Diseñada para crecer</h2>
+<p class="section-description">Cada componente escala de forma independiente. La plataforma está preparada para pasar de un hospital a una red completa de instituciones de salud</p>
+</div>
+
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-icon">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/></svg>
+</div>
+<div class="stat-content">
+<h3 class="stat-title">Escalado horizontal</h3>
+<p class="stat-value" style="font-size: var(--text-2xl);">K8s + HPA</p>
+<p class="stat-label">Cada servicio escala independientemente según carga real</p>
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-icon">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+</div>
+<div class="stat-content">
+<h3 class="stat-title">Inferencia GPU</h3>
+<p class="stat-value" style="font-size: var(--text-2xl);">Triton / vLLM</p>
+<p class="stat-label">Nodos GPU dedicados con batch dinámico y cola priorizada</p>
+</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-icon">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</div>
+<div class="stat-content">
+<h3 class="stat-title">Cache distribuida</h3>
+<p class="stat-value" style="font-size: var(--text-2xl);">Redis + CDN</p>
+<p class="stat-label">Resultados cacheados por hash SHA-256 para evitar re-inferencia</p>
+</div>
+</div>
+</div>
+
+<div class="economic-workflow" style="margin-top: var(--space-12);">
+<h3>Arquitectura de despliegue</h3>
+<p style="font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-gray-300); line-height: 1.8; margin: 0;">
+Frontend (CDN) → API Gateway (N pods) → Redis Queue → Celery Workers (N pods)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inference Server (GPU nodes)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PostgreSQL + S3 + Audit Log
+</p>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+9. TECNOLOGÍAS
+============================================ -->
+<section class="section" id="tecnologias">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+09 · STACK TECNOLÓGICO
+</div>
+<h2 class="section-title">Tecnologías utilizadas</h2>
+<p class="section-description">Stack moderno, probado en producción y alineado con los estándares de la industria para software médico enterprise</p>
+</div>
+
+<div class="tech-logos">
+<div class="tech-logo" title="FastAPI">
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M128 228a100 100 0 1 0 0-200 100 100 0 0 0 0 200zm0 28C57.3 256 0 198.7 0 128S57.3 0 128 0s128 57.3 128 128-57.3 128-128 128z"/></svg>
+</div>
+<div class="tech-logo" title="Redis">
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M226.7 106.5c-14.3 7.3-35.1 12-56.7 14.4 2.1 7.8 4.3 16 6.1 24.4 27.1-3.2 53.5-9.6 70.2-20.6 4.2-2.7 6.3-6.8 6.3-11.2 0-4.4-2.1-8.5-6.3-11.2-4.8-3.1-11.8-3.1-19.6 4.2zM128 128c-21.6-2.4-42.4-7.1-56.7-14.4-7.8-7.3-14.8-7.3-19.6-4.2-4.2 2.7-6.3 6.8-6.3 11.2 0 4.4 2.1 8.5 6.3 11.2 16.7 11 43.1 17.4 70.2 20.6 1.8-8.4 4-16.6 6.1-24.4zm0-64c-21.6-2.4-42.4-7.1-56.7-14.4-7.8-7.3-14.8-7.3-19.6-4.2-4.2 2.7-6.3 6.8-6.3 11.2 0 4.4 2.1 8.5 6.3 11.2 16.7 11 43.1 17.4 70.2 20.6 1.8-8.4 4-16.6 6.1-24.4zm0 128c-21.6-2.4-42.4-7.1-56.7-14.4-7.8-7.3-14.8-7.3-19.6-4.2-4.2 2.7-6.3 6.8-6.3 11.2 0 4.4 2.1 8.5 6.3 11.2 16.7 11 43.1 17.4 70.2 20.6 1.8-8.4 4-16.6 6.1-24.4z"/></svg>
+</div>
+<div class="tech-logo" title="Celery">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+</div>
+<div class="tech-logo" title="PostgreSQL">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M17.1 13.9c-.2 0-.4 0-.6.1.1-.4.2-.8.2-1.2 0-2.5-1.5-4.5-4-4.5-2.3 0-4 1.8-4 4.1 0 2.4 1.7 4.2 4.2 4.2.5 0 1-.1 1.4-.2l2.3 2.3c.2.2.5.2.7 0l.5-.5c.2-.2.2-.5 0-.7l-2.1-2.1c.5-.4.8-1 .8-1.7 0-.1 0-.2-.1-.3.2 0 .4-.1.6-.1.4 0 .7.3.7.7s-.3.7-.7.7z"/></svg>
+</div>
+<div class="tech-logo" title="Docker">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M23 11.8c.7-.4 1-1.2.7-2-.4-1-1.5-1.6-2.6-1.6-.2 0-.4 0-.6.1-.4-1.7-1.8-3-3.6-3.2-.3 0-.6 0-.9.1C15.5 3.8 14 3 12.3 3c-1.1 0-2.1.4-2.9 1-.7-.6-1.6-1-2.6-1C5 3 3.5 4.5 3.5 6.3c0 .4.1.8.2 1.2-.8.5-1.3 1.4-1.3 2.4 0 1.1.6 2 1.5 2.5-.1.3-.1.6-.1.9 0 2.6 2.1 4.7 4.7 4.7h7.1c2.6 0 4.7-2.1 4.7-4.7 0-.5-.1-1-.2-1.5.8-.5 1.4-1.4 1.4-2.4 0-.6-.2-1.1-.5-1.6z"/></svg>
+</div>
+<div class="tech-logo" title="PyTorch">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm-1-15h2v5h-2V7zm0 7h2v2h-2v-2z"/></svg>
+</div>
+<div class="tech-logo" title="MLflow">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.2L19.5 8 12 11.8 4.5 8 12 4.2zM4 9.5l7 3.5v7L4 16.5v-7zm9 10.5v-7l7-3.5v7L13 20z"/></svg>
+</div>
+<div class="tech-logo" title="Prometheus">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+</div>
+<div class="tech-logo" title="Grafana">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm4-9l-4 4-2-2-3 3 1 1 2-2 2 2 5-5-1-1z"/></svg>
+</div>
+<div class="tech-logo" title="Kubernetes">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.2L18.5 8 12 11.8 5.5 8 12 4.2zM5 9.9l6 3.3v6.6L5 16.5V9.9zm8 9.9v-6.6l6-3.3v6.6l-6 3.3z"/></svg>
+</div>
+<div class="tech-logo" title="DICOM">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg>
+</div>
+<div class="tech-logo" title="GradCAM">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+</div>
+</div>
+
+<div class="immuniweb-grid" style="margin-top: var(--space-12);">
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Backend</h3>
+<p>FastAPI, Pydantic, SQLAlchemy, Alembic, Celery, Redis, PostgreSQL, Uvicorn, Gunicorn.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">IA / ML</h3>
+<p>PyTorch, TorchServe, Triton, MONAI, TorchXRayVision, Grad-CAM, MLflow, HuggingFace.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Infraestructura</h3>
+<p>Docker, Kubernetes, NGINX, Cloudflare, AWS/GCP/Azure, S3, KMS, Vault.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Observabilidad</h3>
+<p>Prometheus, Grafana, AlertManager, OpenTelemetry, Jaeger, logs estructurados JSON.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">CI/CD y Calidad</h3>
+<p>GitHub Actions, Black, Ruff, MyPy, Bandit, Semgrep, Trivy, SonarQube, pytest.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Frontend</h3>
+<p>React/Next.js, TypeScript, Tailwind, accesibilidad WCAG 2.2 AA, internacionalización.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+10. MLOps
+============================================ -->
+<section class="section section-dark" id="mlops">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+10 · MLOps
+</div>
+<h2 class="section-title">MLOps y ciclo de vida del modelo</h2>
+<p class="section-description">Gestión profesional del ciclo de vida de los modelos de IA: desde el entrenamiento hasta la producción, con trazabilidad y gobernanza completa.</p>
+</div>
+
+<div class="features-grid">
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Dataset Versioning</h3>
+<p>Versionado de datasets de entrenamiento y evaluación. Trazabilidad completa entre modelo, datos y métricas obtenidas.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Model Approval</h3>
+<p>Flujo formal de aprobación: dev → QA → staging → production. Requiere revisión clínica y validación de métricas antes de cada despliegue.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Rollback automático</h3>
+<p>Si las métricas degradan o se detecta drift, el sistema revierte automáticamente a la versión estable anterior sin intervención manual.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Canary & A/B Testing</h3>
+<p>Despliegue progresivo con feature flags. 10% del tráfico al modelo nuevo, 90% al estable. Comparación de métricas en tiempo real.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Drift Detection</h3>
+<p>Monitorización continua de la distribución de datos de entrada. Alertas automáticas cuando los datos reales divergen del dataset de entrenamiento.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+</div>
+<div class="feature-content">
+<h3 class="feature-title">Model Cards</h3>
+<p>Documentación estandarizada de cada modelo: uso previsto, limitaciones, métricas, dataset, bias conocido y recomendaciones de uso clínico.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+11. CASOS DE USO
+============================================ -->
+<section class="section" id="casos-uso">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+11 · CASOS DE USO
+</div>
+<h2 class="section-title">Casos de uso clínico</h2>
+<p class="section-description">HealthVision<sup>®</sup> está diseñado para múltiples modalidades de imagen y especialidades médicas.</p>
+</div>
+
+<div class="immuniweb-grid">
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Radiología de tórax</h3>
+<p>Detección de neumonía, edema pulmonar, cardiomegalia, nódulos y otros hallazgos en radiografías. GradCAM para localización de áreas sospechosas.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Neurología</h3>
+<p>Análisis de resonancias magnéticas cerebrales, detección de lesiones, tumores y eventos vasculares con segmentación automatizada.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Oftalmología</h3>
+<p>Retinografías para detección de retinopatía diabética, degeneración macular y glaucoma con modelos especializados.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Cardiología</h3>
+<p>Ecocardiogramas y angiografías con análisis automatizado de fracción de eyección, detección de estenosis y valoración funcional.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Oncología</h3>
+<p>Seguimiento de lesiones en TC y RM, medición volumétrica automatizada y detección de progresión o respuesta al tratamiento.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Patología digital</h3>
+<p>Análisis de imágenes histopatológicas de alta resolución, detección de áreas tumorales y cuantificación de biomarcadores.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+12. CUMPLIMIENTO NORMATIVO
+============================================ -->
+<section class="section section-dark" id="cumplimiento">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+12 · CUMPLIMIENTO
+</div>
+<h2 class="section-title">Cumplimiento normativo</h2>
+<p class="section-description">Diseñada desde el inicio para operar dentro de los marcos regulatorios más exigentes del sector salud.</p>
+</div>
+
+<div class="immuniweb-grid">
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">GDPR®</h3>
+<p>Diseñada siguiendo los principios del Reglamento General de Protección de Datos de la Unión Europea. El cumplimiento final dependerá de la implementación y jurisdicción.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">HIPAA®</h3>
+<p>Alineada con la Ley de Portabilidad y Responsabilidad de Seguros de Salud de Estados Unidos. Anonimización, cifrado y controles de acceso preparados para auditorías.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">ISO 27001® / SOC 2®</h3>
+<p>Arquitectura compatible con buenas prácticas de seguridad de ISO 27001 y SOC 2. Las certificaciones dependerán de los procesos de auditoría correspondientes.</p>
+</div>
+<div class="immuniweb-card">
+<h3 class="immuniweb-card-title">Dispositivo médico de software</h3>
+<p>Si el software se utiliza para apoyar decisiones clínicas, podría estar sujeto a regulación como dispositivo médico de software, dependiendo del país y uso previsto.</p>
+</div>
+</div>
+
+<div class="info-box" style="margin-top: var(--space-12);">
+<h3 class="info-box-title">Nota sobre cumplimiento</h3>
+<p>El cumplimiento normativo final depende de la implementación específica, configuración, jurisdicción y uso clínico previsto. HealthVision<sup>®</sup> proporciona las herramientas y arquitectura necesarias, pero la certificación requiere procesos de auditoría independientes.</p>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+13. FAQ
+============================================ -->
+<section class="section" id="faq">
+<div class="container">
+<div class="section-header text-center">
+<div class="section-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+13 · PREGUNTAS FRECUENTES
+</div>
+<h2 class="section-title">Preguntas frecuentes</h2>
+<p class="section-description">Respuestas a las dudas más comunes sobre HealthVision<sup>®</sup>, su arquitectura y su uso en entornos clínicos.</p>
+</div>
+
+<div class="economic-layout">
+<div class="economic-content">
+<div class="economic-features">
+<div class="economic-feature">
+<h3>¿HealthVision<sup>®</sup> reemplaza al médico?</h3>
+<p style="padding-left: 0; margin-bottom: 0;">No. HealthVision<sup>®</sup> es una herramienta de apoyo que aporta una segunda opinión cuantificable y explicable. La decisión clínica final siempre corresponde al profesional de salud.</p>
+</div>
+<div class="economic-feature">
+<h3>¿Qué formatos de imagen soporta?</h3>
+<p style="padding-left: 0; margin-bottom: 0;">DICOM (estándar médico) y NIfTI (neuroimagen) El pipeline incluye validación estructural y conversión automática según el modelo objetivo.</p>
+</div>
+<div class="economic-feature">
+<h3>¿Los datos del paciente se almacenan?</h3>
+<p style="padding-left: 0; margin-bottom: 0;">Los datos se anonimizan antes del procesamiento. Las imágenes se almacenan cifradas (AES-256) con políticas de retención configurables y audit log completo.</p>
+</div>
+<div class="economic-feature">
+<h3>¿Puede desplegarse on-premise?</h3>
+<p style="padding-left: 0; margin-bottom: 0;">Sí. La arquitectura containerizada con Docker y Kubernetes permite despliegues on-premise, cloud privado o híbridos según los requisitos de cada institución.</p>
+</div>
+<div class="economic-feature">
+<h3>¿Qué pasa si un modelo se desactualiza?</h3>
+<p style="padding-left: 0; margin-bottom: 0;">El sistema detecta drift automáticamente, permite shadow testing con modelos nuevos y rollback instantáneo. El Model Registry mantiene el historial completo.</p>
+</div>
+<div class="economic-feature">
+<h3>¿Se integra con PACS/RIS existentes?</h3>
+<p style="padding-left: 0; margin-bottom: 0;">La arquitectura está preparada para integraciones mediante APIs estándar del sector (DICOMweb, HL7 FHIR) y conectores con los principales PACS/RIS del mercado.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+14. CTA FINAL
+============================================ -->
+<section class="section section-dark">
+<div class="container">
+<div class="thank-you-container">
+<div class="thank-you-icon">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+</div>
+<h2 class="thank-you-title">Lleva el análisis médico al siguiente nivel</h2>
+<p class="thank-you-description">HealthVision<sup>®</sup> combina inteligencia artificial explicable, arquitectura enterprise y cumplimiento normativo para transformar la manera en que hospitales, clínicas y médicos procesan imágenes clínicas.</p>
+
+<div class="hero-actions" style="justify-content: center;">
+<a href="/contacto.html" class="btn btn-primary btn-large">
+Solicitar Demo
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+</a>
+<a href="https://wa.me/50672232295" class="btn btn-secondary btn-large">Hablar por WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============================================
+FOOTER
+============================================ -->
+<footer class="footer">
+<div class="footer-grid">
+<div class="footer-brand">
+<a href="/" class="footer-logo">
+<img src="/assets/img/logo.webp" alt="Abundia.io" class="footer-logo-icon" width="40" height="40">
+<span class="footer-logo-name">Abundia.io</span>
+</a>
+<p class="footer-description">Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium.</p>
+<div class="footer-social">
+<a href="https://wa.me/50672232295" class="footer-social-link" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a href="https://t.me/abundiatech" class="footer-social-link" aria-label="Telegram">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+</a>
+<a href="mailto:info@abundia.io" class="footer-social-link" aria-label="Email">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+</a>
+</div>
+</div>
+
+<div class="footer-column">
+<h4 class="footer-title">Servicios</h4>
+<ul class="footer-links">
+<li><a href="/servicios/ciberseguridad.html">Ciberseguridad</a></li>
+<li><a href="/servicios/hosting.html">Hosting</a></li>
+<li><a href="/servicios/desarrollo-web.html">Desarrollo Web</a></li>
+<li><a href="/servicios/ia.html">IA & Automatización</a></li>
+</ul>
+</div>
+
+<div class="footer-column">
+<h4 class="footer-title">ImmuniWeb<sup>®</sup></h4>
+<ul class="footer-links">
+<li><a href="/servicios/ciberseguridad.html#discovery">Discovery</a></li>
+<li><a href="/servicios/ciberseguridad.html#neuron">Neuron</a></li>
+<li><a href="/servicios/ciberseguridad.html#continuous">Continuous</a></li>
+<li><a href="/servicios/ciberseguridad.html#mobile">Mobile</a></li>
+</ul>
+</div>
+
+<div class="footer-column">
+<h4 class="footer-title">Contacto</h4>
+<ul class="footer-contact">
+<li>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<a href="https://wa.me/50672232295">WhatsApp</a>
+</li>
+<li>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+<a href="https://t.me/abundiatech">Telegram</a>
+</li>
+<li>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<a href="mailto:info@abundia.io">info@abundia.io</a>
+</li>
+<li>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+San José, Costa Rica
+</li>
+</ul>
+</div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div><div class="footer-bottom">
+<p>© 2023-2026 Abundia.io · Todos los derechos reservados</p>
+<span class="footer-partner">Partner ImmuniWeb<sup>®</sup> · Hosting · IA · Seguridad</span>
+</div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Scripts -->
+<script src="/js/main.js"></script>
+<script src="/js/navbar.js"></script>
+<script src="/js/scroll.js"></script>
+</body>
+</html>
+

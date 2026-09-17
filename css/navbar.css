@@ -1,0 +1,339 @@
+/* ============================================
+   ABUNDIA.IO - Navigation Component
+   Enterprise Navigation Architecture
+   ============================================ */
+
+/* Navigation Base */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  background: transparent;
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--color-gray-800);
+  box-shadow: var(--shadow-lg);
+}
+
+.navbar-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    padding: 0 var(--space-12);
+  }
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.02);
+}
+
+.navbar-logo-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navbar-logo-tagline {
+  font-size: 9px;
+  font-weight: var(--font-medium);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.navbar-logo-name {
+  font-size: 18px;
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-gray-100);
+  line-height: 1;
+}
+
+/* Navigation Menu - Desktop */
+.navbar-menu {
+  display: none;
+  align-items: center;
+  gap: var(--space-8);
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .navbar-menu {
+    display: flex;
+  }
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-300);
+  padding: var(--space-2) 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-normal);
+}
+
+.navbar-link:hover {
+  color: var(--color-primary);
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Navigation Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navbar-cta {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+}
+
+@media (min-width: 768px) {
+  .navbar-cta {
+    display: inline-flex;
+  }
+}
+
+/* Mobile Menu Toggle */
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: var(--space-2);
+  background: transparent;
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.navbar-toggle:hover {
+  background: var(--color-gray-800);
+  border-color: var(--color-primary);
+}
+
+.navbar-toggle-line {
+  width: 20px;
+  height: 2px;
+  background: var(--color-gray-300);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+}
+
+.navbar-toggle.active .navbar-toggle-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active .navbar-toggle-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.navbar-toggle.active .navbar-toggle-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.navbar-mobile-menu {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-black-solid);
+  z-index: var(--z-fixed);
+  padding: var(--space-6);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all var(--transition-normal);
+  overflow-y: auto;
+}
+
+.navbar-mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.navbar-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-6);
+}
+
+.navbar-mobile-link {
+  display: block;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.navbar-mobile-link:hover {
+  background: var(--color-gray-800);
+  color: var(--color-primary);
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: var(--space-4);
+  justify-content: center;
+}
+
+/* Dropdown (Future Enhancement) */
+.navbar-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  min-width: 240px;
+  background: var(--color-black-elevated);
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-xl);
+}
+
+.navbar-item:hover .navbar-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.navbar-dropdown-link {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.navbar-dropdown-link:hover {
+  background: var(--color-gray-800);
+  color: var(--color-primary);
+}
+
+/* Accessibility */
+.navbar-toggle:focus,
+.navbar-link:focus,
+.navbar-mobile-link:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar-logo,
+  .navbar-link::after,
+  .navbar-toggle-line,
+  .navbar-mobile-menu,
+  .navbar-dropdown {
+    transition: none;
+  }
+}
+
+/* ABUNDIA NAVIGATION PATCH v2 — compact widths */
+@media (min-width: 768px) and (max-width: 1180px) {
+  .navbar-container { gap: 16px; padding-left: 18px; padding-right: 18px; }
+  .navbar-menu { gap: 18px; }
+  .navbar-cta { padding: 9px 13px; font-size: 12px; }
+}
+
+@media (max-width: 767px) {
+  .navbar-container { height: 64px; padding: 0 14px; gap: 10px; }
+  .navbar-logo { gap: 9px; min-width: 0; }
+  .navbar-logo-icon { width: 34px; height: 34px; }
+  .navbar-logo-tagline { display: none; }
+  .navbar-logo-name { font-size: 15px; }
+  .navbar-actions { margin-left: auto; }
+  .navbar-cta { display: none !important; }
+  .navbar-toggle { display: flex !important; width: 42px; height: 42px; border-radius: 12px; }
+  .navbar-mobile-menu { top: 64px; }
+}
+
+
+.navbar-mobile-cta {
+  display: block;
+  margin-top: 8px;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary);
+  color: var(--color-black-deep);
+  font-weight: var(--font-semibold);
+  text-align: center;
+  box-shadow: 0 0 26px rgba(34,197,94,.24);
+}
+.navbar-mobile-cta:hover,
+.navbar-mobile-cta:focus {
+  color: var(--color-black-deep);
+  background: var(--color-primary-light);
+}

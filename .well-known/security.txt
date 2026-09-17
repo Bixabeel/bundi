@@ -1,0 +1,9 @@
+# security.txt — https://securitytxt.org / RFC 9116
+# Abundia.io Vulnerability Disclosure Policy
+
+Contact: mailto:info@abundia.io
+Contact: https://abundia.io/contacto.html
+Expires: 2027-07-24T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://abundia.io/.well-known/security.txt
+Policy: https://abundia.io/legal/seguridad.html

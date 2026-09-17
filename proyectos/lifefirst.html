@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeFirst® | Plataforma Inteligente de Salud Mental | Abundia.io</title>
+    <link rel="canonical" href="https://abundia.io/proyectos/lifefirst.html">
+    <meta name="description" content="LifeFirst® - Plataforma inteligente de salud mental que acompaña activamente al usuario en su vida diaria. Detección de patrones emocionales, ejercicios personalizados basados en ciencia y privacidad por diseño.">
+    <meta name="keywords" content="LifeFirst, salud mental, bienestar emocional, IA salud mental, diario emocional, acompañamiento psicológico, privacidad por diseño">
+    <meta property="og:title" content="LifeFirst® | Plataforma Inteligente de Salud Mental | Abundia.io">
+    <meta property="og:description" content="Compañero emocional diario con IA que detecta patrones, propone ejercicios personalizados y registra tu evolución emocional con privacidad por diseño.">
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#8b5cf6">
+
+    <style>
+        .lifefirst-hero-visual {
+            max-width: 700px;
+            margin: var(--space-12) auto 0;
+        }
+        .emotion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--space-4);
+        }
+        .emotion-item {
+            padding: var(--space-5);
+            background: rgba(139, 92, 246, 0.03);
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            transition: all var(--transition-normal);
+        }
+        .emotion-item:hover {
+            background: rgba(139, 92, 246, 0.06);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        .emotion-icon {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: var(--radius-md);
+            color: #8b5cf6;
+        }
+        .emotion-item span {
+            font-size: var(--text-sm);
+            font-weight: var(--font-medium);
+            color: var(--color-gray-200);
+        }
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+        }
+        .science-card {
+            padding: var(--space-8);
+            background: var(--color-black-elevated);
+            border: 1px solid var(--color-gray-800);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        .science-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        .science-card h4 {
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+            color: var(--color-primary);
+            margin-bottom: var(--space-3);
+            letter-spacing: var(--tracking-wide);
+        }
+        .science-card p {
+            font-size: var(--text-sm);
+            color: var(--color-gray-400);
+            margin: 0;
+        }
+        .philosophy-box {
+            padding: var(--space-10);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.02) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: var(--radius-2xl);
+            text-align: center;
+            margin: var(--space-12) 0;
+        }
+        .philosophy-box h3 {
+            font-size: var(--text-3xl);
+            color: var(--color-gray-100);
+            margin-bottom: var(--space-4);
+        }
+        .philosophy-box p {
+            font-size: var(--text-lg);
+            color: var(--color-gray-400);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .philosophy-box strong {
+            color: var(--color-primary);
+        }
+        .functions-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-8) 0;
+            background: var(--color-black-elevated);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--color-gray-800);
+        }
+        .functions-table thead {
+            background: rgba(139, 92, 246, 0.1);
+        }
+        .functions-table th {
+            padding: var(--space-4) var(--space-6);
+            text-align: left;
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wider);
+        }
+        .functions-table td {
+            padding: var(--space-5) var(--space-6);
+            border-top: 1px solid var(--color-gray-800);
+            font-size: var(--text-sm);
+            color: var(--color-gray-300);
+            vertical-align: top;
+        }
+        .functions-table tr:hover {
+            background: rgba(139, 92, 246, 0.03);
+        }
+        .functions-table td:first-child {
+            font-weight: var(--font-semibold);
+            color: var(--color-gray-100);
+        }
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-8);
+        }
+        .phase-card {
+            padding: var(--space-8);
+            background: var(--color-black-elevated);
+            border: 1px solid var(--color-gray-800);
+            border-radius: var(--radius-xl);
+            position: relative;
+            transition: all var(--transition-normal);
+        }
+        .phase-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        .phase-number {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50%;
+            font-size: var(--text-lg);
+            font-weight: var(--font-bold);
+            color: var(--color-primary);
+        }
+        .phase-card h4 {
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+            color: var(--color-gray-100);
+            margin-bottom: var(--space-4);
+            padding-right: var(--space-12);
+        }
+        .phase-card p {
+            font-size: var(--text-sm);
+            color: var(--color-gray-400);
+            margin: 0;
+            line-height: var(--leading-relaxed);
+        }
+        .disclaimer-box {
+            padding: var(--space-8);
+            background: rgba(245, 158, 11, 0.05);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: var(--radius-xl);
+            margin: var(--space-12) 0;
+        }
+        .disclaimer-box-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+        }
+        .disclaimer-box-header svg {
+            color: var(--color-warning);
+            flex-shrink: 0;
+        }
+        .disclaimer-box h4 {
+            font-size: var(--text-lg);
+            font-weight: var(--font-bold);
+            color: var(--color-warning);
+            margin: 0;
+        }
+        .disclaimer-box p {
+            font-size: var(--text-base);
+            color: var(--color-gray-300);
+            margin: 0;
+            line-height: var(--leading-relaxed);
+        }
+        .collab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: var(--space-6);
+        }
+        .collab-card {
+            padding: var(--space-6);
+            background: var(--color-black-elevated);
+            border: 1px solid var(--color-gray-800);
+            border-radius: var(--radius-xl);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+        .collab-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateY(-4px);
+        }
+        .collab-card h4 {
+            font-size: var(--text-lg);
+            font-weight: var(--font-bold);
+            color: var(--color-primary);
+            margin-bottom: var(--space-3);
+        }
+        .collab-card p {
+            font-size: var(--text-sm);
+            color: var(--color-gray-400);
+            margin-bottom: var(--space-4);
+        }
+        .collab-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            color: var(--color-primary);
+        }
+        .collab-card a:hover {
+            color: var(--color-primary-light);
+        }
+        .status-banner {
+            padding: var(--space-6);
+            background: rgba(34, 197, 94, 0.05);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            border-radius: var(--radius-xl);
+            margin: var(--space-8) 0;
+        }
+        .status-banner-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+        }
+        .status-banner-header svg {
+            color: var(--color-success);
+            flex-shrink: 0;
+        }
+        .status-banner h4 {
+            font-size: var(--text-base);
+            font-weight: var(--font-semibold);
+            color: var(--color-success);
+            margin: 0;
+        }
+        .status-banner p {
+            font-size: var(--text-sm);
+            color: var(--color-gray-400);
+            margin: 0;
+            line-height: var(--leading-relaxed);
+        }
+        @media (max-width: 767px) {
+            .functions-table {
+                display: block;
+                overflow-x: auto;
+            }
+            .functions-table th,
+            .functions-table td {
+                min-width: 150px;
+            }
+        }
+    </style>
+<style>
+/* Abundia Legal Footer Fix */
+.footer-grid{grid-template-columns:repeat(5,1fr)!important}
+@media(max-width:1024px){.footer-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:768px){.footer-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="custom-cursor-follower" id="cursor-follower"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar" id="navbar" role="banner">
+        <nav class="navbar-container" role="navigation" aria-label="Navegación principal">
+            <a href="/" class="navbar-logo">
+                <img src="/assets/img/logo.webp" alt="Abundia.io" class="navbar-logo-icon" width="40" height="40">
+                <div class="navbar-logo-text">
+                    <span class="navbar-logo-tagline">ECOSISTEMA TECNOLÓGICO</span>
+                    <span class="navbar-logo-name">ABUNDIA.IO</span>
+                </div>
+            </a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="/#servicios" class="navbar-link">Servicios</a></li>
+                <li class="navbar-item"><a href="/proyectos.html" class="navbar-link" aria-current="page">Abundia Labs</a></li>
+                <li class="navbar-item"><a href="/servicios/hosting.html" class="navbar-link">Hosting</a></li>
+                <li class="navbar-item"><a href="/servicios/hosting.html#planes" class="navbar-link">Planes</a></li>
+                
+                <li class="navbar-item"><a href="/legal/" class="navbar-link">Legal</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <a href="/contacto.html" class="btn btn-primary navbar-cta">Solicitar Cotización</a>
+                <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="navbar-toggle-line"></span><span class="navbar-toggle-line"></span><span class="navbar-toggle-line"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="navbar-mobile-menu" id="navbar-mobile-menu" aria-hidden="true">
+            <ul class="navbar-mobile-list">
+                <li><a href="/#servicios" class="navbar-mobile-link">Servicios</a></li>
+                <li><a href="/proyectos.html" class="navbar-mobile-link">Abundia Labs</a></li>
+                <li><a href="/servicios/hosting.html" class="navbar-mobile-link">Hosting</a></li>
+                <li><a href="/servicios/hosting.html#planes" class="navbar-mobile-link">Planes</a></li>
+                
+                <li><a href="/legal/" class="navbar-mobile-link">Legal</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Hero -->
+        <section class="page-hero" aria-labelledby="lifefirst-hero-title">
+            <div class="page-hero-content">
+                <div class="section-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    ✅ Pruebas de estrés y depuración completadas
+                </div>
+                <h1 class="page-hero-title" id="lifefirst-hero-title">LifeFirst®</h1>
+                <p class="page-hero-description">Plataforma inteligente para salud mental que acompaña activamente a la persona en su vida diaria. No es únicamente un diario digital: es un compañero que busca ayudar al usuario a desarrollar hábitos emocionales saludables mediante detección de patrones, ejercicios personalizados y privacidad por diseño.</p>
+                
+                <!-- Visualization -->
+                <div class="lifefirst-hero-visual reveal-up">
+                    <svg viewBox="0 0 700 400" fill="none" aria-hidden="true" style="width:100%;height:auto;">
+                        <defs>
+                            <linearGradient id="lfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.1"/>
+                                <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:0.95"/>
+                            </linearGradient>
+                            <radialGradient id="lfGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4"/>
+                                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0"/>
+                            </radialGradient>
+                        </defs>
+                        <rect width="700" height="400" fill="url(#lfBg)" rx="16"/>
+                        
+                        <!-- Grid -->
+                        <g stroke="#8b5cf6" stroke-width="0.5" opacity="0.08">
+                            <line x1="0" y1="100" x2="700" y2="100"/><line x1="0" y1="200" x2="700" y2="200"/><line x1="0" y1="300" x2="700" y2="300"/>
+                            <line x1="100" y1="0" x2="100" y2="400"/><line x1="200" y1="0" x2="200" y2="400"/><line x1="350" y1="0" x2="350" y2="400"/><line x1="500" y1="0" x2="500" y2="400"/><line x1="600" y1="0" x2="600" y2="400"/>
+                        </g>
+
+                        <!-- Central Heart/Mind -->
+                        <circle cx="350" cy="200" r="120" fill="url(#lfGlow)"/>
+                        <path d="M350 160 C330 140, 290 140, 290 180 C290 220, 350 260, 350 260 C350 260, 410 220, 410 180 C410 140, 370 140, 350 160 Z" stroke="#8b5cf6" stroke-width="3" fill="rgba(139,92,246,0.05)"/>
+                        <circle cx="350" cy="200" r="40" stroke="#8b5cf6" stroke-width="2" fill="rgba(139,92,246,0.1)"/>
+                        <circle cx="350" cy="200" r="15" fill="#8b5cf6"/>
+                        
+                        <!-- Emotion Nodes (Purple) -->
+                        <g stroke="#8b5cf6" stroke-width="1.5" opacity="0.8">
+                            <circle cx="150" cy="100" r="20" fill="rgba(139,92,246,0.1)"/>
+                            <line x1="170" y1="110" x2="240" y2="160" stroke-dasharray="4 4"/>
+                            
+                            <circle cx="550" cy="120" r="20" fill="rgba(139,92,246,0.1)"/>
+                            <line x1="530" y1="130" x2="460" y2="170" stroke-dasharray="4 4"/>
+                            
+                            <circle cx="120" cy="300" r="20" fill="rgba(139,92,246,0.1)"/>
+                            <line x1="140" y1="290" x2="230" y2="240" stroke-dasharray="4 4"/>
+                            
+                            <circle cx="580" cy="280" r="20" fill="rgba(139,92,246,0.1)"/>
+                            <line x1="560" y1="270" x2="470" y2="230" stroke-dasharray="4 4"/>
+                        </g>
+
+                        <!-- Labels -->
+                        <text x="350" y="350" text-anchor="middle" fill="#8b5cf6" font-size="12" font-weight="600" letter-spacing="2">ACOMPAÑAMIENTO EMOCIONAL DIARIO</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estado del Proyecto -->
+        <section class="section" style="padding-top: var(--space-8); padding-bottom: 0;">
+            <div class="container">
+                <div class="status-banner reveal">
+                    <div class="status-banner-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <h4>Estado del proyecto</h4>
+                    </div>
+                    <p>LifeFirst® ha completado las pruebas de estrés y depuración. La plataforma se encuentra en fase de validación final y preparación para despliegue controlado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. ¿Qué es LifeFirst? -->
+        <section class="section" aria-labelledby="lf-what-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+                        1. ¿Qué es LifeFirst?
+                    </div>
+                    <h2 class="section-title" id="lf-what-title">Una plataforma inteligente para salud mental</h2>
+                    <p class="section-description">LifeFirst® es un compañero que acompaña activamente a la persona en su vida diaria, buscando ayudar al usuario a desarrollar hábitos emocionales saludables.</p>
+                </div>
+
+                <!-- El Desafío -->
+                <div style="margin-top: var(--space-12);">
+                    <h3 style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--color-gray-100); margin-bottom: var(--space-6);">El Desafío</h3>
+                    <p style="font-size: var(--text-base); color: var(--color-gray-400); margin-bottom: var(--space-6);">El bienestar emocional es difícil de mantener solo. La vida moderna nos expone a:</p>
+                    
+                    <div class="emotion-grid">
+                        <div class="emotion-item reveal">
+                            <div class="emotion-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                            </div>
+                            <span>Estrés constante</span>
+                        </div>
+                        <div class="emotion-item reveal">
+                            <div class="emotion-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                            </div>
+                            <span>Patrones negativos invisibles</span>
+                        </div>
+                        <div class="emotion-item reveal">
+                            <div class="emotion-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            </div>
+                            <span>Falta de herramientas</span>
+                        </div>
+                        <div class="emotion-item reveal">
+                            <div class="emotion-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <span>Dificultad para entender la evolución emocional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- La Solución -->
+                <div style="margin-top: var(--space-12);">
+                    <h3 style="font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--color-gray-100); margin-bottom: var(--space-6);">La Solución</h3>
+                    <p style="font-size: var(--text-base); color: var(--color-gray-400); margin-bottom: var(--space-6);">LifeFirst® no es solo un diario: es una plataforma inteligente que interactúa diariamente, detecta cambios, sugiere ejercicios personalizados y te acompaña en tu camino hacia el bienestar.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item reveal">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Interacción Diaria</h3>
+                                <p>Pregunta por tu estado cada día y construye un perfil emocional detallado a lo largo del tiempo.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Detección de Cambios</h3>
+                                <p>Identifica variaciones en tu estado emocional antes de que se conviertan en problemas significativos.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z"/></svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Ejercicios Personalizados</h3>
+                                <p>Sugiere actividades específicas según tu estado actual: gratitud, respiración, organización de pensamientos.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6L13.5 15.5L8.5 10.5L1 18"/><path d="M17 6H23V12"/></svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="feature-title">Evolución Continua</h3>
+                                <p>Visualiza tu progreso con métricas claras y comprensibles a lo largo del tiempo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Cómo Funciona -->
+        <section class="section section-dark" aria-labelledby="lf-how-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                        2. Cómo Funciona
+                    </div>
+                    <h2 class="section-title" id="lf-how-title">Cinco Pilares del Acompañamiento</h2>
+                    <p class="section-description">Un sistema integrado que trabaja en conjunto para ofrecer apoyo emocional continuo.</p>
+                </div>
+
+                <div class="phase-grid">
+                    <div class="phase-card reveal">
+                        <div class="phase-number">1</div>
+                        <h4>Detección Diaria de Ánimo</h4>
+                        <p>La IA pregunta por tu estado cada día, registra tus respuestas y construye un perfil emocional detallado que evoluciona con el tiempo.</p>
+                    </div>
+                    <div class="phase-card reveal">
+                        <div class="phase-number">2</div>
+                        <h4>Análisis de Patrones Emocionales</h4>
+                        <p>Identifica patrones positivos y negativos, detectando tendencias antes de que se conviertan en problemas significativos para tu bienestar.</p>
+                    </div>
+                    <div class="phase-card reveal">
+                        <div class="phase-number">3</div>
+                        <h4>Recomendaciones Personalizadas</h4>
+                        <p>Sugiere ejercicios específicos según tu estado actual: gratitud, respiración, organización de pensamientos o motivación para objetivos pequeños pero significativos.</p>
+                    </div>
+                    <div class="phase-card reveal">
+                        <div class="phase-number">4</div>
+                        <h4>Guía de Sesiones Interactivas</h4>
+                        <p>Dirige sesiones de gratitud, ayuda a organizar pensamientos y motiva objetivos diarios mediante interacciones conversacionales adaptativas.</p>
+                    </div>
+                    <div class="phase-card reveal">
+                        <div class="phase-number">5</div>
+                        <h4>Registro de Evolución Emocional</h4>
+                        <p>Visualiza tu progreso a lo largo del tiempo con métricas claras y comprensibles, permitiendo identificar mejoras y áreas de atención.</p>
+                    </div>
+                </div>
+
+                <div class="philosophy-box reveal-up" style="margin-top: var(--space-12);">
+                    <h3>Adaptación Continua</h3>
+                    <p>La IA adapta sus recomendaciones conforme conoce mejor a la persona, utilizando <strong>aprendizaje contextual</strong> para ofrecer intervenciones cada vez más precisas y relevantes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Funciones Detalladas -->
+        <section class="section" aria-labelledby="lf-functions-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        3. Funciones Detalladas
+                    </div>
+                    <h2 class="section-title" id="lf-functions-title">Precisión en Cada Interacción</h2>
+                    <p class="section-description">Cada función está diseñada para maximizar el beneficio mientras respeta la privacidad del usuario.</p>
+                </div>
+
+                <table class="functions-table reveal">
+                    <thead>
+                        <tr>
+                            <th>Función</th>
+                            <th>Mecanismo Técnico</th>
+                            <th>Beneficio Clave</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Detección de Ánimo</td>
+                            <td>
+                                • Interfaz conversacional adaptativa<br>
+                                • Análisis semántico de respuestas<br>
+                                • Escalas emocionales validadas científicamente
+                            </td>
+                            <td>Registro consistente y comparable a lo largo del tiempo</td>
+                        </tr>
+                        <tr>
+                            <td>Análisis de Patrones</td>
+                            <td>
+                                • Algoritmos de detección de tendencias<br>
+                                • Identificación de correlaciones temporales<br>
+                                • Alertas tempranas ante desviaciones significativas
+                            </td>
+                            <td>Visibilidad proactiva del estado emocional</td>
+                        </tr>
+                        <tr>
+                            <td>Recomendaciones Personalizadas</td>
+                            <td>
+                                • Sistema de recomendación basado en contexto<br>
+                                • Biblioteca de ejercicios validados<br>
+                                • Adaptación según historial y preferencias
+                            </td>
+                            <td>Intervenciones relevantes y efectivas</td>
+                        </tr>
+                        <tr>
+                            <td>Sesiones Guiadas</td>
+                            <td>
+                                • Diálogos estructurados basados en evidencia<br>
+                                • Técnicas de psicología cognitiva y mindfulness<br>
+                                • Progresión adaptativa según engagement
+                            </td>
+                            <td>Acompañamiento activo en prácticas de bienestar</td>
+                        </tr>
+                        <tr>
+                            <td>Visualización de Evolución</td>
+                            <td>
+                                • Dashboards interactivos<br>
+                                • Métricas longitudinales<br>
+                                • Exportación de datos para profesionales (opcional)
+                            </td>
+                            <td>Comprensión clara del progreso emocional</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 4. Base Científica -->
+        <section class="section section-dark" aria-labelledby="lf-science-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                        4. Base Científica
+                    </div>
+                    <h2 class="section-title" id="lf-science-title">Fundamentado en Investigación Validada</h2>
+                    <p class="section-description">La IA de LifeFirst® adapta sus recomendaciones basándose en bibliografía científica consolidada de psicología y psiquiatría.</p>
+                </div>
+
+                <div class="science-grid">
+                    <div class="science-card reveal">
+                        <h4>Psicología Cognitiva</h4>
+                        <p>Técnicas de reestructuración cognitiva y identificación de pensamientos automáticos.</p>
+                    </div>
+                    <div class="science-card reveal">
+                        <h4>Terapia Conductual</h4>
+                        <p>Principios de modificación de conducta y establecimiento de hábitos saludables.</p>
+                    </div>
+                    <div class="science-card reveal">
+                        <h4>Mindfulness</h4>
+                        <p>Prácticas de atención plena y regulación emocional basadas en evidencia.</p>
+                    </div>
+                    <div class="science-card reveal">
+                        <h4>Psiquiatría Moderna</h4>
+                        <p>Criterios de identificación de síntomas y recomendaciones de búsqueda de ayuda profesional.</p>
+                    </div>
+                    <div class="science-card reveal">
+                        <h4>Psicología Positiva</h4>
+                        <p>Intervenciones de gratitud, fortalezas personales y bienestar subjetivo.</p>
+                    </div>
+                    <div class="science-card reveal">
+                        <h4>Ciencias del Comportamiento</h4>
+                        <p>Modelos de cambio de comportamiento y mantenimiento de hábitos a largo plazo.</p>
+                    </div>
+                </div>
+
+                <div class="philosophy-box reveal-up" style="margin-top: var(--space-12);">
+                    <h3>Evidencia Revisada por Pares</h3>
+                    <p>Cada ejercicio, cada sugerencia, cada patrón de intervención está respaldado por <strong>investigación revisada por pares</strong> y publicada en revistas científicas de alto impacto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Privacidad y Seguridad -->
+        <section class="section" aria-labelledby="lf-privacy-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                        5. Privacidad y Seguridad
+                    </div>
+                    <h2 class="section-title" id="lf-privacy-title">Privacidad por Diseño</h2>
+                    <p class="section-description">La confidencialidad es la base de cualquier herramienta de salud mental. LifeFirst® está construido desde cero con la privacidad como prioridad absoluta.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Datos Cifrados</h3>
+                            <p>Toda tu información está cifrada con estándares de grado militar, tanto en tránsito como en reposo.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Servidores Seguros</h3>
+                            <p>Infraestructura con certificaciones de seguridad internacionales y acceso estrictamente controlado.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Accesibilidad y Confidencialidad</h3>
+                            <p>Solo tú tienes acceso a tu información. Ni siquiera el equipo de Abundia puede leerla.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Cumplimiento Normativo</h3>
+                            <p>Diseñado siguiendo principios de GDPR, HIPAA y otras normativas aplicables a datos de salud.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Retención Controlada</h3>
+                            <p>Los datos se conservan según tus preferencias y pueden eliminarse completamente en cualquier momento.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Transparencia Total</h3>
+                            <p>Políticas claras sobre qué datos se recopilan, cómo se usan y quién puede acceder a ellos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Arquitectura Técnica -->
+        <section class="section section-dark" aria-labelledby="lf-architecture-title">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        6. Arquitectura Técnica
+                    </div>
+                    <h2 class="section-title" id="lf-architecture-title">Infraestructura Escalable y Segura</h2>
+                    <p class="section-description">Diseñada para crecer con las necesidades de los usuarios manteniendo los más altos estándares de seguridad.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Arquitectura Serverless</h3>
+                            <p>Microservicios para procesamiento de lenguaje natural y análisis de patrones emocionales.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Escalabilidad Automática</h3>
+                            <p>Capacidad de respuesta automática en picos de uso sin comprometer la privacidad.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item reveal">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Aislamiento de Datos</h3>
+                            <p>Cada usuario tiene su propio espacio cifrado y aislado del resto del sistema.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer Importante -->
+        <section class="section" aria-labelledby="lf-disclaimer-title">
+            <div class="container">
+                <div class="disclaimer-box reveal">
+                    <div class="disclaimer-box-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        <h4 id="lf-disclaimer-title">Importante:</h4>
+                    </div>
+                    <p>LifeFirst® es una herramienta de acompañamiento y bienestar diario. <strong>No reemplaza la terapia profesional ni la atención de profesionales de la salud mental.</strong> Complementa perfectamente el trabajo con psicólogos o psiquiatras, y siempre recomendamos buscar ayuda profesional cuando sea necesario.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Democratización -->
+        <section class="section section-dark" aria-labelledby="lf-democratization-title">
+            <div class="container">
+                <div class="philosophy-box reveal-up">
+                    <h3 id="lf-democratization-title">Democratizar el Acompañamiento Emocional</h3>
+                    <p>LifeFirst® busca democratizar un acompañamiento emocional <strong>constante, accesible y privado</strong>, sin sustituir a los profesionales de la salud cuando estos sean necesarios, sino complementando su trabajo y facilitando el acceso a herramientas de bienestar para todas las personas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="section" aria-labelledby="lf-cta-title">
+            <div class="container text-center">
+                <div class="section-header text-center">
+                    <h2 class="section-title" id="lf-cta-title">Comienza tu camino hacia el bienestar</h2>
+                    <p class="section-description">Da el primer paso hoy. Tu compañero emocional diario te está esperando.</p>
+                </div>
+                <div class="section-actions" style="justify-content: center;">
+                    <a href="/contacto.html" class="btn btn-primary btn-large">Comenzar ahora</a>
+                    <a href="https://wa.me/50672232295" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/assets/img/logo.webp" alt="Abundia.io" class="footer-logo-icon" width="40" height="40">
+                        <span class="footer-logo-name">Abundia.io</span>
+                    </a>
+                    <p class="footer-description">Ecosistema tecnológico enfocado en ciberseguridad, IA, hosting, automatización y desarrollo web premium.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links"><li><a href="/servicios/ciberseguridad.html">Ciberseguridad</a></li><li><a href="/servicios/hosting.html">Hosting</a></li><li><a href="/servicios/desarrollo-web.html">Desarrollo Web</a></li><li><a href="/servicios/ia.html">IA & Automatización</a></li></ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">ImmuniWeb®</h4>
+                    <ul class="footer-links"><li><a href="/servicios/ciberseguridad.html#discovery">Discovery</a></li><li><a href="/servicios/ciberseguridad.html#neuron">Neuron</a></li><li><a href="/servicios/ciberseguridad.html#continuous">Continuous</a></li><li><a href="/servicios/ciberseguridad.html#mobile">Mobile</a></li></ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact"><li><a href="https://wa.me/50672232295" target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li><a href="https://t.me/abundiatech" target="_blank" rel="noopener noreferrer">Telegram</a></li><li><a href="mailto:info@abundia.io">info@abundia.io</a></li><li>San José, Costa Rica</li></ul>
+                </div>
+            
+                <div class="footer-column">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+            </div><div class="footer-bottom">
+                <p>&copy; 2026 Abundia.io · Todos los derechos reservados</p>
+                <p class="footer-partner">Partner ImmuniWeb® · Hosting · IA · Seguridad</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
+    <script src="/js/cursor.js" defer></script>
+</body>
+</html>
+

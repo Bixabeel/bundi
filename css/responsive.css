@@ -1,0 +1,160 @@
+/* ============================================
+   ABUNDIA.IO - Responsive Architecture
+   Mobile-First, Breakpoint Strategy
+   ============================================ */
+
+/* 1. BASE MOBILE (< 768px) */
+/* Most styles are already mobile-first in main.css. 
+   This file handles specific overrides and complex layout shifts. */
+
+/* Typography Scaling for Mobile */
+@media (max-width: 767px) {
+  h1 { font-size: 2.5rem; line-height: 1.1; }
+  h2 { font-size: 2rem; line-height: 1.2; }
+  h3 { font-size: 1.5rem; }
+  
+  .section {
+    padding: 64px 24px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 64px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+  }
+}
+
+/* 2. TABLET (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 768px;
+  }
+  
+  .section {
+    padding: 80px 32px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* 3. LAPTOP (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    max-width: 1024px;
+  }
+  
+  .section {
+    padding: 96px 40px;
+  }
+}
+
+/* 4. DESKTOP (1280px - 1535px) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 5. ULTRA WIDE (1536px+) */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+  
+  body {
+    font-size: 18px; /* Slightly larger base font for huge screens */
+  }
+  
+  h1 { font-size: 5rem; }
+  h2 { font-size: 3.5rem; }
+}
+
+/* 6. SPECIFIC COMPONENT RESPONSIVE OVERRIDES */
+
+/* Navbar Mobile Adjustments */
+@media (max-width: 1023px) {
+  .navbar-menu {
+    display: none;
+  }
+  
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-toggle {
+    display: none;
+  }
+  
+  .navbar-mobile-menu {
+    display: none !important;
+  }
+}
+
+/* Stat Card layout on small screens */
+@media (max-width: 767px) {
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Plans Grid */
+@media (max-width: 767px) {
+  .plans-grid {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Contact Layout override removed: .contact-layout is already
+   grid-template-columns: 1fr by default (mobile-first) in sections.css */
+
+/* Thank You Stats */
+@media (max-width: 767px) {
+  .thank-you-stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Back to Top Button */
+@media (max-width: 767px) {
+  .back-to-top {
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* 7. PRINT STYLES (Already in main.css, but ensuring no conflicts) */
+@media print {
+  .navbar, .footer, .back-to-top, .custom-cursor, .custom-cursor-follower {
+    display: none !important;
+  }
+  
+  .section {
+    padding: 20px 0;
+    page-break-inside: avoid;
+  }
+}

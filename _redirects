@@ -1,0 +1,7 @@
+# ABUNDIA.IO — Redirects
+
+# Legacy URL kept for backwards compatibility.
+/legal/seguridad.htm /legal/seguridad.html 301
+# Contact success page: canonical clean URL + legacy HTML alias.
+/gracias.html /gracias/ 301
+/gracias /gracias/ 301

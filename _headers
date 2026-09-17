@@ -1,0 +1,80 @@
+# ABUNDIA.IO — Cloudflare Pages / Cloudflare Workers Response Headers
+# Applies to every response served for this static site.
+#
+# Format reference: https://developers.cloudflare.com/pages/configuration/headers/
+#
+# CSP notes (documented per hardening requirements):
+#
+# - style-src requires 'unsafe-inline': all 28 pages rely on inline <style>
+#   blocks and style="" attributes for per-page hero backgrounds and
+#   component tweaks. Refactoring every inline style into external
+#   classes was assessed and would touch every page; the immediately
+#   stricter alternative (nonces) is not usable because this is a fully
+#   static site with no per-request server-side rendering to inject a
+#   fresh nonce on each response. 'unsafe-inline' is therefore the
+#   least-permissive policy that does not break the site.
+#
+# - script-src is 'self' plus one SHA-256 hash: the site ships zero
+#   third-party <script src> tags (the former unpkg.com Phosphor Icons
+#   CDN dependency was removed and replaced with a local inline SVG
+#   sprite). The single hash allow-lists the one inline block that
+#   remains: the JSON-LD structured data on proyectos/eterna.html.
+#   If that JSON-LD content is ever edited, its hash must be
+#   recalculated (sha256 of the exact bytes between the <script> tags,
+#   base64-encoded) or the block will silently stop rendering.
+#
+# - Cross-Origin-Embedder-Policy is 'unsafe-none' rather than 'require-corp'.
+#   require-corp only pays off when the page needs cross-origin isolation
+#   (SharedArrayBuffer, high-resolution timers, heavy WASM) — this site
+#   uses none of those. Turning it on would require every cross-origin
+#   resource (including Google Fonts, which does not consistently send
+#   Cross-Origin-Resource-Policy on every response) to explicitly opt in,
+#   with a real risk of silently blocking fonts in production. Given no
+#   feature here depends on cross-origin isolation, 'unsafe-none' is the
+#   correct choice, not a weakened one.
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-DNS-Prefetch-Control: on
+  X-Permitted-Cross-Domain-Policies: none
+  X-Download-Options: noopen
+  Origin-Agent-Cluster: ?1
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Cross-Origin-Embedder-Policy: unsafe-none
+  Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-77kD+ijAqeVfV2bcu7az02yirRCk+Yef6Apn7zhoxJA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; frame-src 'none'; object-src 'none'; base-uri 'self'; manifest-src 'self'; worker-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
+  X-Robots-Tag: index, follow
+
+# Static assets: safe to cache aggressively (filenames are stable;
+# bump filenames or add ?v= query strings if content changes without
+# a filename change, otherwise Cloudflare/browsers may serve stale
+# versions for up to a year).
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: revalidate on every request so content updates go live
+# immediately without needing a cache purge.
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/site.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=86400

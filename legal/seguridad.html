@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Security headers set site-wide via /_headers, see index.html -->
+    
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- SEO -->
+    <title>Seguridad | Abundia.io</title>
+    <meta name="description" content="Conoce los principios de seguridad que guían el desarrollo, la infraestructura y las soluciones tecnológicas de Abundia.io.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://abundia.io/legal/seguridad.html">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Seguridad | Abundia.io">
+    <meta property="og:description" content="Conoce los principios de seguridad que guían el desarrollo, la infraestructura y las soluciones tecnológicas de Abundia.io.">
+    <meta property="og:url" content="https://abundia.io/legal/seguridad.html">
+    <meta property="og:image" content="https://abundia.io/assets/img/og/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    
+    <!-- Icons -->
+    
+    <!-- Global CSS (DO NOT MODIFY) -->
+<!-- Scoped Styles for Legal/Security Page -->
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <style>
+        /* Reusing design tokens and patterns from existing legal pages */
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-16);
+        }
+
+        .legal-section h2 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .legal-text {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-6);
+        }
+
+        .legal-text p + p { margin-top: var(--space-4); }
+
+        /* Highlight Quote */
+        .highlight-quote {
+            border-left: 3px solid var(--color-primary-500);
+            padding-left: var(--space-6);
+            margin: var(--space-8) 0;
+            font-size: var(--text-xl);
+            font-style: italic;
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Principles Grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        .principle-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-6);
+            transition: var(--transition-fast);
+        }
+
+        .principle-card:hover {
+            border-color: var(--color-primary-500);
+            transform: translateY(-2px);
+        }
+
+        .principle-card h3 {
+            font-size: var(--text-lg);
+            color: var(--color-primary-500);
+            margin-bottom: var(--space-3);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .principle-card p {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            line-height: var(--leading-normal);
+        }
+
+        /* Protection List */
+        .protection-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-3);
+            margin: var(--space-8) 0;
+        }
+
+        .protection-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            padding: var(--space-3) 0;
+        }
+
+        .protection-item i {
+            color: var(--color-primary-500);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Tech Tags */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            margin: var(--space-8) 0;
+        }
+
+        .tech-tag {
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.15);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--border-radius-full);
+            font-size: var(--text-sm);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Checklist Grid */
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-size: var(--text-base);
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            padding: var(--space-4);
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--border-default);
+        }
+
+        .check-item i {
+            color: var(--color-primary-500);
+            font-size: 20px;
+        }
+
+        /* Commitment Box */
+        .commitment-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(16, 185, 129, 0.03) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: var(--border-radius-2xl);
+            padding: var(--space-12) var(--space-8);
+            text-align: center;
+            margin: var(--space-16) 0;
+        }
+
+        .commitment-box h3 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+        }
+
+        .commitment-box p {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Version Footer */
+        .version-footer {
+            text-align: center;
+            padding-top: var(--space-12);
+            border-top: 1px solid var(--border-default);
+            margin-top: var(--space-16);
+            font-size: var(--text-sm);
+            color: var(--text-tertiary);
+        }
+
+        @media (max-width: 768px) {
+            .principles-grid, .protection-list, .checklist-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="/css/legal.css">
+
+</head>
+<body class="antialiased">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header (Reused) -->
+    <header class="header" role="banner" id="site-header"></header>
+
+    <main id="main-content" role="main">
+        
+        <!-- HERO -->
+        <section class="hero hero--compact">
+            <div class="hero-bg">
+                <div class="hero-bg-grid"></div>
+                <div class="hero-bg-glow"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="hero-badge animate-fade-in">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-shield-check"></use></svg>
+                        <span>Seguridad y Protección</span>
+                    </div>
+                    <h1 class="hero-title animate-fade-in-up">
+                        La seguridad no es una característica.<br>
+                        <span class="text-gradient">Es parte de nuestra arquitectura.</span>
+                    </h1>
+                    <p class="hero-description animate-fade-in-up delay-1">
+                        En Abundia diseñamos soluciones tecnológicas considerando la seguridad desde las primeras etapas del desarrollo. Nuestro objetivo es reducir riesgos, proteger la información y construir plataformas confiables mediante buenas prácticas de ingeniería, infraestructura y privacidad.
+                    </p>
+                    <div class="hero-cta animate-fade-in-up delay-2" style="justify-content: center; margin-top: var(--space-8);">
+                        <a href="/contacto.html" class="btn btn-primary btn-lg">Contáctanos</a>
+                        <a href="/legal/politica-de-privacidad.html" class="btn btn-outline btn-lg">Política de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="legal-content">
+
+                <!-- SECCIÓN 1: FILOSOFÍA -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Nuestra filosofía</h2>
+                    <div class="legal-text">
+                        <p>La seguridad no consiste únicamente en instalar un firewall o utilizar un antivirus. Es un disciplina integral que debe abarcar la arquitectura, la infraestructura, las aplicaciones, los procesos, las personas, el monitoreo, la respuesta ante incidentes y la mejora continua.</p>
+                        <p>Entendemos la seguridad como un proceso dinámico que evoluciona junto con las amenazas y las tecnologías. No es un estado final, sino una práctica constante de evaluación, adaptación y fortalecimiento.</p>
+                    </div>
+                    <div class="highlight-quote">
+                        "La mejor vulnerabilidad es aquella que nunca llega a existir porque fue considerada desde el diseño."
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 2: PRINCIPIOS -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Principios de Seguridad</h2>
+                    <div class="principles-grid">
+                        <div class="principle-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-pencil-ruler"></use></svg> Security by Design</h3>
+                            <p>Todo proyecto se desarrolla considerando controles de seguridad desde las primeras fases del diseño, no como una capa añadida al final.</p>
+                        </div>
+                        <div class="principle-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-lock-key"></use></svg> Privacy by Design</h3>
+                            <p>La privacidad se incorpora como principio de arquitectura y no como una característica añadida posteriormente.</p>
+                        </div>
+                        <div class="principle-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-user-minus"></use></svg> Menor privilegio</h3>
+                            <p>Los accesos se limitan únicamente a los recursos estrictamente necesarios para cada función específica.</p>
+                        </div>
+                        <div class="principle-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-stack"></use></svg> Defensa en profundidad</h3>
+                            <p>La protección se implementa mediante múltiples capas de seguridad que trabajan conjuntamente.</p>
+                        </div>
+                        <div class="principle-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrows-clockwise"></use></svg> Mejora continua</h3>
+                            <p>La seguridad evoluciona constantemente mediante revisiones, actualizaciones y nuevas medidas de protección.</p>
+                        </div>
+                        <div class="principle-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-eye"></use></svg> Transparencia</h3>
+                            <p>Cuando corresponde, informamos de manera clara las medidas implementadas y las limitaciones existentes.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 3: PROTECCIÓN DE LA INFORMACIÓN -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Protección de la Información</h2>
+                    <div class="legal-text">
+                        <p>Dependiendo del servicio contratado y la naturaleza del proyecto, Abundia procura aplicar medidas técnicas y organizativas orientadas a proteger la información. Estas pueden incluir:</p>
+                    </div>
+                    <div class="protection-list">
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-lock"></use></svg> Conexiones cifradas mediante HTTPS/TLS</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-cloud-arrow-up"></use></svg> Protección de infraestructura mediante Cloudflare</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-identification-card"></use></svg> Políticas de autenticación robustas</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-users-three"></use></svg> Control de accesos basado en roles</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrows-counter-clockwise"></use></svg> Actualizaciones de seguridad periódicas</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-flow-arrow"></use></svg> Segmentación de servicios y redes</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-database"></use></svg> Copias de seguridad cuando el servicio lo incluya</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-chart-line-up"></use></svg> Registro y monitoreo de eventos relevantes</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-shield-warning"></use></svg> Protección contra ataques automatizados</div>
+                        <div class="protection-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-code"></use></svg> Buenas prácticas OWASP durante el desarrollo</div>
+                    </div>
+                    <p class="legal-text" style="font-size: var(--text-sm); opacity: 0.8; margin-top: var(--space-4);">
+                        Las medidas específicas dependen de la naturaleza de cada proyecto y los requerimientos acordados.
+                    </p>
+                </section>
+
+                <!-- SECCIÓN 4: DESARROLLO SEGURO -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Desarrollo Seguro</h2>
+                    <div class="legal-text">
+                        <p>Durante el desarrollo de software buscamos seguir principios y prácticas orientadas a reducir vulnerabilidades comunes, incluyendo:</p>
+                        <ul class="info-list" style="margin-top: var(--space-4);">
+                            <li>Validación rigurosa de entradas</li>
+                            <li>Sanitización de datos sensibles</li>
+                            <li>Protección contra XSS, CSRF y SQL Injection</li>
+                            <li>Autenticación segura y autorización adecuada</li>
+                            <li>Manejo seguro de sesiones y tokens</li>
+                            <li>Gestión responsable de errores y logs</li>
+                            <li>Actualización constante de dependencias</li>
+                            <li>Revisión periódica del código fuente</li>
+                        </ul>
+                        <p style="margin-top: var(--space-6); font-style: italic; opacity: 0.9;">
+                            Nota: No todas las aplicaciones requieren exactamente los mismos controles. Las medidas implementadas se adaptan al tipo de solución desarrollada y su contexto de uso.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 5: INFRAESTRUCTURA -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Infraestructura</h2>
+                    <div class="legal-text">
+                        <p>Abundia utiliza proveedores reconocidos internacionalmente cuando el proyecto lo requiere. Algunas de las tecnologías que han sido utilizadas por distintos proyectos del ecosistema incluyen:</p>
+                    </div>
+                    <div class="tech-grid">
+                        <span class="tech-tag">Cloudflare</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag">Render</span>
+                        <span class="tech-tag">Railway</span>
+                        <span class="tech-tag">Vercel</span>
+                        <span class="tech-tag">WordPress</span>
+                        <span class="tech-tag">ImmuniWeb</span>
+                    </div>
+                    <div class="legal-text">
+                        <p>La utilización de estas tecnologías depende de los requerimientos específicos de cada proyecto y no implica una relación exclusiva ni permanente con dichos proveedores.</p>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 6: GESTIÓN DE VULNERABILIDADES -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Gestión Responsable de Vulnerabilidades</h2>
+                    <div class="legal-text">
+                        <p>Abundia promueve una cultura de mejora continua y colaboración responsable. Si un investigador de seguridad identifica una posible vulnerabilidad relacionada con alguno de nuestros activos públicos, agradecemos que sea reportada de forma responsable a:</p>
+                        <p><a href="mailto:info@abundia.io" style="color: var(--color-primary-500); text-decoration: underline; font-weight: var(--font-weight-semibold);">info@abundia.io</a></p>
+                        <p>Los reportes serán evaluados y tratados de forma confidencial cuando corresponda. Valoramos la contribución de la comunidad de seguridad para fortalecer nuestros sistemas.</p>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 7: LO QUE HACEMOS -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Lo que hacemos</h2>
+                    <div class="checklist-grid">
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Desarrollo seguro</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Protección HTTPS</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Arquitectura moderna</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Actualización de componentes</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Control de accesos</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Buenas prácticas OWASP</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Protección de infraestructura</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Privacidad desde el diseño</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Revisión continua</div>
+                        <div class="check-item"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Monitoreo orientado a riesgos</div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 8: LO QUE NO PROMETEMOS -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Lo que NO prometemos</h2>
+                    <div class="legal-text">
+                        <p>Ningún sistema conectado a Internet puede garantizar seguridad absoluta. Por ello:</p>
+                        <ul class="info-list" style="margin-top: var(--space-4);">
+                            <li>No afirmamos que un sistema sea invulnerable.</li>
+                            <li>No prometemos protección del 100%.</li>
+                            <li>No garantizamos disponibilidad absoluta.</li>
+                        </ul>
+                        <p style="margin-top: var(--space-6);">En su lugar, trabajamos continuamente para reducir riesgos mediante ingeniería responsable, monitoreo proactivo y buenas prácticas de seguridad.</p>
+                    </div>
+                    <div class="highlight-quote">
+                        "La seguridad absoluta no existe. La gestión responsable del riesgo sí."
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 9: COMPROMISO -->
+                <section class="legal-section animate-fade-in">
+                    <h2>Compromiso de Abundia</h2>
+                    <div class="legal-text">
+                        <p>La seguridad forma parte de la cultura organizacional de Abundia. Nos guía la ingeniería responsable, el respeto por la privacidad, la búsqueda de confianza, la ética profesional, la mejora continua y la transparencia en nuestras comunicaciones.</p>
+                        <p>Entendemos que la tecnología solo genera valor cuando las personas pueden confiar en ella. Por eso asumimos la seguridad no como una obligación contractual, sino como un compromiso ético con quienes utilizan nuestras soluciones.</p>
+                    </div>
+                </section>
+
+                <!-- CAJA DESTACADA FINAL -->
+                <div class="commitment-box animate-fade-in">
+                    <h3>Nuestro compromiso</h3>
+                    <p>
+                        Cada solución desarrollada por Abundia busca equilibrar innovación, rendimiento, privacidad y seguridad. Nuestro objetivo es construir plataformas tecnológicas confiables que evolucionen continuamente frente a los nuevos desafíos del entorno digital.
+                    </p>
+                </div>
+
+                <!-- VERSION FOOTER -->
+                <div class="version-footer animate-fade-in">
+                    <p>Última actualización: Julio 2026 • Versión 1.0</p>
+                    <p style="margin-top: var(--space-2);">© 2026 Abundia.io · Todos los derechos reservados.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Spacer before footer -->
+        <div style="height: var(--space-24);"></div>
+
+    </main>
+
+    <!-- Footer (Reused) -->
+    <footer class="footer" role="contentinfo" id="site-footer"></footer>
+
+    <!-- Scripts (Site Standard) -->
+    <script src="/js/main.js" defer></script>
+    <script src="/assets/js/components/header.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/assets/js/components/footer.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+</body>
+</html>

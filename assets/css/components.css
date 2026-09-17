@@ -1,0 +1,344 @@
+/* ============================================
+   ABUNDIA.IO - Legal Subsystem / Components
+   ============================================ */
+
+/* ============================================
+   SERVICE CARD
+   Reused across legal pages both as a grid item
+   and as a single highlighted block.
+   ============================================ */
+.services-grid,
+.legal-grid,
+.principles-grid,
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 1024px) {
+  .services-grid,
+  .legal-grid,
+  .principles-grid,
+  .checklist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid,
+  .legal-grid,
+  .principles-grid,
+  .checklist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card,
+.principle-card,
+.legal-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  transition: border-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.service-card:hover,
+.principle-card:hover,
+.legal-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.service-icon {
+  color: var(--color-primary);
+  font-size: var(--text-xl);
+  flex-shrink: 0;
+}
+
+.service-description {
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+}
+
+.service-features {
+  list-style: none;
+  margin-top: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.card-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.card-list li::before {
+  content: "•";
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ============================================
+   LEGAL CONTENT / PROSE
+   ============================================ */
+.legal-content {
+  padding: var(--space-16) 0;
+}
+
+.legal-prose,
+.legal-section {
+  max-width: 840px;
+  margin: 0 auto var(--space-12);
+}
+
+.legal-prose h2,
+.legal-section h2 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.legal-prose h3,
+.legal-section h3 {
+  font-size: var(--text-lg);
+  margin-top: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legal-prose p,
+.legal-section p,
+.legal-text {
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.legal-prose ul,
+.legal-section ul {
+  margin: var(--space-4) 0;
+  padding-left: var(--space-6);
+  list-style: disc;
+}
+
+.legal-prose li,
+.legal-section li {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+/* ============================================
+   LEGAL TABLE
+   ============================================ */
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-6) 0;
+  font-size: var(--text-sm);
+}
+
+.legal-table th,
+.legal-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border: 1px solid var(--border-default);
+}
+
+.legal-table th {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.legal-table td {
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   HIGHLIGHT QUOTE
+   ============================================ */
+.highlight-quote {
+  border-left: 3px solid var(--color-primary);
+  padding: var(--space-4) var(--space-6);
+  margin: var(--space-8) 0;
+  font-style: italic;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+/* ============================================
+   TECH GRID / TAGS
+   ============================================ */
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-full);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.tech-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.tech-label { color: var(--text-tertiary); }
+.tech-value { color: var(--text-primary); font-weight: var(--font-weight-medium); }
+
+/* ============================================
+   LISTS (info / protection / purpose / security / check items)
+   ============================================ */
+.info-list,
+.protection-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+.protection-item,
+.purpose-item,
+.security-item,
+.check-item,
+.request-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-md);
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.request-info {
+  margin: var(--space-6) 0;
+}
+
+.check-item .ph-icon,
+.protection-item .ph-icon,
+.purpose-item .ph-icon,
+.security-item .ph-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   COMMITMENT / CTA BOXES
+   ============================================ */
+.commitment-section {
+  margin: var(--space-12) 0;
+}
+
+.commitment-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+}
+
+.commitment-text {
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.legal-cta-container,
+.final-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-8);
+}
+
+.legal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+/* ============================================
+   VERSION FOOTER
+   ============================================ */
+.version-footer,
+.version-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  margin-top: var(--space-8);
+  border-top: 1px solid var(--border-default);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+.version-label { color: var(--text-tertiary); }
+.version-value { color: var(--text-secondary); font-weight: var(--font-weight-medium); }
+
+/* ============================================
+   TECH SHEET
+   ============================================ */
+.legal-tech-sheet {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-6);
+  margin: var(--space-8) 0;
+}
+
+/* ============================================
+   ICONS (inline SVG sprite, replaces the
+   @phosphor-icons/web CDN script — see CSP hardening)
+   ============================================ */
+.ph-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}

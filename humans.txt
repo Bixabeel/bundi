@@ -1,0 +1,11 @@
+/* TEAM */
+Company: Abundia.io
+Contact: info@abundia.io
+Location: San José, Costa Rica
+
+/* SITE */
+Last update: 2026-07-24
+Language: Spanish / English
+Standards: HTML5, CSS3, ES6+ JavaScript
+Components: Google Fonts (Inter, JetBrains Mono)
+Software: Hand-coded, static site, hosted behind Cloudflare

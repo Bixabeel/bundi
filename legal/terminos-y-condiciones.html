@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" class="no-js">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Security headers set site-wide via /_headers, see index.html -->
+    
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- SEO -->
+    <title>Términos y Condiciones | Abundia.io</title>
+    <meta name="description" content="Consulta los términos y condiciones que regulan el uso del sitio web, servicios y plataformas tecnológicas de Abundia.io.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://abundia.io/legal/terminos-y-condiciones.html">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Términos y Condiciones | Abundia.io">
+    <meta property="og:description" content="Consulta los términos y condiciones que regulan el uso del sitio web, servicios y plataformas tecnológicas de Abundia.io.">
+    <meta property="og:url" content="https://abundia.io/legal/terminos-y-condiciones.html">
+    <meta property="og:image" content="https://abundia.io/assets/img/og/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    
+    <!-- Icons -->
+    
+    <!-- Global CSS (DO NOT MODIFY) -->
+<!-- Scoped Styles for Legal Documents -->
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <style>
+        /* Technical Data Sheet */
+        .legal-tech-sheet {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: var(--space-4);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-xl);
+            padding: var(--space-6);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-16);
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-1);
+        }
+
+        .tech-label {
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-tertiary);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .tech-value {
+            font-size: var(--text-base);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Legal Content Layout */
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-16);
+        }
+
+        .legal-section h2 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .legal-text {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-6);
+        }
+
+        .legal-text p + p {
+            margin-top: var(--space-4);
+        }
+
+        /* Usage Grids */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .usage-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-5);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+        }
+
+        .usage-card.allowed {
+            border-left: 3px solid var(--color-primary-500);
+        }
+
+        .usage-card.prohibited {
+            border-left: 3px solid var(--color-error);
+            background: rgba(239, 68, 68, 0.03);
+        }
+
+        .usage-card i {
+            font-size: 20px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .usage-card.allowed i {
+            color: var(--color-primary-500);
+        }
+
+        .usage-card.prohibited i {
+            color: var(--color-error);
+        }
+
+        .usage-card span {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            line-height: var(--leading-normal);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .service-tag {
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.15);
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--border-radius-md);
+            font-size: var(--text-base);
+            color: var(--text-primary);
+            text-align: center;
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Philosophy Block */
+        .philosophy-block {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(16, 185, 129, 0.03) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: var(--border-radius-2xl);
+            padding: var(--space-12) var(--space-8);
+            text-align: center;
+            margin: var(--space-16) 0;
+        }
+
+        .philosophy-block h3 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+        }
+
+        .philosophy-block p {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .philosophy-block p + p {
+            margin-top: var(--space-4);
+        }
+
+        /* Final Actions */
+        .legal-actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+            padding-top: var(--space-12);
+            border-top: 1px solid var(--border-default);
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .legal-tech-sheet {
+                grid-template-columns: 1fr 1fr;
+            }
+            .legal-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .legal-actions .btn {
+                width: 100%;
+            }
+            .usage-grid, .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<style id="abundia-legal-final-fix">
+/* === ABUNDIA LEGAL VISUAL FIX v1.0 === */
+
+/* 1. VARIABLES & RESET BASE */
+:root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --color-bg: #0a0a0a;
+    --color-surface: #171717;
+    --color-text: #e5e5e5;
+    --color-text-muted: #a3a3a3;
+    --color-primary: #22c55e;
+    --space-unit: 1rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* 2. CONTENEDORES Y CENTRADO */
+.container, main > div, section > div, .legal-content {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    width: 100%;
+}
+
+/* 3. TIPOGRAFÍA ESTRUCTURADA */
+h1, h2, h3, h4 { 
+    color: #fff; 
+    font-weight: 700; 
+    line-height: 1.2; 
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin-top: 2rem; text-align: center; }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-top: 3rem; border-bottom: 1px solid #262626; padding-bottom: 0.75rem; }
+h3 { font-size: 1.25rem; margin-top: 2rem; color: var(--color-primary); }
+p { margin-bottom: 1.25rem; color: var(--color-text-muted); max-width: 70ch !important; }
+
+/* 4. LISTAS ORDENADAS */
+ul, ol, .info-list, .permission-list { 
+    margin: 1rem 0 1.5rem 1.5rem !important; 
+    color: var(--color-text-muted);
+    padding-left: 1.5rem !important;
+}
+li { margin-bottom: 0.5rem; padding-left: 0.5rem; }
+li::marker { color: var(--color-primary); }
+
+/* 5. TABLAS LEGIBLES */
+table, .legal-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 2rem 0; 
+    font-size: 0.95rem;
+}
+th, td { 
+    padding: 1rem 1.25rem !important; 
+    border: 1px solid #262626; 
+    text-align: left;
+}
+th { background: var(--color-surface); color: #fff; font-weight: 600; }
+tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+/* 6. ENLACES Y BOTONES */
+a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.8; text-decoration: underline; }
+
+/* 7. ESPACIADO VERTICAL ENTRE SECCIONES */
+section, .legal-section { margin-bottom: 4rem !important; }
+
+/* 8. HERO COMPACTO */
+.hero--compact { text-align: center; padding: 4rem 0 2rem; }
+.hero--compact p { margin-left: auto; margin-right: auto; }
+
+/* --- REFINAMIENTO VISUAL (GAPS Y PADDING) --- */
+
+/* 9. GRID GAP UNIVERSAL */
+.legal-content [class*="-grid"],
+.info-grid, .ownership-grid, .permissions-grid, 
+.services-grid, .checklist-grid, .purpose-grid,
+.mgmt-grid, .third-party-grid, .rights-grid {
+    gap: 2rem !important;
+}
+
+/* 10. COLUMN PADDING INTERNO */
+.legal-content [class*="-grid"] > * {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+/* 11. CARD PADDING CORRECTO */
+.info-card, .ownership-card, .principle-card, 
+.permission-column, .right-card, .mgmt-item,
+.tp-card, .service-tag, .check-item, .usage-card {
+    padding: 1.5rem !important;
+}
+
+/* 12. MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .container, main > div, section > div, .legal-content {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    .legal-content [class*="-grid"] { gap: 1rem !important; }
+    .legal-section { margin-bottom: 2.5rem !important; }
+    .info-card, .ownership-card, .principle-card,
+    .permission-column, .right-card { padding: 1rem !important; }
+    table { display: block; overflow-x: auto; }
+}
+</style>
+
+<style id="legal-tables-only">
+/* Solo tablas legales - resto usa clases globales */
+.legal-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.95rem}
+.legal-table th,.legal-table td{padding:1rem 1.25rem;border:1px solid var(--border-default,#262626);text-align:left;color:var(--text-secondary,#a3a3a3)}
+.legal-table th{background:var(--bg-tertiary,#1a1a1a);color:var(--text-primary,#fff);font-weight:600;text-transform:uppercase;font-size:.8rem;letter-spacing:.05em}
+.legal-table tr:hover td{background:var(--bg-secondary,#171717)}
+.legal-prose p{margin-bottom:1.25rem;line-height:1.7;color:var(--text-secondary,#a3a3a3);max-width:75ch}
+.legal-prose h2{font-size:1.75rem;color:var(--text-primary,#fff);margin:3rem 0 1rem;font-weight:700}
+.legal-prose h3{font-size:1.25rem;color:var(--color-primary-500,#22c55e);margin:2rem 0 .75rem;font-weight:600}
+.legal-prose ul{margin:1rem 0 1.5rem 1.5rem;color:var(--text-secondary,#a3a3a3)}
+.legal-prose li{margin-bottom:.5rem}
+@media(max-width:768px){.legal-table{display:block;overflow-x:auto}}
+</style>
+    <link rel="stylesheet" href="/css/legal.css">
+
+</head>
+<body class="antialiased">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header (Reused) -->
+    <header class="header" role="banner" id="site-header"></header>
+
+    <main id="main-content" role="main">
+        
+        <!-- HERO -->
+        <section class="hero hero--compact">
+            <div class="hero-bg">
+                <div class="hero-bg-grid"></div>
+                <div class="hero-bg-glow"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="hero-badge animate-fade-in">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-scales"></use></svg>
+                        <span>Uso Responsable • Transparencia • Tecnología</span>
+                    </div>
+                    <h1 class="hero-title animate-fade-in-up">Términos y Condiciones</h1>
+                    <p class="hero-description animate-fade-in-up delay-1">
+                        Bienvenido a Abundia.io.
+                        Estos Términos y Condiciones regulan el acceso, navegación y utilización de nuestro sitio web, así como la interacción con nuestros servicios, plataformas y soluciones tecnológicas.
+                        Al utilizar este sitio aceptas las disposiciones descritas en este documento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            
+            <!-- TECHNICAL DATA SHEET -->
+            <div class="legal-tech-sheet animate-fade-in-up delay-2">
+                <div class="tech-item">
+                    <span class="tech-label">Documento</span>
+                    <span class="tech-value">Términos y Condiciones</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Versión</span>
+                    <span class="tech-value">1.2</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Estado</span>
+                    <span class="tech-value" style="color: var(--color-primary-500);">Vigente</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Última actualización</span>
+                    <span class="tech-value">Julio 2026</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Responsable</span>
+                    <span class="tech-value">Abundia.io</span>
+                </div>
+            </div>
+
+            <div class="container legal-prose">
+
+                <!-- ALCANCE -->
+                <section class="section legal-prose">
+                    <h2>Alcance</h2>
+                    <div class="legal-prose">
+                        <p>Estos términos aplican al sitio web Abundia.io, sus páginas, formularios, plataformas, proyectos tecnológicos y cualquier servicio ofrecido bajo la marca Abundia, salvo que un contrato específico establezca condiciones particulares.</p>
+                    </div>
+                </section>
+
+                <!-- USO PERMITIDO -->
+                <section class="section legal-prose">
+                    <h2>Uso permitido</h2>
+                    <div class="legal-prose">
+                        <p>El usuario puede:</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg>
+                            <span>Navegar el sitio</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg>
+                            <span>Solicitar información</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg>
+                            <span>Solicitar cotizaciones</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg>
+                            <span>Contratar servicios</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg>
+                            <span>Interactuar mediante formularios oficiales</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg>
+                            <span>Consultar documentación pública</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- USO NO PERMITIDO -->
+                <section class="section legal-prose">
+                    <h2>Uso no permitido</h2>
+                    <div class="legal-prose">
+                        <p>Queda prohibido:</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Intentar vulnerar la seguridad del sitio</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Realizar ataques informáticos</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Obtener acceso no autorizado</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Introducir software malicioso</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Copiar contenido protegido</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Realizar ingeniería inversa sobre plataformas de Abundia</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Utilizar el sitio para actividades ilícitas</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Enviar spam mediante formularios</span>
+                        </div>
+                        <div class="service-card">
+                            <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-warning-circle"></use></svg>
+                            <span>Interferir con el funcionamiento del sitio</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PROPIEDAD INTELECTUAL -->
+                <section class="section legal-prose">
+                    <h2>Propiedad Intelectual</h2>
+                    <div class="legal-prose">
+                        <p>Todo el contenido original publicado por Abundia, incluyendo diseños, software, documentación, imágenes, textos, logotipos propios, arquitectura de plataformas, identidad visual y demás elementos protegibles constituye propiedad intelectual de Abundia.io o de sus respectivos titulares.</p>
+                        <p>Queda prohibida su reproducción total o parcial sin autorización expresa.</p>
+                    </div>
+                </section>
+
+                <!-- MARCAS COMERCIALES -->
+                <section class="section legal-prose">
+                    <h2>Marcas comerciales</h2>
+                    <div class="legal-prose">
+                        <p>Las marcas, nombres comerciales, logotipos y productos pertenecientes a terceros que puedan aparecer en este sitio continúan siendo propiedad exclusiva de sus respectivos titulares.</p>
+                        <p>Su utilización tiene únicamente fines informativos, descriptivos o de compatibilidad tecnológica y no implica afiliación, patrocinio o representación, salvo que expresamente se indique lo contrario.</p>
+                    </div>
+                </section>
+
+                <!-- SERVICIOS TECNOLÓGICOS -->
+                <section class="section legal-prose">
+                    <h2>Servicios tecnológicos</h2>
+                    <div class="legal-prose">
+                        <p>Los servicios ofrecidos por Abundia pueden incluir, entre otros:</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="badge badge-primary">Desarrollo de software</div>
+                        <div class="badge badge-primary">Inteligencia Artificial</div>
+                        <div class="badge badge-primary">Automatización</div>
+                        <div class="badge badge-primary">Hosting</div>
+                        <div class="badge badge-primary">Infraestructura</div>
+                        <div class="badge badge-primary">Ciberseguridad</div>
+                        <div class="badge badge-primary">Consultoría</div>
+                        <div class="badge badge-primary">Arquitecturas Cloud</div>
+                        <div class="badge badge-primary">Investigación tecnológica</div>
+                    </div>
+                    <div class="legal-prose">
+                        <p>Cada proyecto podrá estar sujeto además a contratos específicos entre Abundia y el cliente.</p>
+                    </div>
+                </section>
+
+                <!-- COTIZACIONES -->
+                <section class="section legal-prose">
+                    <h2>Cotizaciones</h2>
+                    <div class="legal-prose">
+                        <p>Las cotizaciones emitidas por Abundia constituyen propuestas comerciales sujetas a disponibilidad, alcance del proyecto y vigencia indicada en cada documento.</p>
+                        <p>La aceptación definitiva podrá requerir contrato o acuerdo adicional.</p>
+                    </div>
+                </section>
+
+                <!-- DISPONIBILIDAD -->
+                <section class="section legal-prose">
+                    <h2>Disponibilidad</h2>
+                    <div class="legal-prose">
+                        <p>Aunque procuramos mantener nuestros servicios disponibles de forma continua, no garantizamos disponibilidad ininterrumpida.</p>
+                        <p>Podrán producirse interrupciones derivadas de mantenimiento, actualizaciones, incidencias técnicas o circunstancias fuera de nuestro control.</p>
+                    </div>
+                </section>
+
+                <!-- EXACTITUD DE LA INFORMACIÓN -->
+                <section class="section legal-prose">
+                    <h2>Exactitud de la información</h2>
+                    <div class="legal-prose">
+                        <p>Realizamos esfuerzos razonables para mantener la información actualizada.</p>
+                        <p>Sin embargo, algunas características, tecnologías o servicios pueden modificarse conforme evoluciona el ecosistema Abundia.</p>
+                    </div>
+                </section>
+
+                <!-- ENLACES EXTERNOS -->
+                <section class="section legal-prose">
+                    <h2>Enlaces externos</h2>
+                    <div class="legal-prose">
+                        <p>Este sitio puede contener enlaces hacia sitios web de terceros.</p>
+                        <p>Abundia no controla el contenido ni las políticas de dichos sitios y no asume responsabilidad por ellos.</p>
+                    </div>
+                </section>
+
+                <!-- LIMITACIÓN DE RESPONSABILIDAD -->
+                <section class="section legal-prose">
+                    <h2>Limitación de responsabilidad</h2>
+                    <div class="legal-prose">
+                        <p>En la máxima medida permitida por la legislación aplicable, Abundia no será responsable por daños indirectos, incidentales, especiales o consecuenciales derivados del uso del sitio web o de la imposibilidad temporal de utilizarlo.</p>
+                        <p>Nada de lo anterior limita los derechos que la legislación aplicable otorgue a los usuarios cuando correspondan.</p>
+                    </div>
+                </section>
+
+                <!-- SEGURIDAD -->
+                <section class="section legal-prose">
+                    <h2>Seguridad</h2>
+                    <div class="legal-prose">
+                        <p>Abundia implementa prácticas razonables de seguridad informática para proteger su infraestructura.</p>
+                        <p>No obstante, ningún sistema conectado a Internet puede garantizar una seguridad absoluta.</p>
+                        <p>Los usuarios también son responsables de proteger sus propios dispositivos y credenciales.</p>
+                    </div>
+                </section>
+
+                <!-- SUSPENSIÓN DE ACCESO -->
+                <section class="section legal-prose">
+                    <h2>Suspensión de acceso</h2>
+                    <div class="legal-prose">
+                        <p>Abundia podrá restringir o bloquear el acceso a usuarios que:</p>
+                        <ul class="service-features" style="margin-top: var(--space-4);">
+                            <li>Intenten vulnerar la seguridad.</li>
+                            <li>Incumplan estos términos.</li>
+                            <li>Realicen actividades fraudulentas.</li>
+                            <li>Afecten la estabilidad del sitio.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- PROTECCIÓN DE DATOS -->
+                <section class="section legal-prose">
+                    <h2>Protección de datos</h2>
+                    <div class="legal-prose">
+                        <p>El tratamiento de información personal se encuentra regulado por nuestra Política de Privacidad.</p>
+                    </div>
+                    <a href="/legal/politica-de-privacidad.html" class="btn btn-outline">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-lock-key"></use></svg> Ver Política de Privacidad
+                    </a>
+                </section>
+
+                <!-- LEGISLACIÓN APLICABLE -->
+                <section class="section legal-prose">
+                    <h2>Legislación aplicable</h2>
+                    <div class="legal-prose">
+                        <p>Estos términos se interpretarán conforme a la legislación aplicable en Costa Rica, sin perjuicio de que determinados servicios internacionales puedan quedar sujetos además a otras normativas cuando corresponda.</p>
+                    </div>
+                </section>
+
+                <!-- MODIFICACIONES -->
+                <section class="section legal-prose">
+                    <h2>Modificaciones</h2>
+                    <div class="legal-prose">
+                        <p>Abundia podrá actualizar estos Términos y Condiciones cuando resulte necesario para reflejar:</p>
+                        <ul class="service-features" style="margin-top: var(--space-4);">
+                            <li>Cambios legales.</li>
+                            <li>Nuevos servicios.</li>
+                            <li>Mejoras tecnológicas.</li>
+                            <li>Actualizaciones operativas.</li>
+                        </ul>
+                        <p style="margin-top: var(--space-4);">La versión vigente será siempre la publicada en este sitio.</p>
+                    </div>
+                </section>
+
+                <!-- TARJETA FINAL -->
+                <div class="legal-tech-sheet animate-fade-in" style="margin-top: var(--space-16);">
+                    <div class="tech-item">
+                        <span class="tech-label">Versión</span>
+                        <span class="tech-value">1.2</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Estado</span>
+                        <span class="tech-value" style="color: var(--color-primary-500);">Vigente</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Última actualización</span>
+                        <span class="tech-value">Julio 2026</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Responsable</span>
+                        <span class="tech-value">Abundia.io</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Correo</span>
+                        <span class="tech-value">info@abundia.io</span>
+                    </div>
+                </div>
+
+                <!-- FILOSOFÍA -->
+                <div class="service-card" style="grid-column:1/-1;text-align:center;padding:3rem">
+                    <h3>Nuestra filosofía</h3>
+                    <p>
+                        La tecnología evoluciona constantemente y también lo hacen los servicios que desarrollamos.
+                        Estos Términos y Condiciones buscan establecer un marco transparente, equilibrado y responsable para la interacción entre Abundia y sus usuarios, promoviendo relaciones basadas en la confianza, la innovación y el respeto mutuo.
+                    </p>
+                    <p>
+                        Nuestro objetivo no consiste únicamente en ofrecer soluciones tecnológicas de alto nivel, sino también en construir relaciones duraderas fundamentadas en la claridad, la seguridad y las buenas prácticas.
+                    </p>
+                </div>
+
+                <!-- BOTONES FINALES -->
+                <div class="legal-actions animate-fade-in">
+                    <a href="/legal/" class="btn btn-secondary">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrow-left"></use></svg> Centro Legal
+                    </a>
+                    <a href="/contacto.html" class="btn btn-primary">
+                        Contáctanos <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrow-right"></use></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Spacer before footer -->
+        <div style="height: var(--space-24);"></div>
+
+    </main>
+
+    <!-- Footer (Reused) -->
+    <footer class="footer" role="contentinfo" id="site-footer">                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+        </footer>
+
+    <!-- Scripts (Site Standard) -->
+    <script src="/js/main.js" defer></script>
+    <script src="/assets/js/components/header.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/assets/js/components/footer.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" class="no-js">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Security headers set site-wide via /_headers, see index.html -->
+    
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- SEO -->
+    <title>Propiedad Intelectual | Abundia.io</title>
+    <meta name="description" content="Información sobre derechos de autor, licencias, marcas comerciales y el uso de tecnologías pertenecientes a terceros en el ecosistema Abundia.io.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://abundia.io/legal/propiedad-intelectual.html">
+    
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Propiedad Intelectual | Abundia.io">
+    <meta property="og:description" content="Información sobre derechos de autor, licencias, marcas comerciales y el uso de tecnologías pertenecientes a terceros en el ecosistema Abundia.io.">
+    <meta property="og:url" content="https://abundia.io/legal/propiedad-intelectual.html">
+    <meta property="og:image" content="https://abundia.io/assets/img/og/og-image.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    
+    <!-- Icons -->
+    
+    <!-- Global CSS (DO NOT MODIFY) -->
+<!-- Scoped Styles for Legal Documents -->
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/sections.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <style>
+        /* Technical Data Sheet */
+        .legal-tech-sheet {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: var(--space-4);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-xl);
+            padding: var(--space-6);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-16);
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-1);
+        }
+
+        .tech-label {
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-tertiary);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        .tech-value {
+            font-size: var(--text-base);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Legal Content Layout */
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-16);
+        }
+
+        .legal-section h2 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .legal-text {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-6);
+        }
+
+        .legal-text p + p {
+            margin-top: var(--space-4);
+        }
+
+        /* Content Ownership Cards */
+        .ownership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        .ownership-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-6);
+            height: 100%;
+        }
+
+        .ownership-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: var(--border-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: var(--space-4);
+            color: var(--color-primary-500);
+        }
+
+        .ownership-card h3 {
+            font-size: var(--text-lg);
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+        }
+
+        .ownership-card p {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            line-height: var(--leading-normal);
+        }
+
+        /* Elegant Table */
+        .legal-table-wrapper {
+            overflow-x: auto;
+            margin: var(--space-8) 0;
+            border-radius: var(--border-radius-lg);
+            border: 1px solid var(--border-default);
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px;
+        }
+
+        .legal-table th {
+            background: var(--bg-tertiary);
+            text-align: left;
+            padding: var(--space-4) var(--space-6);
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-tertiary);
+            border-bottom: 1px solid var(--border-default);
+        }
+
+        .legal-table td {
+            padding: var(--space-4) var(--space-6);
+            border-bottom: 1px solid var(--border-default);
+            color: var(--text-secondary);
+            font-size: var(--text-base);
+        }
+
+        .legal-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .legal-table tr:hover td {
+            background: var(--bg-secondary);
+        }
+
+        /* Usage Permissions Grid */
+        .permissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        .permission-column {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-6);
+        }
+
+        .permission-column.allowed {
+            border-top: 3px solid var(--color-primary-500);
+        }
+
+        .permission-column.prohibited {
+            border-top: 3px solid var(--color-error);
+        }
+
+        .permission-column h3 {
+            font-size: var(--text-lg);
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .permission-column.allowed h3 { color: var(--color-primary-500); }
+        .permission-column.prohibited h3 { color: var(--color-error); }
+
+        .permission-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .permission-list li {
+            font-size: var(--text-base);
+            color: var(--text-secondary);
+            padding-left: var(--space-6);
+            position: relative;
+        }
+
+        .permission-list li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-size: 16px;
+        }
+
+        .permission-column.allowed .permission-list li i { color: var(--color-primary-500); }
+        .permission-column.prohibited .permission-list li i { color: var(--color-error); }
+
+        /* Contact Request Card */
+        .request-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-xl);
+            padding: var(--space-8);
+            margin: var(--space-8) 0;
+        }
+
+        .request-card h3 {
+            font-size: var(--text-xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .request-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+
+        .request-info-item strong {
+            display: block;
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
+            color: var(--text-tertiary);
+            margin-bottom: var(--space-2);
+        }
+
+        .request-info-item a, .request-info-item span {
+            font-size: var(--text-base);
+            color: var(--text-primary);
+        }
+
+        .request-info-item a {
+            color: var(--color-primary-500);
+            text-decoration: underline;
+        }
+
+        .motives-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: var(--space-3);
+        }
+
+        .motives-list li {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .motives-list li i {
+            color: var(--color-primary-500);
+            font-size: 14px;
+        }
+
+        /* Innovation Highlight Section */
+        .innovation-section {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(16, 185, 129, 0.03) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: var(--border-radius-2xl);
+            padding: var(--space-12) var(--space-8);
+            text-align: center;
+            margin: var(--space-16) 0;
+        }
+
+        .innovation-section h3 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+        }
+
+        .innovation-section p {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .innovation-section p + p {
+            margin-top: var(--space-4);
+        }
+
+        /* Trademark Notice Box */
+        .trademark-notice {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-default);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-6);
+            margin-top: var(--space-12);
+            font-size: var(--text-sm);
+            color: var(--text-tertiary);
+            line-height: var(--leading-relaxed);
+        }
+
+        .trademark-notice strong {
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: var(--space-2);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: var(--space-16) 0;
+            border-top: 1px solid var(--border-default);
+            margin-top: var(--space-16);
+        }
+
+        .final-cta h2 {
+            font-size: var(--text-2xl);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .final-cta p {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto var(--space-8);
+            line-height: var(--leading-relaxed);
+        }
+
+        @media (max-width: 768px) {
+            .legal-tech-sheet { grid-template-columns: 1fr 1fr; }
+            .ownership-grid, .permissions-grid { grid-template-columns: 1fr; }
+            .motives-list { grid-template-columns: 1fr; }
+        }
+    </style>
+<style id="abundia-legal-final-fix">
+/* === ABUNDIA LEGAL VISUAL FIX v1.0 === */
+
+/* 1. VARIABLES & RESET BASE */
+:root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --color-bg: #0a0a0a;
+    --color-surface: #171717;
+    --color-text: #e5e5e5;
+    --color-text-muted: #a3a3a3;
+    --color-primary: #22c55e;
+    --space-unit: 1rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* 2. CONTENEDORES Y CENTRADO */
+.container, main > div, section > div, .legal-content {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    width: 100%;
+}
+
+/* 3. TIPOGRAFÍA ESTRUCTURADA */
+h1, h2, h3, h4 { 
+    color: #fff; 
+    font-weight: 700; 
+    line-height: 1.2; 
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin-top: 2rem; text-align: center; }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-top: 3rem; border-bottom: 1px solid #262626; padding-bottom: 0.75rem; }
+h3 { font-size: 1.25rem; margin-top: 2rem; color: var(--color-primary); }
+p { margin-bottom: 1.25rem; color: var(--color-text-muted); max-width: 70ch !important; }
+
+/* 4. LISTAS ORDENADAS */
+ul, ol, .info-list, .permission-list { 
+    margin: 1rem 0 1.5rem 1.5rem !important; 
+    color: var(--color-text-muted);
+    padding-left: 1.5rem !important;
+}
+li { margin-bottom: 0.5rem; padding-left: 0.5rem; }
+li::marker { color: var(--color-primary); }
+
+/* 5. TABLAS LEGIBLES */
+table, .legal-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 2rem 0; 
+    font-size: 0.95rem;
+}
+th, td { 
+    padding: 1rem 1.25rem !important; 
+    border: 1px solid #262626; 
+    text-align: left;
+}
+th { background: var(--color-surface); color: #fff; font-weight: 600; }
+tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+/* 6. ENLACES Y BOTONES */
+a { color: var(--color-primary); text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.8; text-decoration: underline; }
+
+/* 7. ESPACIADO VERTICAL ENTRE SECCIONES */
+section, .legal-section { margin-bottom: 4rem !important; }
+
+/* 8. HERO COMPACTO */
+.hero--compact { text-align: center; padding: 4rem 0 2rem; }
+.hero--compact p { margin-left: auto; margin-right: auto; }
+
+/* --- REFINAMIENTO VISUAL (GAPS Y PADDING) --- */
+
+/* 9. GRID GAP UNIVERSAL */
+.legal-content [class*="-grid"],
+.info-grid, .ownership-grid, .permissions-grid, 
+.services-grid, .checklist-grid, .purpose-grid,
+.mgmt-grid, .third-party-grid, .rights-grid {
+    gap: 2rem !important;
+}
+
+/* 10. COLUMN PADDING INTERNO */
+.legal-content [class*="-grid"] > * {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+/* 11. CARD PADDING CORRECTO */
+.info-card, .ownership-card, .principle-card, 
+.permission-column, .right-card, .mgmt-item,
+.tp-card, .service-tag, .check-item, .usage-card {
+    padding: 1.5rem !important;
+}
+
+/* 12. MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .container, main > div, section > div, .legal-content {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    .legal-content [class*="-grid"] { gap: 1rem !important; }
+    .legal-section { margin-bottom: 2.5rem !important; }
+    .info-card, .ownership-card, .principle-card,
+    .permission-column, .right-card { padding: 1rem !important; }
+    table { display: block; overflow-x: auto; }
+}
+</style>
+
+<style id="legal-tables-only">
+/* Solo tablas legales - resto usa clases globales */
+.legal-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:.95rem}
+.legal-table th,.legal-table td{padding:1rem 1.25rem;border:1px solid var(--border-default,#262626);text-align:left;color:var(--text-secondary,#a3a3a3)}
+.legal-table th{background:var(--bg-tertiary,#1a1a1a);color:var(--text-primary,#fff);font-weight:600;text-transform:uppercase;font-size:.8rem;letter-spacing:.05em}
+.legal-table tr:hover td{background:var(--bg-secondary,#171717)}
+.legal-prose p{margin-bottom:1.25rem;line-height:1.7;color:var(--text-secondary,#a3a3a3);max-width:75ch}
+.legal-prose h2{font-size:1.75rem;color:var(--text-primary,#fff);margin:3rem 0 1rem;font-weight:700}
+.legal-prose h3{font-size:1.25rem;color:var(--color-primary-500,#22c55e);margin:2rem 0 .75rem;font-weight:600}
+.legal-prose ul{margin:1rem 0 1.5rem 1.5rem;color:var(--text-secondary,#a3a3a3)}
+.legal-prose li{margin-bottom:.5rem}
+@media(max-width:768px){.legal-table{display:block;overflow-x:auto}}
+</style>
+    <link rel="stylesheet" href="/css/legal.css">
+
+</head>
+<body class="antialiased">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header (Reused) -->
+    <header class="header" role="banner" id="site-header"></header>
+
+    <main id="main-content" role="main">
+        
+        <!-- HERO -->
+        <section class="hero hero--compact">
+            <div class="hero-bg">
+                <div class="hero-bg-grid"></div>
+                <div class="hero-bg-glow"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="hero-badge animate-fade-in">
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-books"></use></svg>
+                        <span>Centro Legal</span>
+                    </div>
+                    <h1 class="hero-title animate-fade-in-up">Propiedad Intelectual</h1>
+                    <p class="hero-description animate-fade-in-up delay-1">
+                        La innovación también implica respetar el trabajo de quienes crean tecnología. En Abundia protegemos nuestro contenido y reconocemos los derechos de terceros sobre sus marcas, productos y desarrollos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            
+            <!-- TECHNICAL DATA SHEET -->
+            <div class="legal-tech-sheet animate-fade-in-up delay-2">
+                <div class="tech-item">
+                    <span class="tech-label">Documento</span>
+                    <span class="tech-value">Propiedad Intelectual</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Versión</span>
+                    <span class="tech-value">1.2</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Última actualización</span>
+                    <span class="tech-value">Julio 2026</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-label">Responsable</span>
+                    <span class="tech-value">Abundia.io</span>
+                </div>
+            </div>
+
+            <div class="container legal-prose">
+
+                <!-- SECCIÓN 1: NUESTRO COMPROMISO -->
+                <section class="section legal-prose">
+                    <h2>Nuestro compromiso</h2>
+                    <div class="legal-prose">
+                        <p>En Abundia.io creemos que la innovación debe construirse sobre el respeto.</p>
+                        <p>Respetamos la propiedad intelectual de terceros, protegemos nuestros propios desarrollos y procuramos que todo el contenido publicado en este sitio sea utilizado de manera responsable, transparente y conforme a las buenas prácticas internacionales.</p>
+                        <p>Nuestro objetivo no es apropiarnos del trabajo de otros, sino construir soluciones tecnológicas interoperables que integren herramientas ampliamente reconocidas por la industria.</p>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 2: CONTENIDO PROPIEDAD DE ABUNDIA -->
+                <section class="section legal-prose">
+                    <h2>Contenido propiedad de Abundia</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-card"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-code"></use></svg></div>
+                            <h3>Software desarrollado por Abundia</h3>
+                            <p>Las plataformas, aplicaciones, interfaces, arquitecturas y desarrollos originales publicados por Abundia son propiedad intelectual de sus respectivos titulares cuando corresponda y están protegidos por la legislación aplicable.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-paint-brush"></use></svg></div>
+                            <h3>Diseño del sitio</h3>
+                            <p>La estructura visual, diseño gráfico, experiencia de usuario, textos originales, documentación y contenido propio forman parte del patrimonio intelectual de Abundia.io.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card"><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-image"></use></svg></div>
+                            <h3>Material audiovisual</h3>
+                            <p>Las ilustraciones, gráficos, diagramas y demás contenido generado específicamente para Abundia pertenecen a Abundia, salvo que se indique expresamente lo contrario.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 3: MARCAS COMERCIALES DE TERCEROS -->
+                <section class="section legal-prose">
+                    <h2>Marcas comerciales de terceros</h2>
+                    <div class="legal-prose">
+                        <p>En distintas secciones del sitio pueden aparecer nombres comerciales, logotipos o marcas pertenecientes a otras organizaciones.</p>
+                        <p>Su utilización tiene únicamente fines informativos, descriptivos o de compatibilidad tecnológica.</p>
+                    </div>
+
+                    <div>
+                        <table class="legal-table">
+                            <thead>
+                                <tr>
+                                    <th>Marca</th>
+                                    <th>Uso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Cloudflare</td><td>Infraestructura y seguridad</td></tr>
+                                <tr><td>AWS</td><td>Infraestructura Cloud</td></tr>
+                                <tr><td>Google</td><td>Tecnologías y servicios compatibles</td></tr>
+                                <tr><td>WordPress</td><td>Compatibilidad de desarrollo</td></tr>
+                                <tr><td>ImmuniWeb®</td><td>Partner tecnológico</td></tr>
+                                <tr><td>Railway</td><td>Plataforma de despliegue</td></tr>
+                                <tr><td>Render</td><td>Plataforma Cloud</td></tr>
+                                <tr><td>Vercel</td><td>Hosting Frontend</td></tr>
+                                <tr><td>Pinecone</td><td>Base vectorial</td></tr>
+                                <tr><td>NVIDIA (cuando aparezca)</td><td>Compatibilidad tecnológica</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="legal-prose" style="font-size: var(--text-base); opacity: 0.9;">
+                        <p>La aparición de cualquiera de estas marcas no implica patrocinio, asociación comercial exclusiva, representación legal ni cesión de derechos.</p>
+                        <p>Todas las marcas comerciales, logotipos y nombres registrados pertenecen a sus respectivos propietarios.</p>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 4: USO PERMITIDO DEL CONTENIDO -->
+                <section class="section legal-prose">
+                    <h2>Uso permitido del contenido</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check-circle"></use></svg> Puedes</h3>
+                            <ul class="service-features">
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Leer la información publicada</li>
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Compartir enlaces hacia nuestro sitio</li>
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Citar fragmentos breves indicando la fuente</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-x-circle"></use></svg> No está permitido</h3>
+                            <ul class="service-features">
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-x"></use></svg> Copiar páginas completas</li>
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-x"></use></svg> Redistribuir contenido como propio</li>
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-x"></use></svg> Eliminar créditos o referencias</li>
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-x"></use></svg> Utilizar nuestros logotipos sin autorización</li>
+                                <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-x"></use></svg> Modificar documentación para presentarla como oficial</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 5: OPEN SOURCE -->
+                <section class="section legal-prose">
+                    <h2>Open Source</h2>
+                    <div class="legal-prose">
+                        <p>Abundia utiliza, integra y desarrolla soluciones compatibles con tecnologías de código abierto cuando ello aporta valor, seguridad y sostenibilidad al proyecto.</p>
+                        <p>Cada componente mantiene la licencia definida por su autor original.</p>
+                        <p>Cuando corresponda, respetamos las obligaciones establecidas por dichas licencias y reconocemos el trabajo de las comunidades de software libre.</p>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 6: DERECHOS DE TERCEROS -->
+                <section class="section legal-prose">
+                    <h2>Derechos de terceros</h2>
+                    <div class="legal-prose">
+                        <p>Si considera que algún contenido publicado en este sitio vulnera derechos de propiedad intelectual, derechos de autor o marcas registradas, puede comunicarse con nosotros.</p>
+                        <p>Analizaremos cada solicitud de buena fe y, cuando corresponda, realizaremos las modificaciones necesarias en un plazo razonable.</p>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 7: SOLICITUDES RELACIONADAS -->
+                <section class="section legal-prose">
+                    <h2>Solicitudes relacionadas</h2>
+                    <div class="service-card">
+                        <h3><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-envelope-simple"></use></svg> Contacto</h3>
+                        <div class="request-info">
+                            <div class="request-info-item">
+                                <strong>Correo</strong>
+                                <a href="mailto:info@abundia.io">info@abundia.io</a>
+                            </div>
+                            <div class="request-info-item">
+                                <strong>Formulario</strong>
+                                <a href="/contacto.html">https://abundia.io/contacto.html</a>
+                            </div>
+                        </div>
+                        <strong style="display:block; font-size: var(--text-sm); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: var(--text-tertiary); margin-bottom: var(--space-3);">Motivos aceptados</strong>
+                        <ul class="service-features">
+                            <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Solicitudes sobre copyright</li>
+                            <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Uso indebido de marcas</li>
+                            <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Consultas sobre licencias</li>
+                            <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Autorizaciones de uso</li>
+                            <li><svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-check"></use></svg> Correcciones</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 8: INNOVACIÓN RESPONSABLE -->
+                <div class="service-card" style="grid-column:1/-1;text-align:center;padding:3rem">
+                    <h3>La innovación también implica reconocer a quienes innovaron antes</h3>
+                    <p>
+                        En Abundia creemos que el verdadero progreso tecnológico nace de la colaboración, el respeto por la propiedad intelectual y la construcción de soluciones que aporten valor a la sociedad.
+                    </p>
+                    <p>
+                        Reconocer el trabajo de terceros no disminuye la innovación; la fortalece.
+                    </p>
+                    <p>
+                        Nuestro compromiso es desarrollar tecnología original, respetar las licencias aplicables, utilizar marcas únicamente con fines descriptivos y mantener una relación transparente con clientes, proveedores, comunidades de software y socios tecnológicos.
+                    </p>
+                </div>
+
+                <!-- ÚLTIMA ACTUALIZACIÓN -->
+                <div class="legal-tech-sheet animate-fade-in" style="margin-top: var(--space-12);">
+                    <div class="tech-item">
+                        <span class="tech-label">Última actualización</span>
+                        <span class="tech-value">Julio 2026</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Versión</span>
+                        <span class="tech-value">1.2</span>
+                    </div>
+                </div>
+
+                <!-- AVISO SOBRE MARCAS COMERCIALES -->
+                <div class="service-card" style="grid-column:1/-1;padding:2rem">
+                    <strong>Aviso sobre marcas comerciales</strong>
+                    Los nombres comerciales, logotipos, marcas registradas y productos mencionados en este sitio pertenecen a sus respectivos propietarios. Su utilización tiene exclusivamente fines descriptivos, informativos o para indicar compatibilidad tecnológica. Abundia.io no reclama titularidad sobre dichas marcas ni pretende generar confusión respecto de su propiedad.
+                </div>
+
+                <!-- CTA FINAL -->
+                <div class="final-cta animate-fade-in">
+                    <h2>¿Tienes consultas sobre licencias o propiedad intelectual?</h2>
+                    <p>Si necesitas autorización para utilizar contenido de Abundia, deseas reportar un posible conflicto de derechos o tienes preguntas relacionadas con propiedad intelectual, estaremos encantados de ayudarte.</p>
+                    <a href="/contacto.html" class="btn btn-primary">
+                        Contactar a Abundia
+                        <svg class="ph-icon" aria-hidden="true"><use href="/assets/img/icons/phosphor-sprite.svg#ph-arrow-right"></use></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Spacer before footer -->
+        <div style="height: var(--space-24);"></div>
+
+    </main>
+
+    <!-- Footer (Reused) -->
+    <footer class="footer" role="contentinfo" id="site-footer">                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/legal/">Centro Legal</a></li>
+                        <li><a href="/legal/politica-de-privacidad.html">Privacidad</a></li>
+                        <li><a href="/legal/terminos-y-condiciones.html">Términos</a></li>
+                        <li><a href="/legal/politica-de-cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+        </footer>
+
+    <!-- Scripts (Site Standard) -->
+    <script src="/js/main.js" defer></script>
+    <script src="/assets/js/components/header.js" defer></script>
+    <script src="/js/navbar.js" defer></script>
+    <script src="/assets/js/components/footer.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+</body>
+</html>
