@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios de Servicios Digitales | Abundia.io</title>
+    <meta name="description" content="Tarifario completo de servicios digitales de Abundia. Estrategia, diseño, desarrollo web, gamificación, IA, automatización, SEO y seguridad. Soluciones integrales para empresas.">
+    <link rel="canonical" href="https://abundia.io/precios">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tarifario de Servicios Digitales | Abundia.io">
+    <meta property="og:description" content="Explora nuestro ecosistema de soluciones digitales: Estrategia, Creatividad, Tecnología y Automatización.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abundia.io/precios">
+    <meta property="og:site_name" content="Abundia.io">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tarifario de Servicios Digitales | Abundia.io">
+    <meta name="twitter:description" content="Explora nuestro ecosistema de soluciones digitales: Estrategia, Creatividad, Tecnología y Automatización.">
+
+    <style>
+        :root {
+            --bg-body: #070b14;
+            --bg-surface: rgba(15, 23, 42, 0.6);
+            --bg-card: rgba(20, 30, 48, 0.4);
+            --bg-card-hover: rgba(30, 41, 59, 0.5);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-accent: rgba(16, 185, 129, 0.3);
+            --accent: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.15);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Background Ambience */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        
+        p { color: var(--text-muted); }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: #34d399;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Nav */
+        .mini-nav {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-subtle);
+            background: rgba(7, 11, 20, 0.8);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #064e3b;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: #34d399;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-glow);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--accent-glow);
+            border: 1px solid var(--border-accent);
+            border-radius: 100px;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 16px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-desc {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Explorer Section */
+        .explorer {
+            padding: 40px 0;
+            position: sticky;
+            top: 73px;
+            z-index: 90;
+            background: rgba(7, 11, 20, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+        }
+
+        .search-box::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: contain;
+            pointer-events: none;
+        }
+
+        .search-box input {
+            padding-left: 50px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            justify-content: center;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .filters::-webkit-scrollbar { display: none; }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            color: var(--text-main);
+            border-color: var(--text-dim);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
+            color: #064e3b;
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Grid Layouts */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-accent);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .card-num {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .card-features li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding: 6px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .card-features li::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .pricing-block {
+            margin-top: auto;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .price-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .price-main {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .price-tax {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-top: 4px;
+        }
+
+        .price-note {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* Accordion */
+        .accordion {
+            margin-top: 16px;
+        }
+
+        .accordion-btn {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .accordion-btn:hover {
+            color: #34d399;
+        }
+
+        .accordion-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-btn[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .accordion-content ul {
+            padding-top: 12px;
+        }
+
+        /* Special LayoutS */
+        
+        /* Premium Card (Growth) */
+        .card-premium {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid var(--accent);
+            padding: 48px;
+        }
+
+        .premium-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin: 32px 0;
+        }
+
+        .premium-col h4 {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Escalera (Plataformas) */
+        .escalera {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .escalera-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .escalera-step:hover {
+            border-color: var(--border-accent);
+        }
+
+        .step-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent-glow);
+            color: var(--accent);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* Chips */
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .chip {
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .chip:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Timeline */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--border-subtle), var(--accent), var(--border-subtle));
+            z-index: 0;
+        }
+
+        .timeline-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 0 10px;
+        }
+
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-body);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .timeline-step h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .timeline-step p {
+            font-size: 0.85rem;
+        }
+
+        /* Editorial Table (Transformación) */
+        .editorial-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .editorial-table th, .editorial-table td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .editorial-table th {
+            background: rgba(255,255,255,0.03);
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .editorial-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .editorial-table tr.total-row {
+            background: var(--accent-glow);
+        }
+
+        .editorial-table tr.total-row td {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.2rem;
+            border-bottom: none;
+        }
+
+        /* FAQ / Condiciones */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 24px 0;
+        }
+
+        .faq-q {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-a {
+            max-height: 200px;
+            padding-top: 16px;
+        }
+
+        .faq-item.active .faq-q svg {
+            transform: rotate(180deg);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.05));
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* Utilities */
+        .text-accent { color: var(--accent); }
+        .text-center { text-align: center; }
+        .mt-4 { margin-top: 32px; }
+        .mb-4 { margin-bottom: 32px; }
+        .hidden { display: none !important; }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 60px 0; }
+            .explorer { position: relative; top: 0; padding: 24px 0; border-bottom: none; }
+            .filters { justify-content: flex-start; padding: 0 24px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .card-premium { padding: 32px 24px; }
+            
+            .timeline {
+                flex-direction: column;
+                gap: 32px;
+                padding: 0;
+            }
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 20px;
+                right: auto;
+                width: 2px;
+                height: 100%;
+            }
+            .timeline-step {
+                text-align: left;
+                padding-left: 60px;
+            }
+            .timeline-dot {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+            
+            .editorial-table th, .editorial-table td {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mini Nav -->
+    <nav class="mini-nav">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <a href="/" class="logo">
+                <span class="logo-dot"></span>
+                Abundia.io
+            </a>
+            <a href="https://wa.me/50672232295" class="btn btn-primary" target="_blank" rel="noopener">Solicitar Cotización</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero container">
+        <div class="hero-tag">Tarifario 2026</div>
+        <h1>Tarifario de Servicios Digitales</h1>
+        <p class="hero-sub">Tecnología · Estrategia · Creatividad · Automatización · Crecimiento</p>
+        <p class="hero-desc">Abundia integra estrategia, creatividad y tecnología para desarrollar soluciones digitales que impulsan el crecimiento de tu empresa.</p>
+        <div class="hero-ctas">
+            <a href="https://wa.me/50672232295" class="btn btn-primary" target="_blank" rel="noopener">Solicitar Cotización</a>
+            <a href="#explorador" class="btn btn-secondary">Explorar Servicios</a>
+        </div>
+    </header>
+
+    <!-- Explorer -->
+    <section id="explorador" class="explorer">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="¿Qué solución estás buscando?" aria-label="Buscar servicios">
+            </div>
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="estrategia">Estrategia</button>
+                <button class="filter-btn" data-filter="contenido">Contenido & Creatividad</button>
+                <button class="filter-btn" data-filter="marketing">Marketing & Growth</button>
+                <button class="filter-btn" data-filter="seo-web">SEO & Web</button>
+                <button class="filter-btn" data-filter="gamificacion">Gamificación</button>
+                <button class="filter-btn" data-filter="plataformas">Plataformas</button>
+                <button class="filter-btn" data-filter="ia">IA & Automatización</button>
+                <button class="filter-btn" data-filter="infraestructura">Infraestructura</button>
+                <button class="filter-btn" data-filter="integrales">Soluciones Integrales</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Standard Services Grid -->
+        <section class="section container">
+            <div class="services-grid" id="servicesGrid">
+                <!-- JS will inject standard cards here -->
+            </div>
+        </section>
+
+        <!-- Plataformas Digitales (Escalera) -->
+        <section class="section container service-item" data-category="plataformas" data-search="plataformas digitales a medida mvp profesional saas marketplaces multisede fidelización inteligencia comercial portales empresariales aplicaciones web complejas ecosistemas integrados">
+            <div class="section-header reveal">
+                <h2>Desarrollo de Plataformas Digitales a Medida</h2>
+                <p>Escalera de soluciones para validar, crecer y dominar tu mercado digital.</p>
+            </div>
+            
+            <div class="escalera">
+                <div class="escalera-step reveal">
+                    <span class="step-badge">Nivel 01 — MVP</span>
+                    <h3>Validación de Idea</h3>
+                    <p class="card-desc">Para validar una idea antes de construir una plataforma completa. Registro, perfiles, base de datos, 1-2 flujos, panel administrativo básico, UX/UI y despliegue inicial.</p>
+                    <div class="pricing-block">
+                        <div class="price-label">Rango de Inversión</div>
+                        <div class="price-main">₡2.000.000 – ₡3.500.000</div>
+                        <div class="price-tax">+ IVA (₡2.260.000 – ₡3.955.000 IVA incluido)</div>
+                    </div>
+                </div>
+
+                <div class="escalera-step reveal">
+                    <span class="step-badge">Nivel 02 — Profesional</span>
+                    <h3>Plataforma en Crecimiento</h3>
+                    <p class="card-desc">Múltiples perfiles, roles, gamificación avanzada, dashboards, geolocalización, notificaciones, automatizaciones, APIs y arquitectura preparada para escalar.</p>
+                    <div class="pricing-block">
+                        <div class="price-label">Rango de Inversión</div>
+                        <div class="price-main">₡3.500.000 – ₡6.000.000</div>
+                        <div class="price-tax">+ IVA (₡3.955.000 – ₡6.780.000 IVA incluido)</div>
+                    </div>
+                </div>
+
+                <div class="escalera-step reveal">
+                    <span class="step-badge">Nivel 03 — Avanzado</span>
+                    <h3>Productos Digitales & Ecosistemas</h3>
+                    <p class="card-desc">SaaS, marketplaces, multisede, fidelización, inteligencia comercial, portales empresariales y aplicaciones web complejas con múltiples tipos de usuario.</p>
+                    <div class="pricing-block">
+                        <div class="price-label">Desde</div>
+                        <div class="price-main">₡6.000.000</div>
+                        <div class="price-tax">+ IVA (₡6.780.000 IVA incluido)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Factores de Cotización -->
+            <div class="reveal mt-4" style="text-align: center;">
+                <h3 style="margin-top: 60px;">Factores que determinan una cotización</h3>
+                <p>Cada plataforma se diseña según sus requerimientos reales.</p>
+                <div class="chips" style="justify-content: center; margin-top: 24px;">
+                    <span class="chip">Objetivos</span>
+                    <span class="chip">Usuarios y Roles</span>
+                    <span class="chip">Módulos y Flujos</span>
+                    <span class="chip">Complejidad</span>
+                    <span class="chip">Base de Datos</span>
+                    <span class="chip">Integraciones & APIs</span>
+                    <span class="chip">Pagos</span>
+                    <span class="chip">Geolocalización</span>
+                    <span class="chip">Automatizaciones</span>
+                    <span class="chip">Seguridad</span>
+                    <span class="chip">Escalabilidad</span>
+                    <span class="chip">Apps Móviles</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- IA & Automatización -->
+        <section class="section container service-item" data-category="ia" data-search="automatización inteligencia artificial chatbots whatsapp bots crm dashboards reportes flujos automatizados atención soporte">
+            <div class="card reveal" style="max-width: 800px; margin: 0 auto;">
+                <div class="card-num">TECNOLOGÍA COGNITIVA</div>
+                <h3>Automatización & Inteligencia Artificial</h3>
+                <p class="card-desc">Soluciones avanzadas para empresas que desean automatizar procesos, atención al cliente, seguimiento de leads y operaciones repetitivas.</p>
+                
+                <div class="accordion">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="ia-features">
+                        <span>Ver capacidades incluidas</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="accordion-content" id="ia-features">
+                        <ul class="card-features">
+                            <li>Chatbots con IA basados en vectorización</li>
+                            <li>WhatsApp Bots y respuestas automáticas</li>
+                            <li>CRM automatizado y seguimiento de leads</li>
+                            <li>Dashboards, reportes y métricas comerciales</li>
+                            <li>Integración con sitios web y plataformas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-block">
+                    <div class="price-label">Modalidad</div>
+                    <div class="price-main" style="font-size: 1.5rem;">Cotización según alcance</div>
+                    <div class="price-note">El valor se determina tras analizar los flujos, integraciones y volumen de datos.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infraestructura -->
+        <section class="section container service-item" data-category="infraestructura" data-search="infraestructura hosting seguridad cdn ssl backups monitoreo cloud waf ddos hardening">
+            <div class="card reveal" style="max-width: 800px; margin: 0 auto;">
+                <div class="card-num">ECOSISTEMA SEGURO</div>
+                <h3>Infraestructura, Hosting & Seguridad</h3>
+                <p class="card-desc">Protección multicapa, redundancia y optimización técnica para plataformas que requieren alta disponibilidad y defensa activa.</p>
+                
+                <div class="accordion">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="infra-features">
+                        <span>Ver capacidades incluidas</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="accordion-content" id="infra-features">
+                        <ul class="card-features">
+                            <li>Hosting administrado y Cloud Infrastructure</li>
+                            <li>CDN, SSL y Backups automatizados</li>
+                            <li>WAF, Protección DDoS y Anti-Bot</li>
+                            <li>Hardening y seguridad web avanzada</li>
+                            <li>Monitoreo de superficie de ataque</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-block">
+                    <div class="price-label">Modalidad</div>
+                    <div class="price-main" style="font-size: 1.5rem;">Cotización según infraestructura</div>
+                    <div class="price-note">Varía según el nivel de servicio, tráfico y requerimientos de seguridad.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paquete Integral (Premium) -->
+        <section class="section container service-item" data-category="integrales" data-search="dirección digital growth paquete integral estrategia contenido social media growth innovación">
+            <div class="card card-premium reveal">
+                <div class="card-num">SOLUCIÓN INTEGRAL</div>
+                <h3 style="font-size: 2rem;">Dirección Digital & Growth</h3>
+                <p class="card-desc" style="font-size: 1.1rem; max-width: 800px;">Un ecosistema completo que integra estrategia, creatividad, tecnología y crecimiento. Ideal para empresas que buscan una transformación integral y acompañamiento continuo.</p>
+                
+                <div class="premium-grid">
+                    <div class="premium-col">
+                        <h4>Estrategia</h4>
+                        <ul class="card-features">
+                            <li>Dirección estratégica</li>
+                            <li>Investigación</li>
+                            <li>Planeamiento</li>
+                            <li>Campañas</li>
+                        </ul>
+                    </div>
+                    <div class="premium-col">
+                        <h4>Contenido</h4>
+                        <ul class="card-features">
+                            <li>Copywriting</li>
+                            <li>Storytelling</li>
+                            <li>Diseño</li>
+                            <li>Audiovisual</li>
+                        </ul>
+                    </div>
+                    <div class="premium-col">
+                        <h4>Social Media</h4>
+                        <ul class="card-features">
+                            <li>Facebook & Instagram</li>
+                            <li>Calendarización</li>
+                            <li>Publicación</li>
+                            <li>Community Management</li>
+                        </ul>
+                    </div>
+                    <div class="premium-col">
+                        <h4>Digital</h4>
+                        <ul class="card-features">
+                            <li>Sitio web</li>
+                            <li>SEO</li>
+                            <li>Analítica</li>
+                            <li>Optimización</li>
+                        </ul>
+                    </div>
+                    <div class="premium-col">
+                        <h4>Growth</h4>
+                        <ul class="card-features">
+                            <li>Investigación de oportunidades</li>
+                            <li>Desarrollo comercial</li>
+                            <li>Prospectos</li>
+                            <li>Seguimiento</li>
+                        </ul>
+                    </div>
+                    <div class="premium-col">
+                        <h4>Innovación</h4>
+                        <ul class="card-features">
+                            <li>Nuevas experiencias</li>
+                            <li>Gamificación</li>
+                            <li>Prototipos</li>
+                            <li>Automatización</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-block" style="border-top: 1px solid var(--border-accent); padding-top: 32px;">
+                    <div class="price-label">Inversión Mensual</div>
+                    <div class="price-main" style="font-size: 2.5rem;">₡850.000</div>
+                    <div class="price-tax" style="font-size: 1.1rem;">+ IVA / ₡960.500 IVA incluido</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformación Digital (Editorial) -->
+        <section class="section container service-item" data-category="integrales" data-search="proyectos de transformación digital composición estrategia creatividad tecnología">
+            <div class="section-header reveal">
+                <h2>Proyectos de Transformación Digital</h2>
+                <p>Composición editorial para proyectos que combinan estrategia, creatividad, tecnología y desarrollo de nuevos productos digitales.</p>
+            </div>
+
+            <table class="editorial-table reveal">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th style="text-align: right;">Inversión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Dirección estratégica digital</td><td>₡300.000</td></tr>
+                    <tr><td>Copywriting & storytelling</td><td>₡250.000</td></tr>
+                    <tr><td>Diseño gráfico & dirección de arte</td><td>₡200.000</td></tr>
+                    <tr><td>Producción audiovisual</td><td>₡400.000</td></tr>
+                    <tr><td>Social Media & Community Management</td><td>₡175.000</td></tr>
+                    <tr><td>Investigación & inteligencia digital</td><td>₡250.000</td></tr>
+                    <tr><td>Desarrollo comercial</td><td>₡150.000</td></tr>
+                    <tr><td>SEO</td><td>₡300.000</td></tr>
+                    <tr><td>Desarrollo web</td><td>₡1.300.000</td></tr>
+                    <tr><td>Gamificación / prototipo</td><td>₡600.000</td></tr>
+                    <tr><td><strong>Subtotal</strong></td><td><strong>₡3.925.000</strong></td></tr>
+                    <tr><td><strong>IVA 13%</strong></td><td><strong>₡510.250</strong></td></tr>
+                    <tr class="total-row"><td>Total</td><td>₡4.435.250</td></tr>
+                </tbody>
+            </table>
+            <p class="text-center reveal" style="margin-top: 24px; font-size: 0.9rem;">Los servicios pueden contratarse individualmente o integrarse en soluciones personalizadas.</p>
+        </section>
+
+        <!-- Proceso (Timeline) -->
+        <section class="section container">
+            <div class="section-header reveal">
+                <h2>Nuestro Proceso de Desarrollo</h2>
+                <p>Metodología estructurada para garantizar calidad, escalabilidad y alineación estratégica.</p>
+            </div>
+            <div class="timeline reveal">
+                <div class="timeline-step">
+                    <div class="timeline-dot">01</div>
+                    <h4>Discovery</h4>
+                    <p>Comprensión del problema y objetivos.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-dot">02</div>
+                    <h4>Arquitectura</h4>
+                    <p>Definición de funcionalidades y estructura.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-dot">03</div>
+                    <h4>UX/UI</h4>
+                    <p>Diseño de experiencia e interfaces.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-dot">04</div>
+                    <h4>Desarrollo</h4>
+                    <p>Frontend, backend e integraciones.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-dot">05</div>
+                    <h4>Testing</h4>
+                    <p>Pruebas funcionales y técnicas.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-dot">06</div>
+                    <h4>Lanzamiento</h4>
+                    <p>Despliegue y puesta en producción.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-dot">07</div>
+                    <h4>Evolución</h4>
+                    <p>Mantenimiento y optimización.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Condiciones Generales -->
+        <section class="section container">
+            <div class="section-header reveal">
+                <h2>Condiciones Generales</h2>
+                <p>Transparencia y claridad en nuestra forma de trabajar.</p>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span>Moneda e Impuestos</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-a">Todos los precios están expresados en colones costarricenses (₡). Se aplicará el 13% de IVA correspondiente según la legislación vigente.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span>Pauta Publicitaria</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-a">La pauta publicitaria no está incluida en los servicios de gestión. El presupuesto de inversión en medios (Ads) es responsabilidad y cargo directo del cliente.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span> Terceros, Licencias y Dominios</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-a">El costo de dominios, licencias de software, APIs de pago, servicios de terceros y producciones presenciales no está incluido y se cotiza o factura por separado.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span>Alcance y Funcionalidades</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-a">El desarrollo de plataformas y software se realiza estrictamente según el alcance definido. Funcionalidades adicionales o fuera del alcance inicial se cotizan por separado.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span>Descuentos y Proyectos a Largo Plazo</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-a">Existen descuentos potenciales y condiciones preferenciales para la contratación de múltiples servicios simultáneos o proyectos de largo plazo.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta container">
+            <h2 class="reveal">¿Tienes un proyecto en mente?</h2>
+            <p class="reveal" style="max-width: 600px; margin: 0 auto 32px; font-size: 1.1rem;">Conversemos sobre cómo integrar estrategia, tecnología y creatividad para llevar tu visión al siguiente nivel.</p>
+            <a href="https://wa.me/50672232295" class="btn btn-primary reveal" target="_blank" rel="noopener" style="padding: 16px 32px; font-size: 1.1rem;">Solicitar Cotización</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023-2026 Abundia.io · Todos los derechos reservados</p>
+            <p style="margin-top: 8px; font-size: 0.8rem;">Tecnología · IA · Seguridad · Hosting</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // DATA: Standard Services
+        // ==========================================
+        const services = [
+            {
+                id: '01', cat: 'estrategia', title: 'Dirección Estratégica Digital',
+                desc: 'Visión, planeamiento y acompañamiento estratégico para alinear la tecnología con los objetivos del negocio.',
+                price: '₡300.000', priceTax: '₡339.000 IVA incluido', type: 'ÚNICO',
+                features: ['Dirección y planeamiento', 'Investigación de mercado', 'Estrategia de campañas', 'Supervisión de proyectos']
+            },
+            {
+                id: '02', cat: 'contenido', title: 'Copywriting & Storytelling',
+                desc: 'Narrativas estratégicas y redacción persuasiva para conectar con tu audiencia y mejorar la conversión.',
+                price: '₡250.000', priceTax: '₡282.500 IVA incluido', type: 'ÚNICO',
+                features: ['Guiones y narrativas', 'Textos para web y ads', 'Storytelling de marca', 'Optimización de conversión']
+            },
+            {
+                id: '03', cat: 'contenido', title: 'Diseño Gráfico & Dirección de Arte',
+                desc: 'Identidad visual, piezas gráficas y dirección estética para mantener la coherencia de tu marca.',
+                price: '₡200.000', priceTax: '₡226.000 IVA incluido', type: 'ÚNICO',
+                features: ['Diseño de piezas', 'Dirección de arte', 'Adaptaciones de marca', 'Material visual']
+            },
+            {
+                id: '04', cat: 'contenido', title: 'Producción Audiovisual & Animación',
+                desc: 'Producción mensual de contenido. Hasta 4 piezas audiovisuales de complejidad estándar.',
+                price: '₡400.000', priceTax: '₡452.000 IVA incluido', type: 'MENSUAL',
+                features: ['Hasta 4 piezas mensuales', 'Edición y postproducción', 'Animación estándar', 'Formatos multiplataforma'],
+                note: 'Producciones especiales o presenciales se cotizan por separado.'
+            },
+            {
+                id: '05', cat: 'marketing', title: 'Social Media & Community Management',
+                desc: 'Gestión integral de redes sociales, interacción con la comunidad y calendarización estratégica.',
+                price: '₡175.000', priceTax: '₡197.750 IVA incluido', type: 'MENSUAL',
+                features: ['Facebook & Instagram', 'Hasta 8 publicaciones gráficas', 'Hasta 4 piezas audiovisuales', 'Stories según calendario', 'Atención y canalización']
+            },
+            {
+                id: '06', cat: 'estrategia', title: 'Investigación & Inteligencia Digital',
+                desc: 'Análisis de datos, competencia y comportamiento de usuario para tomar decisiones basadas en evidencia.',
+                price: '₡250.000', priceTax: '₡282.500 IVA incluido', type: 'ÚNICO',
+                features: ['Análisis de competencia', 'Inteligencia de mercado', 'Reportes de datos', 'Insights estratégicos']
+            },
+            {
+                id: '07', cat: 'marketing', title: 'Desarrollo Comercial & Oportunidades',
+                desc: 'Investigación de prospectos, seguimiento de leads y gestión de oportunidades de negocio.',
+                price: '₡150.000', priceTax: '₡169.500 IVA incluido', type: 'MENSUAL',
+                features: ['Investigación de prospectos', 'Seguimiento comercial', 'Gestión de oportunidades', 'Reportes de pipeline']
+            },
+            {
+                id: '08', cat: 'seo-web', title: 'SEO & Optimización Digital',
+                desc: 'Optimización técnica, estructura y velocidad para mejorar el posicionamiento orgánico.',
+                price: '₡300.000', priceTax: '₡339.000 IVA incluido', type: 'INICIAL',
+                features: ['Auditoría técnica', 'Optimización Core Web Vitals', 'Estructura SEO', 'Indexación'],
+                note: 'Mantenimiento y optimización continua disponible como servicio mensual según alcance.'
+            },
+            {
+                id: '09', cat: 'seo-web', title: 'Desarrollo Web & Experiencias Digitales',
+                desc: 'Sitios premium, arquitectura, UX/UI, frontend, rendimiento y SEO técnico. Preparado para escalar.',
+                price: '₡1.300.000', priceTax: '₡1.469.000 IVA incluido', type: 'ÚNICO',
+                features: ['Discovery y Arquitectura', 'UX/UI y Prototipado', 'Frontend Responsive', 'Core Web Vitals', 'SEO Técnico y Analítica', 'QA y Despliegue'],
+                note: 'E-commerce, plataformas y apps web complejas se cotizan en la sección de Plataformas.'
+            },
+            {
+                id: '10', cat: 'gamificacion', title: 'Gamificación & Productos Digitales',
+                desc: 'Diseño estratégico de experiencias gamificadas: puntos, misiones, niveles, rankings y fidelización.',
+                price: '₡600.000', priceTax: '₡678.000 IVA incluido', type: 'DESDE',
+                features: ['Diseño de mecánicas', 'Prototipado de experiencia', 'Journeys y recompensas', 'Métricas de participación'],
+                note: 'Rango habitual: ₡600.000 – ₡1.200.000 + IVA. La programación funcional se cotiza como desarrollo de plataforma.'
+            }
+        ];
+
+        // ==========================================
+        // RENDER STANDARD CARDS
+        // ==========================================
+        const grid = document.getElementById('servicesGrid');
+        
+        services.forEach(s => {
+            const card = document.createElement('div');
+            card.className = 'card reveal service-item';
+            card.dataset.category = s.cat;
+            card.dataset.search = `${s.id} ${s.title} ${s.desc} ${s.features.join(' ')} ${s.cat}`.toLowerCase();
+            
+            card.innerHTML = `
+                <div class="card-num">SERVICIO ${s.id} · ${s.type}</div>
+                <h3>${s.title}</h3>
+                <p class="card-desc">${s.desc}</p>
+                
+                <div class="accordion">
+                    <button class="accordion-btn" aria-expanded="false" aria-controls="feat-${s.id}">
+                        <span>Ver características</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="accordion-content" id="feat-${s.id}">
+                        <ul class="card-features">
+                            ${s.features.map(f => `<li>${f}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pricing-block">
+                    <div class="price-label">${s.type === 'DESDE' ? 'Desde' : 'Inversión'}</div>
+                    <div class="price-main">${s.price}</div>
+                    <div class="price-tax">${s.priceTax}</div>
+                    ${s.note ? `<div class="price-note">${s.note}</div>` : ''}
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        // ==========================================
+        // FILTERS & SEARCH
+        // ==========================================
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const searchInput = document.getElementById('searchInput');
+        const allItems = document.querySelectorAll('.service-item');
+
+        function applyFilters() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+
+            allItems.forEach(item => {
+                const cat = item.dataset.category;
+                const searchText = item.dataset.search;
+                
+                const matchesCat = activeFilter === 'all' || cat === activeFilter;
+                const matchesSearch = !searchTerm || searchText.includes(searchTerm);
+
+                if (matchesCat && matchesSearch) {
+                    item.style.display = '';
+                    // Re-trigger reveal if needed
+                    if (item.classList.contains('reveal') && !item.classList.contains('visible')) {
+                        item.classList.add('visible');
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                applyFilters();
+            });
+        });
+
+        searchInput.addEventListener('input', applyFilters);
+
+        // ==========================================
+        // ACCORDIONS
+        // ==========================================
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.accordion-btn');
+            if (btn) {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', !expanded);
+                const content = btn.nextElementSibling;
+                if (!expanded) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = 0;
+                }
+            }
+
+            const faqQ = e.target.closest('.faq-q');
+            if (faqQ) {
+                faqQ.parentElement.classList.toggle('active');
+            }
+        });
+
+        // ==========================================
+        // INTERSECTION OBSERVER (REVEAL)
+        // ==========================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    </script>
+</body>
+</html>
