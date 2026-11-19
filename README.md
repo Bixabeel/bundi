@@ -13,6 +13,7 @@
 - [Páginas del Sitio](#páginas-del-sitio)
 - [Características Técnicas](#características-técnicas)
 - [Despliegue](#despliegue)
+- [Radar tecnológico (RSS)](#radar-tecnológico-rss)
 - [Seguridad](#seguridad)
 - [Accesibilidad](#accesibilidad)
 - [SEO](#seo)
@@ -22,7 +23,7 @@
 
 ## 🏗️ Arquitectura del Proyecto
 
-Abundia.io es un sitio web estático multipágina construido con HTML5, CSS3 y JavaScript vanilla (ES6+). No utiliza frameworks SPA (React, Vue, Angular) ni requiere proceso de compilación (build step). El sitio puede desplegarse directamente en GitHub Pages, Cloudflare Pages o cualquier servidor estático.
+Abundia.io es un sitio web multipágina construido principalmente como sitio estático con HTML5, CSS3 y JavaScript vanilla (ES6+). No utiliza frameworks SPA (React, Vue, Angular) ni requiere proceso de compilación (build step). Las páginas existentes y el nuevo Blog se publican en Cloudflare Pages; el agregador RSS del Blog funciona como un Cloudflare Worker independiente conectado a Cloudflare KV.
 
 ### Principios Arquitectónicos
 
@@ -45,6 +46,7 @@ Abundia New/
 ├── gracias.html
 ├── proyectos.html
 ├── servicios.html
+├── blog.html                     # Radar tecnológico alimentado por RSS/Atom
 ├── robots.txt
 ├── sitemap.xml
 ├── site.webmanifest
@@ -59,7 +61,8 @@ Abundia New/
 │   ├── sections.css
 │   ├── footer.css
 │   ├── responsive.css
-│   └── animations.css            # Scroll-reveal (.reveal*)
+│   ├── animations.css            # Scroll-reveal (.reveal*)
+│   └── blog.css                  # UI responsive del Radar tecnológico
 │
 ├── js/
 │   ├── main.js                   # Inicialización, no-js removal
@@ -67,6 +70,7 @@ Abundia New/
 │   ├── scroll.js
 │   ├── cursor.js
 │   ├── animations.js             # IntersectionObserver para .reveal*
+│   └── blog.js                   # Búsqueda, filtros, paginación y endpoint RSS
 │
 │
 ├── assets/
@@ -82,6 +86,8 @@ Abundia New/
 ├── proyectos/                    # 6 páginas de portafolio
 ├── servicios/                    # 12 páginas de servicios
 ├── legal/                        # Centro legal (privacidad, términos, cookies, etc.)
+├── workers/
+│   └── news-aggregator/          # Cloudflare Worker + KV + Cron para RSS/Atom
 │
 └── tools/                        # Scripts de desarrollo (no se despliegan como parte del sitio público)
     └── Rebuild-LegalPages.ps1
@@ -96,13 +102,14 @@ Abundia New/
 - JavaScript vanilla ES6+ (sin dependencias de runtime)
 - Google Fonts (Inter, JetBrains Mono)
 - Phosphor Icons vía CDN (solo en `legal/`)
-- Hosting: sitio estático detrás de Cloudflare
+- Hosting: Cloudflare Pages para el sitio estático
+- RSS/Atom: Cloudflare Workers + KV + Cron Trigger (cada 15 minutos)
 
 ---
 
 ## 🔒 Seguridad
 
-El proyecto sigue una política de hardening que incluye Content-Security-Policy, cabeceras HTTP restrictivas gestionadas vía Cloudflare (`_headers`), y ausencia de dependencias de backend propio. Ver la documentación de despliegue de Cloudflare del proyecto para el detalle completo de configuración.
+El proyecto sigue una política de hardening que incluye Content-Security-Policy y cabeceras HTTP restrictivas gestionadas vía Cloudflare (`_headers`). El Worker del agregador solo consulta una lista fija de feeds HTTPS; los titulares y resúmenes externos se insertan en el DOM como texto y los enlaces se validan para aceptar únicamente HTTPS.
 
 ---
 
@@ -123,3 +130,10 @@ Cada página incluye `canonical`, Open Graph y meta description. El `sitemap.xml
 - Evaluar consolidar `servicios/ia.html` y `servicios/inteligencia-artificial.html` (contenido temáticamente solapado)
 - Completar `og:image:width` / `og:image:height` y `twitter:image` en todas las páginas
 
+
+
+## Radar tecnológico (RSS)
+
+La página pública `blog.html` presenta noticias de IA, tecnología, ciberseguridad y cloud. El navegador consulta un endpoint del mismo dominio (`/api/news`); las fuentes RSS/Atom se consultan desde un Cloudflare Worker independiente, que normaliza los titulares y mantiene el resultado en Cloudflare KV con una actualización programada cada 15 minutos.
+
+El código del agregador, el archivo `wrangler.toml`, el procedimiento de despliegue y las pruebas del parser están en `workers/news-aggregator/`. Antes de publicar, ejecutá `npm install`, configurá el ID del namespace KV en `wrangler.toml`, probá con `npm test` y desplegá con `npx wrangler deploy` desde esa carpeta. El despliegue de la web estática en Cloudflare Pages no cambia.

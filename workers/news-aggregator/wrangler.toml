@@ -1,0 +1,18 @@
+name = "abundia-news-aggregator"
+main = "src/index.js"
+compatibility_date = "2026-11-18"
+workers_dev = false
+
+# Intercepta exclusivamente el endpoint de noticias del dominio principal.
+routes = [
+  { pattern = "abundia.io/api/news", zone_name = "abundia.io" }
+]
+
+[[kv_namespaces]]
+binding = "NEWS_CACHE"
+# Reemplazar por el ID que devuelve: npx wrangler kv namespace create NEWS_CACHE
+id = "c7cf650998774e8faebc012a74d18bbf"
+
+[triggers]
+# Actualización programada cada 15 minutos.
+crons = ["*/15 * * * *"]
