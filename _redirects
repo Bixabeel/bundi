@@ -1,7 +1,16 @@
-# ABUNDIA.IO — Redirects
+# ABUNDIA.IO — Cloudflare Pages redirects
 
-# Legacy URL kept for backwards compatibility.
+# Evita dos direcciones públicas para la portada.
+/index.html / 301
+
+# Compatibilidad con URLs anteriores.
 /legal/seguridad.htm /legal/seguridad.html 301
-# Contact success page: canonical clean URL + legacy HTML alias.
 /gracias.html /gracias/ 301
 /gracias /gracias/ 301
+
+# Tarifario: la URL canónica es https://abundia.io/precios.
+# 200 = proxy/rewrite interno; el navegador conserva /precios.
+/precios/ /precios 301
+/precios/precios.html /precios 301
+/precios/precios /precios 301
+/precios /precios/precios.html 200

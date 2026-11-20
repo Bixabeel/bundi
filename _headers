@@ -1,37 +1,23 @@
-# ABUNDIA.IO — Cloudflare Pages / Cloudflare Workers Response Headers
-# Applies to every response served for this static site.
+# ABUNDIA.IO — Cloudflare Pages response headers
+# Security policies are preserved and the current site assets were checked.
+# Cloudflare Pages applies this file to static asset responses. The RSS API
+# route is served by its own Worker and keeps the headers defined in that code.
 #
-# Format reference: https://developers.cloudflare.com/pages/configuration/headers/
+# CSP decisions:
+# - style-src keeps 'unsafe-inline' because multiple existing HTML pages use
+#   inline style attributes and style blocks. Removing it would break layouts.
+# - script-src does NOT use 'unsafe-inline'. The inline price calculator in
+#   /precios/precios.html is authorized by its exact SHA-256 hash below.
+# - The application/ld+json block in proyectos/eterna.html is structured-data
+#   content, not executable JavaScript, so it does not need a script hash.
+# - Two inline onerror attributes found in proyectos/open-eye.html were
+#   removed; all executable scripts are now local files or the hash below.
+# - connect-src permits same-origin RSS requests and Web3Forms submissions.
+# - The site uses Google Fonts, so their stylesheet and font hosts stay allowed.
 #
-# CSP notes (documented per hardening requirements):
-#
-# - style-src requires 'unsafe-inline': all 28 pages rely on inline <style>
-#   blocks and style="" attributes for per-page hero backgrounds and
-#   component tweaks. Refactoring every inline style into external
-#   classes was assessed and would touch every page; the immediately
-#   stricter alternative (nonces) is not usable because this is a fully
-#   static site with no per-request server-side rendering to inject a
-#   fresh nonce on each response. 'unsafe-inline' is therefore the
-#   least-permissive policy that does not break the site.
-#
-# - script-src is 'self' plus one SHA-256 hash: the site ships zero
-#   third-party <script src> tags (the former unpkg.com Phosphor Icons
-#   CDN dependency was removed and replaced with a local inline SVG
-#   sprite). The single hash allow-lists the one inline block that
-#   remains: the JSON-LD structured data on proyectos/eterna.html.
-#   If that JSON-LD content is ever edited, its hash must be
-#   recalculated (sha256 of the exact bytes between the <script> tags,
-#   base64-encoded) or the block will silently stop rendering.
-#
-# - Cross-Origin-Embedder-Policy is 'unsafe-none' rather than 'require-corp'.
-#   require-corp only pays off when the page needs cross-origin isolation
-#   (SharedArrayBuffer, high-resolution timers, heavy WASM) — this site
-#   uses none of those. Turning it on would require every cross-origin
-#   resource (including Google Fonts, which does not consistently send
-#   Cross-Origin-Resource-Policy on every response) to explicitly opt in,
-#   with a real risk of silently blocking fonts in production. Given no
-#   feature here depends on cross-origin isolation, 'unsafe-none' is the
-#   correct choice, not a weakened one.
+# Cache decisions:
+# CSS and JS filenames are not fingerprinted, so they must revalidate.
+# Images use a short freshness window rather than a year-long immutable cache.
 
 /*
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
@@ -46,34 +32,70 @@
   Cross-Origin-Resource-Policy: same-origin
   Cross-Origin-Embedder-Policy: unsafe-none
   Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-77kD+ijAqeVfV2bcu7az02yirRCk+Yef6Apn7zhoxJA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; frame-src 'none'; object-src 'none'; base-uri 'self'; manifest-src 'self'; worker-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
-  X-Robots-Tag: index, follow
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-2JC+hzX9U7v7oo1FtLG8K4mNcPx1TJBXENH6NqnGULg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; frame-src 'none'; object-src 'none'; base-uri 'self'; manifest-src 'self'; worker-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content
 
-# Static assets: safe to cache aggressively (filenames are stable;
-# bump filenames or add ?v= query strings if content changes without
-# a filename change, otherwise Cloudflare/browsers may serve stale
-# versions for up to a year).
+# Pages that must not appear in search results. Keep them crawlable so bots
+# can see the noindex instruction in the response/header and document markup.
+/404.html
+  X-Robots-Tag: noindex, follow
 
-/css/*
-  Cache-Control: public, max-age=31536000, immutable
+/gracias/
+  X-Robots-Tag: noindex, nofollow
 
-/js/*
-  Cache-Control: public, max-age=31536000, immutable
+/legal/*.html
+  X-Robots-Tag: noindex, follow
 
-/assets/css/*
-  Cache-Control: public, max-age=31536000, immutable
+# Worker source and test assets are kept in the repository for maintenance;
+# they are not search landing pages.
+/workers/*
+  X-Robots-Tag: noindex, nofollow
 
-/assets/js/*
-  Cache-Control: public, max-age=31536000, immutable
+# Cloudflare Pages production and branch-preview hostnames must not compete
+# with the canonical https://abundia.io/ property in search results.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
 
-/assets/img/*
-  Cache-Control: public, max-age=31536000, immutable
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
 
-# HTML: revalidate on every request so content updates go live
-# immediately without needing a cache purge.
+# Revalidate HTML so deployments are visible without a long browser cache.
+/
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/gracias/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/legal/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/precios
+  Cache-Control: public, max-age=0, must-revalidate
+
+# These filenames are not content-hashed; revalidate CSS and JavaScript.
+/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Images change less frequently, but are not fingerprinted either.
+/assets/img/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
 
 /site.webmanifest
   Content-Type: application/manifest+json

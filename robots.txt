@@ -1,29 +1,8 @@
-# ==========================================================
-# robots.txt
-# Abundia.io
-# Production Configuration
-# ==========================================================
+# Abundia.io — política de rastreo
+# Las páginas legales y de confirmación declaran noindex en sus propios
+# documentos y en _headers; se dejan rastreables para que los bots puedan verlo.
 
 User-agent: *
 Allow: /
 
-# Bloquear archivos y directorios internos si existen
-Disallow: /cgi-bin/
-Disallow: /.git/
-Disallow: /.github/
-Disallow: /.vscode/
-Disallow: /node_modules/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /tmp/
-
-# Permitir todos los recursos necesarios
-Allow: /assets/
-Allow: /css/
-Allow: /js/
-
-# Sitemap
 Sitemap: https://abundia.io/sitemap.xml
-
-# Host
-Host: https://abundia.io
